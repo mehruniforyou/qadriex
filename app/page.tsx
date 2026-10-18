@@ -14,12 +14,12 @@ export default function PortalPage() {
       <header className="md:hidden flex items-center justify-center py-6">
         <Link href="/" aria-label="Home" className="inline-flex">
           <img
-            alt="Oruky"
+            alt="Qadri"
             width={111}
             height={53}
             className="oruky-logo-light align-middle"
             style={{ height: 53, width: 'auto' }}
-            src="/oruky-logo-light.svg"
+            src="/qadri-logo-light.svg"
           />
           <img
             alt=""
@@ -28,7 +28,7 @@ export default function PortalPage() {
             height={53}
             className="oruky-logo-dark align-middle"
             style={{ height: 53, width: 'auto' }}
-            src="/oruky-logo-dark.svg"
+            src="/qadri-logo-dark.svg"
           />
         </Link>
       </header>
@@ -114,29 +114,29 @@ export default function PortalPage() {
           <span className="portal-layers" aria-hidden="true" />
           <div className="relative w-full h-full flex items-center md:items-end p-6 sm:p-8 md:px-12 md:pb-16 md:pt-8">
             <div className="relative z-10 max-w-[34rem]">
-              <h2 className="o-display text-5xl lg:text-6xl xl:text-7xl font-bold mt-3 leading-[0.95] tracking-tight whitespace-nowrap text-[#111111] [text-shadow:_0_2px_14px_rgba(255,255,255,0.95)]">
+              <h2 className="o-display text-5xl lg:text-6xl xl:text-7xl font-bold mt-3 leading-[0.95] tracking-tight whitespace-nowrap text-[#FFFFFF] [text-shadow:_0_2px_14px_rgba(0,0,0,0.85)]">
                 <span className="pl-char" style={{ ['--i' as any]: 0 }}>R</span>
                 <span className="pl-char" style={{ ['--i' as any]: 1 }}>u</span>
                 <span className="pl-char" style={{ ['--i' as any]: 2 }}>g</span>
                 <span className="pl-char" style={{ ['--i' as any]: 3 }}>s</span>
               </h2>
               <p
-                className="fg-rise fg-rise-d2 mt-4 max-w-sm text-sm sm:text-base leading-relaxed text-[#111111] font-semibold [text-shadow:_0_1px_10px_rgba(255,255,255,0.95)]"
+                className="fg-rise fg-rise-d2 mt-4 max-w-sm text-sm sm:text-base leading-relaxed text-[#FFFFFF] font-semibold [text-shadow:_0_1px_10px_rgba(0,0,0,0.85)]"
               >
                 Rugs can be customisable and a very large range of rugs can be available for B2B.
               </p>
               <span
                 className="fg-rise fg-rise-d3 mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-bold shadow-md transition-transform duration-200 group-hover:scale-105"
-                style={{ background: '#111111', color: '#FFFFFF' }}
+                style={{ background: '#FFFFFF', color: '#111111' }}
               >
-                Explore Rugs <ArrowRight className="w-4 h-4 portal-arrow" />
+                Explore Rugs <ArrowRight className="w-4 h-4 portal-arrow text-[#111111]" />
               </span>
             </div>
           </div>
         </Link>
 
         {/* Center Badge Mark */}
-        <div className="portal-mark" role="img" aria-label="Oruky" style={{ width: 252, height: 120 }}>
+        <div className="portal-mark" role="img" aria-label="Qadri" style={{ width: 252, height: 120 }}>
           <img
             alt=""
             aria-hidden={true}
@@ -144,7 +144,7 @@ export default function PortalPage() {
             height={120}
             className="pm-layer"
             style={{ color: 'transparent' }}
-            src="/oruky-logo-dark.svg"
+            src="/qadri-logo-dark.svg"
           />
           <img
             alt=""
@@ -153,7 +153,7 @@ export default function PortalPage() {
             height={120}
             className="pm-layer pm-split"
             style={{ color: 'transparent' }}
-            src="/oruky-logo-light.svg"
+            src="/qadri-logo-light.svg"
           />
         </div>
       </div>
@@ -164,7 +164,7 @@ export default function PortalPage() {
         style={{ color: 'var(--text-muted)', borderTop: '1px solid var(--border)' }}
       >
         <span className="whitespace-nowrap">
-          © 2026 Oruky
+          © 2026 Qadri
           <span className="hidden sm:inline"> · Adalwin Commerce™ LLP · Pune &amp; Gurgaon</span>
         </span>
         <nav className="flex gap-4">
