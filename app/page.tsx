@@ -15,19 +15,19 @@ export default function PortalPage() {
         <Link href="/" aria-label="Home" className="inline-flex">
           <img
             alt="Qadri"
-            width={111}
-            height={53}
+            width={136}
+            height={36}
             className="oruky-logo-light align-middle"
-            style={{ height: 53, width: 'auto' }}
+            style={{ height: 36, width: 'auto' }}
             src="/qadri-logo-light.svg"
           />
           <img
             alt=""
             aria-hidden={true}
-            width={111}
-            height={53}
+            width={136}
+            height={36}
             className="oruky-logo-dark align-middle"
-            style={{ height: 53, width: 'auto' }}
+            style={{ height: 36, width: 'auto' }}
             src="/qadri-logo-dark.svg"
           />
         </Link>
@@ -136,23 +136,23 @@ export default function PortalPage() {
         </Link>
 
         {/* Center Badge Mark */}
-        <div className="portal-mark" role="img" aria-label="Qadri" style={{ width: 252, height: 120 }}>
+        <div className="portal-mark" role="img" aria-label="Qadri" style={{ width: 240, height: 64 }}>
           <img
             alt=""
             aria-hidden={true}
-            width={252}
-            height={120}
+            width={240}
+            height={64}
             className="pm-layer"
-            style={{ color: 'transparent' }}
+            style={{ color: 'transparent', objectFit: 'contain' }}
             src="/qadri-logo-dark.svg"
           />
           <img
             alt=""
             aria-hidden={true}
-            width={252}
-            height={120}
+            width={240}
+            height={64}
             className="pm-layer pm-split"
-            style={{ color: 'transparent' }}
+            style={{ color: 'transparent', objectFit: 'contain' }}
             src="/qadri-logo-light.svg"
           />
         </div>

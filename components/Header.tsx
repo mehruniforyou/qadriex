@@ -62,23 +62,23 @@ export default function Header() {
         {/* Top Header Row */}
         <div className="header-top-row flex items-center justify-between py-3.5 gap-4">
           {/* Logo */}
-          <Link href="/" aria-label="Oruky home" className="flex items-center shrink-0">
+          <Link href="/" aria-label="Qadri home" className="flex items-center shrink-0">
             <img
-              alt="Oruky"
-              width={92}
-              height={44}
+              alt="Qadri"
+              width={136}
+              height={36}
               className="oruky-logo-light align-middle"
-              style={{ height: 44, width: 'auto' }}
-              src="/oruky-logo-light.svg"
+              style={{ height: 36, width: 'auto' }}
+              src="/qadri-logo-light.svg"
             />
             <img
-              alt="Oruky"
+              alt="Qadri"
               aria-hidden={true}
-              width={92}
-              height={44}
+              width={136}
+              height={36}
               className="oruky-logo-dark align-middle"
-              style={{ height: 44, width: 'auto' }}
-              src="/oruky-logo-dark.svg"
+              style={{ height: 36, width: 'auto' }}
+              src="/qadri-logo-dark.svg"
             />
           </Link>
 

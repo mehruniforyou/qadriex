@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'About Oruky · the studio · Oruky',
-  description: 'Oruky is a 3D-printing studio for enthusiast collectibles, operated by Adalwin Commerce LLP in Pune & Gurgaon.',
+  title: 'About Qadri · the studio · Qadri',
+  description: 'Qadri is a B2B and design studio, operated in Pune & Gurgaon.',
 };
 
 export default function AboutPage() {
@@ -14,21 +14,21 @@ export default function AboutPage() {
 
         <div className="mt-6">
           <img
-            alt="Oruky"
-            width={111}
-            height={53}
+            alt="Qadri"
+            width={136}
+            height={36}
             className="oruky-logo-light align-middle"
-            style={{ height: 53, width: 'auto' }}
-            src="/oruky-logo-light.svg"
+            style={{ height: 36, width: 'auto' }}
+            src="/qadri-logo-light.svg"
           />
           <img
             alt=""
             aria-hidden={true}
-            width={111}
-            height={53}
+            width={136}
+            height={36}
             className="oruky-logo-dark align-middle"
-            style={{ height: 53, width: 'auto' }}
-            src="/oruky-logo-dark.svg"
+            style={{ height: 36, width: 'auto' }}
+            src="/qadri-logo-dark.svg"
           />
         </div>
 

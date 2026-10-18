@@ -21,25 +21,25 @@ export default function Footer() {
       <div className="o-container py-16 grid gap-10 md:grid-cols-3 lg:grid-cols-5">
         {/* Brand column */}
         <div>
-          <Link href="/" aria-label="Oruky home" className="inline-block">
+          <Link href="/" aria-label="Qadri home" className="inline-block">
             <img
-              alt="Oruky"
+              alt="Qadri"
               loading="lazy"
-              width={92}
-              height={44}
+              width={136}
+              height={36}
               className="oruky-logo-light align-middle"
-              style={{ height: 44, width: 'auto' }}
-              src="/oruky-logo-light.svg"
+              style={{ height: 36, width: 'auto' }}
+              src="/qadri-logo-light.svg"
             />
             <img
               alt=""
               aria-hidden={true}
               loading="lazy"
-              width={92}
-              height={44}
+              width={136}
+              height={36}
               className="oruky-logo-dark align-middle"
-              style={{ height: 44, width: 'auto' }}
-              src="/oruky-logo-dark.svg"
+              style={{ height: 36, width: 'auto' }}
+              src="/qadri-logo-dark.svg"
             />
           </Link>
           <p className="mt-3 text-sm text-muted max-w-xs">
@@ -168,7 +168,7 @@ export default function Footer() {
       {/* Bottom Copyright */}
       <div className="border-t border-app py-3" style={{ borderColor: 'var(--border)' }}>
         <div className="o-container text-[11px] text-muted text-center">
-          © 2026 <b style={{ color: 'var(--text)' }}>Oruky</b> · operated by{' '}
+          © 2026 <b style={{ color: 'var(--text)' }}>Qadri</b> · operated by{' '}
           <a
             href="https://adalwin.com"
             target="_blank"
