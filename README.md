@@ -1,6 +1,6 @@
 # Oruky — 3D Frames & 3D-Printed Collectibles (Full Replica)
 
-Deployed to Vercel via [https://github.com/mehruniforyou/qadriex](https://github.com/mehruniforyou/qadriex) (`main` branch).
+Deployed to Vercel via [https://github.com/mehruniforyou/qadriex](https://github.com/mehruniforyou/qadriex) (`main` branch) — Paper Bags & Rugs B2B.
 
 ## Tech Stack
 - **Framework:** Next.js (App Router) + React + TypeScript
