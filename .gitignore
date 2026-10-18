@@ -1,0 +1,61 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# scraper scratch & dumps
+/scripts
+*.txt
+dump_rsc.js
+analyze.js
+analyze_pages.js
+check_*.js
+copy_*.js
+crawl_*.js
+download_*.js
+extract_*.js
+find_*.js
+generate_*.js
+inspect_*.js
+map_*.js
+parse_*.js
+print_*.js
+process_*.js
+render_*.js
+scan_*.js
+search_*.js
+setup_*.js
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+sitemap.xml

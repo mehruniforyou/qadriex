@@ -1,0 +1,199 @@
+'use client';
+
+import React, { useState, useMemo, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { COLLECTIBLES } from '@/data/products';
+import ProductCard from '@/components/ProductCard';
+import { Sparkles, SlidersHorizontal, Check } from 'lucide-react';
+
+function ShopContent() {
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams?.get('c') || 'all';
+  const queryParam = searchParams?.get('q') || '';
+
+  const [selectedCategory, setSelectedCategory] = useState(categoryParam);
+  const [searchFilter, setSearchFilter] = useState(queryParam);
+  const [sortBy, setSortBy] = useState('featured');
+
+  useEffect(() => {
+    if (categoryParam) setSelectedCategory(categoryParam);
+  }, [categoryParam]);
+
+  useEffect(() => {
+    if (queryParam) setSearchFilter(queryParam);
+  }, [queryParam]);
+
+  const filteredProducts = useMemo(() => {
+    let list = [...COLLECTIBLES];
+
+    // Filter by category
+    if (selectedCategory !== 'all') {
+      if (selectedCategory === 'cafe') {
+        list = list.filter(p => p.category === 'cafe' || p.themes.includes('motorcycle') || p.slug.includes('drift') || p.slug.includes('pitstop'));
+      } else if (selectedCategory === 'deskmate') {
+        list = list.filter(p => p.category === 'deskmate' || p.category === 'home_decor' || p.slug.includes('vault') || p.slug.includes('clock') || p.slug.includes('calendar') || p.slug.includes('organizer'));
+      } else if (selectedCategory === 'keychains') {
+        list = list.filter(p => p.category === 'keychains' || p.slug.includes('lazy') || p.slug.includes('zip') || p.slug.includes('cookie') || p.slug.includes('wizard') || p.slug.includes('shelldon'));
+      }
+    }
+
+    // Filter by search query
+    if (searchFilter.trim()) {
+      const q = searchFilter.toLowerCase();
+      list = list.filter(p =>
+        p.name.toLowerCase().includes(q) ||
+        p.tagline.toLowerCase().includes(q) ||
+        p.story.toLowerCase().includes(q)
+      );
+    }
+
+    // Sort
+    if (sortBy === 'price-low') {
+      list.sort((a, b) => a.pricePaise - b.pricePaise);
+    } else if (sortBy === 'price-high') {
+      list.sort((a, b) => b.pricePaise - a.pricePaise);
+    } else if (sortBy === 'newest') {
+      list.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+    }
+
+    return list;
+  }, [selectedCategory, searchFilter, sortBy]);
+
+  return (
+    <div className="py-10 md:py-16 space-y-12">
+      {/* Hero Header */}
+      <section className="o-container">
+        <div className="max-w-3xl">
+          <span className="o-chip">3D-printed collectibles</span>
+          <h1 className="o-display text-4xl sm:text-5xl md:text-6xl font-bold mt-4 leading-tight">
+            All Orukys
+          </h1>
+          <p className="text-muted text-base md:text-lg mt-3 leading-relaxed max-w-2xl">
+            Numbered 3D-printed pieces for riders, drivers and desk obsessives. Designed in-house, slow-printed on Bambu Lab P2S, and finished by hand.
+          </p>
+        </div>
+
+        {/* Filter Controls Row */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-10 pb-4 border-b border-app" style={{ borderColor: 'var(--border)' }}>
+          {/* Category Tabs */}
+          <div className="flex flex-wrap items-center gap-2">
+            <button
+              onClick={() => setSelectedCategory('all')}
+              className={`o-chip !py-2 !px-4 cursor-pointer transition-colors ${
+                selectedCategory === 'all' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
+              }`}
+            >
+              All Pieces ({COLLECTIBLES.length})
+            </button>
+            <button
+              onClick={() => setSelectedCategory('cafe')}
+              className={`o-chip !py-2 !px-4 cursor-pointer transition-colors ${
+                selectedCategory === 'cafe' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
+              }`}
+            >
+              🏍️ The Café
+            </button>
+            <button
+              onClick={() => setSelectedCategory('deskmate')}
+              className={`o-chip !py-2 !px-4 cursor-pointer transition-colors ${
+                selectedCategory === 'deskmate' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
+              }`}
+            >
+              The Deskmates
+            </button>
+            <button
+              onClick={() => setSelectedCategory('keychains')}
+              className={`o-chip !py-2 !px-4 cursor-pointer transition-colors ${
+                selectedCategory === 'keychains' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
+              }`}
+            >
+              Mini Vibes
+            </button>
+          </div>
+
+          {/* Sort dropdown */}
+          <div className="flex items-center gap-2 self-start sm:self-auto">
+            <span className="text-xs text-muted">Sort:</span>
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="o-chip !py-1.5 !px-3 text-xs bg-surface-2 border border-app cursor-pointer"
+              style={{ borderColor: 'var(--border)' }}
+            >
+              <option value="featured">Featured drops</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="newest">Latest drops</option>
+            </select>
+          </div>
+        </div>
+
+        {/* Search Feedback */}
+        {searchFilter && (
+          <div className="flex items-center gap-2 text-sm text-muted mt-4">
+            <span>Showing results for &quot;<b>{searchFilter}</b>&quot;</span>
+            <button
+              onClick={() => setSearchFilter('')}
+              className="text-xs text-primary underline cursor-pointer"
+            >
+              Clear
+            </button>
+          </div>
+        )}
+      </section>
+
+      {/* Products Grid */}
+      <section className="o-container">
+        {filteredProducts.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {filteredProducts.map((product, idx) => (
+              <ProductCard key={product.id} product={product} priority={idx < 4} />
+            ))}
+          </div>
+        ) : (
+          <div className="o-card p-12 text-center max-w-md mx-auto space-y-3">
+            <p className="text-base font-bold">No collectibles found</p>
+            <p className="text-xs text-muted">Try clearing your filters or search term to see all available drops.</p>
+            <button
+              onClick={() => {
+                setSelectedCategory('all');
+                setSearchFilter('');
+              }}
+              className="o-btn-primary !text-xs mt-2"
+            >
+              Reset Filters
+            </button>
+          </div>
+        )}
+      </section>
+
+      {/* Craft Note Callout */}
+      <section className="o-container">
+        <div className="o-card p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-primary" />
+              <span className="text-xs font-bold uppercase tracking-wider">The Oruky Guarantee</span>
+            </div>
+            <h3 className="o-display text-xl md:text-2xl font-bold">Never Mass-Produced.</h3>
+            <p className="text-xs md:text-sm text-muted max-w-xl leading-relaxed">
+              Every drop is printed to order with precision 0.12mm layers on Bambu Lab P2S, numbered sequentially, and shipped directly from our Pune &amp; Gurgaon workshops.
+            </p>
+          </div>
+          <div className="flex items-center gap-4 shrink-0 text-xs font-semibold">
+            <div className="flex items-center gap-1.5"><Check className="w-4 h-4 text-mint" /> Free Pan-India Delivery</div>
+            <div className="flex items-center gap-1.5"><Check className="w-4 h-4 text-mint" /> 7-Day Reprint Promise</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default function ShopPage() {
+  return (
+    <Suspense fallback={<div className="py-20 text-center"><div className="o-container animate-pulse">Loading shop...</div></div>}>
+      <ShopContent />
+    </Suspense>
+  );
+}
