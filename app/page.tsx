@@ -1,10 +1,17 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function PortalPage() {
+  const [hoveredDoor, setHoveredDoor] = useState<'paper-bags' | 'rugs' | null>(null);
+
+  // When cursor is in paper bags field: logo must be black (split: 100%)
+  // When cursor is in rugs field: logo must be white (split: 0%)
+  // When cursor is not anywhere: logo must be half both colours (split: 50%)
+  const split = hoveredDoor === 'paper-bags' ? '100%' : hoveredDoor === 'rugs' ? '0%' : '50%';
+
   return (
     <div className="portal" style={{ background: 'var(--bg)', color: 'var(--text)' }}>
       {/* Screen-reader H1 */}
@@ -17,27 +24,28 @@ export default function PortalPage() {
             alt="Qadri"
             width={136}
             height={36}
-            className="oruky-logo-light align-middle"
+            className="qadri-logo-light oruky-logo-light align-middle"
             style={{ height: 36, width: 'auto' }}
-            src="/qadri-logo-light.svg"
+            src="/qadri-logo-black.svg"
           />
           <img
             alt=""
             aria-hidden={true}
             width={136}
             height={36}
-            className="oruky-logo-dark align-middle"
+            className="qadri-logo-dark oruky-logo-dark align-middle"
             style={{ height: 36, width: 'auto' }}
-            src="/qadri-logo-dark.svg"
+            src="/qadri-logo-white.svg"
           />
         </Link>
       </header>
 
       {/* Portal Doors */}
-      <div className="portal-doors">
+      <div className="portal-doors" onMouseLeave={() => setHoveredDoor(null)}>
         {/* Door 1: Paper Bags */}
         <Link
           href="/frames"
+          onMouseEnter={() => setHoveredDoor('paper-bags')}
           className="portal-door group overflow-hidden relative"
           style={{
             background: '#1D1D1F',
@@ -91,10 +99,11 @@ export default function PortalPage() {
         {/* Door 2: Rugs */}
         <Link
           href="/shop"
+          onMouseEnter={() => setHoveredDoor('rugs')}
           className="portal-door group overflow-hidden relative"
           style={{
             background: 'var(--bg)',
-            color: '#111111',
+            color: '#FFFFFF',
             ['--aurora' as any]: 'color-mix(in srgb, var(--primary) 14%, transparent)',
             ['--layer-line' as any]: 'rgba(0,0,0,0.045)',
             ['--plinth-shadow' as any]: 'rgba(0,0,0,0.28)',
@@ -114,14 +123,24 @@ export default function PortalPage() {
           <span className="portal-layers" aria-hidden="true" />
           <div className="relative w-full h-full flex items-center md:items-end p-6 sm:p-8 md:px-12 md:pb-16 md:pt-8">
             <div className="relative z-10 max-w-[34rem]">
-              <h2 className="o-display text-5xl lg:text-6xl xl:text-7xl font-bold mt-3 leading-[0.95] tracking-tight whitespace-nowrap text-[#FFFFFF] [text-shadow:_0_2px_14px_rgba(0,0,0,0.85)]">
-                <span className="pl-char" style={{ ['--i' as any]: 0 }}>R</span>
-                <span className="pl-char" style={{ ['--i' as any]: 1 }}>u</span>
-                <span className="pl-char" style={{ ['--i' as any]: 2 }}>g</span>
-                <span className="pl-char" style={{ ['--i' as any]: 3 }}>s</span>
+              <h2
+                className="o-display text-5xl lg:text-6xl xl:text-7xl font-bold mt-3 leading-[0.95] tracking-tight whitespace-nowrap rugs-text-white"
+                style={{
+                  color: '#FFFFFF',
+                  textShadow: '0 2px 14px rgba(0,0,0,0.95), 0 0 4px rgba(0,0,0,0.9)',
+                }}
+              >
+                <span className="pl-char" style={{ ['--i' as any]: 0, color: '#FFFFFF' }}>R</span>
+                <span className="pl-char" style={{ ['--i' as any]: 1, color: '#FFFFFF' }}>u</span>
+                <span className="pl-char" style={{ ['--i' as any]: 2, color: '#FFFFFF' }}>g</span>
+                <span className="pl-char" style={{ ['--i' as any]: 3, color: '#FFFFFF' }}>s</span>
               </h2>
               <p
-                className="fg-rise fg-rise-d2 mt-4 max-w-sm text-sm sm:text-base leading-relaxed text-[#FFFFFF] font-semibold [text-shadow:_0_1px_10px_rgba(0,0,0,0.85)]"
+                className="fg-rise fg-rise-d2 mt-4 max-w-sm text-sm sm:text-base leading-relaxed font-semibold rugs-text-white"
+                style={{
+                  color: '#FFFFFF',
+                  textShadow: '0 1px 8px rgba(0,0,0,0.95), 0 0 2px rgba(0,0,0,0.9)',
+                }}
               >
                 Rugs can be customisable and a very large range of rugs can be available for B2B.
               </p>
@@ -129,14 +148,24 @@ export default function PortalPage() {
                 className="fg-rise fg-rise-d3 mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-bold shadow-md transition-transform duration-200 group-hover:scale-105"
                 style={{ background: '#FFFFFF', color: '#111111' }}
               >
-                Explore Rugs <ArrowRight className="w-4 h-4 portal-arrow text-[#111111]" />
+                Explore Rugs <ArrowRight className="w-4 h-4 portal-arrow text-[#111111]" style={{ color: '#111111' }} />
               </span>
             </div>
           </div>
         </Link>
 
-        {/* Center Badge Mark */}
-        <div className="portal-mark" role="img" aria-label="Qadri" style={{ width: 240, height: 64 }}>
+        {/* Center Badge Mark: Dynamic Split Logo */}
+        <div
+          className="portal-mark"
+          role="img"
+          aria-label="Qadri"
+          style={{
+            width: 240,
+            height: 64,
+            ['--split' as any]: split,
+          }}
+        >
+          {/* Base Black Layer (shown on left / Paper Bags field) */}
           <img
             alt=""
             aria-hidden={true}
@@ -144,8 +173,9 @@ export default function PortalPage() {
             height={64}
             className="pm-layer"
             style={{ color: 'transparent', objectFit: 'contain' }}
-            src="/qadri-logo-dark.svg"
+            src="/qadri-logo-black.svg"
           />
+          {/* Top White Layer (clipped by --split, shown on right / Rugs field) */}
           <img
             alt=""
             aria-hidden={true}
@@ -153,7 +183,7 @@ export default function PortalPage() {
             height={64}
             className="pm-layer pm-split"
             style={{ color: 'transparent', objectFit: 'contain' }}
-            src="/qadri-logo-light.svg"
+            src="/qadri-logo-white.svg"
           />
         </div>
       </div>
