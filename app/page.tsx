@@ -38,21 +38,30 @@ export default function PortalPage() {
         {/* Door 1: Paper Bags */}
         <Link
           href="/frames"
-          className="portal-door group"
+          className="portal-door group overflow-hidden relative"
           style={{
             background: '#1D1D1F',
-            color: '#F5F5F7',
+            color: '#111111',
             ['--aurora' as any]: 'color-mix(in srgb, #A1A1A6 26%, transparent)',
             ['--layer-line' as any]: 'rgba(245,245,247,0.055)',
             ['--plinth-shadow' as any]: 'rgba(0,0,0,0.62)',
             ['--pool' as any]: 'rgba(255,255,255,0.20)',
           }}
         >
+          {/* Paper Bags Background Image (No opacity filter) */}
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
+            style={{
+              backgroundImage: "url('/images/paper-bags-portal-bg.jpg')",
+            }}
+            aria-hidden="true"
+          />
+
           <span className="portal-aurora" aria-hidden="true" />
           <span className="portal-layers" aria-hidden="true" />
           <div className="relative w-full h-full flex items-center md:items-end p-6 sm:p-8 md:px-12 md:pb-16 md:pt-8">
             <div className="relative z-10 max-w-[34rem]">
-              <h2 className="o-display text-5xl lg:text-6xl xl:text-7xl font-bold mt-3 leading-[0.95] tracking-tight whitespace-nowrap">
+              <h2 className="o-display text-5xl lg:text-6xl xl:text-7xl font-bold mt-3 leading-[0.95] tracking-tight whitespace-nowrap text-[#111111] [text-shadow:_0_2px_14px_rgba(255,255,255,0.95)]">
                 <span className="pl-char" style={{ ['--i' as any]: 0 }}>P</span>
                 <span className="pl-char" style={{ ['--i' as any]: 1 }}>a</span>
                 <span className="pl-char" style={{ ['--i' as any]: 2 }}>p</span>
@@ -65,14 +74,13 @@ export default function PortalPage() {
                 <span className="pl-char" style={{ ['--i' as any]: 9 }}>s</span>
               </h2>
               <p
-                className="fg-rise fg-rise-d2 mt-4 max-w-sm text-sm sm:text-base leading-relaxed"
-                style={{ color: 'rgba(245,245,247,0.72)' }}
+                className="fg-rise fg-rise-d2 mt-4 max-w-sm text-sm sm:text-base leading-relaxed text-[#111111] font-semibold [text-shadow:_0_1px_10px_rgba(255,255,255,0.95)]"
               >
                 Brand customisable branding paper utility bags in B2B for Brands.
               </p>
               <span
-                className="fg-rise fg-rise-d3 mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-bold transition-transform duration-200 group-hover:scale-105"
-                style={{ background: '#F5F5F7', color: '#1D1D1F' }}
+                className="fg-rise fg-rise-d3 mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-bold shadow-md transition-transform duration-200 group-hover:scale-105"
+                style={{ background: '#111111', color: '#FFFFFF' }}
               >
                 Explore Paper Bags <ArrowRight className="w-4 h-4 portal-arrow" />
               </span>
@@ -93,18 +101,11 @@ export default function PortalPage() {
             ['--pool' as any]: 'rgba(0,0,0,0.07)',
           }}
         >
-          {/* Rugs Background Image with 20% white opacity overlay */}
+          {/* Rugs Background Image (No opacity filter) */}
           <div
             className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
             style={{
               backgroundImage: "url('/images/rugs-portal-bg.jpg')",
-            }}
-            aria-hidden="true"
-          />
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.20)',
             }}
             aria-hidden="true"
           />
