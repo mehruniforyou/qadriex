@@ -5,10 +5,10 @@ import { CartProvider } from '@/context/CartContext';
 import LayoutShell from '@/components/LayoutShell';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://oruky.com'),
-  title: 'Oruky — 3D Frames & 3D-Printed Collectibles, Made in India · Oruky',
+  metadataBase: new URL('https://qadriex.com'),
+  title: 'QADRI — Custom Paper Bags & Bespoke Luxury Rugs, Made in India',
   description:
-    'Two worlds, one studio. 3D-printed journey frames with real terrain relief — treks and racetracks as numbered wall pieces — and desk collectibles for riders, drivers and fans. Made in Pune & Gurgaon.',
+    'Two crafts, one standard. Custom branding utility paper bags and bespoke handcrafted luxury rugs for retail, corporate, and residential spaces. Crafted by QADRI.',
   icons: {
     icon: '/icon.svg',
     apple: '/icon.svg',

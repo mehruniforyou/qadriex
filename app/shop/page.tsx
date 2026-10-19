@@ -64,12 +64,12 @@ function ShopContent() {
       {/* Hero Header */}
       <section className="o-container">
         <div className="max-w-3xl">
-          <span className="o-chip">3D-printed collectibles</span>
+          <span className="o-chip">Bespoke &amp; Handcrafted Rugs</span>
           <h1 className="o-display text-4xl sm:text-5xl md:text-6xl font-bold mt-4 leading-tight">
-            All Orukys
+            All Rugs
           </h1>
           <p className="text-muted text-base md:text-lg mt-3 leading-relaxed max-w-2xl">
-            Numbered 3D-printed pieces for riders, drivers and desk obsessives. Designed in-house, slow-printed on Bambu Lab P2S, and finished by hand.
+            Bespoke handcrafted and premium commercial rugs. Custom sizes, artisanal tufting, and high-durability weaves tailored for luxury interiors and commercial spaces.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ function ShopContent() {
                 selectedCategory === 'all' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
               }`}
             >
-              All Pieces ({COLLECTIBLES.length})
+              All Rugs ({COLLECTIBLES.length})
             </button>
             <button
               onClick={() => setSelectedCategory('cafe')}
@@ -91,7 +91,7 @@ function ShopContent() {
                 selectedCategory === 'cafe' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
               }`}
             >
-              🏍️ The Café
+              Custom &amp; Tufted
             </button>
             <button
               onClick={() => setSelectedCategory('deskmate')}
@@ -99,7 +99,7 @@ function ShopContent() {
                 selectedCategory === 'deskmate' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
               }`}
             >
-              The Deskmates
+              Luxury &amp; Area
             </button>
             <button
               onClick={() => setSelectedCategory('keychains')}
@@ -107,7 +107,7 @@ function ShopContent() {
                 selectedCategory === 'keychains' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
               }`}
             >
-              Mini Vibes
+              Commercial &amp; B2B
             </button>
           </div>
 
@@ -120,10 +120,10 @@ function ShopContent() {
               className="o-chip !py-1.5 !px-3 text-xs bg-surface-2 border border-app cursor-pointer"
               style={{ borderColor: 'var(--border)' }}
             >
-              <option value="featured">Featured drops</option>
+              <option value="featured">Featured collections</option>
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
-              <option value="newest">Latest drops</option>
+              <option value="newest">Latest designs</option>
             </select>
           </div>
         </div>
@@ -152,8 +152,8 @@ function ShopContent() {
           </div>
         ) : (
           <div className="o-card p-12 text-center max-w-md mx-auto space-y-3">
-            <p className="text-base font-bold">No collectibles found</p>
-            <p className="text-xs text-muted">Try clearing your filters or search term to see all available drops.</p>
+            <p className="text-base font-bold">No rugs found</p>
+            <p className="text-xs text-muted">Try clearing your filters or search term to see all available rugs.</p>
             <button
               onClick={() => {
                 setSelectedCategory('all');
@@ -173,16 +173,16 @@ function ShopContent() {
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-xs font-bold uppercase tracking-wider">The Oruky Guarantee</span>
+              <span className="text-xs font-bold uppercase tracking-wider">The Qadri Promise</span>
             </div>
-            <h3 className="o-display text-xl md:text-2xl font-bold">Never Mass-Produced.</h3>
+            <h3 className="o-display text-xl md:text-2xl font-bold">Artisan Craftsmanship &amp; Longevity.</h3>
             <p className="text-xs md:text-sm text-muted max-w-xl leading-relaxed">
-              Every drop is printed to order with precision 0.12mm layers on Bambu Lab P2S, numbered sequentially, and shipped directly from our Pune &amp; Gurgaon workshops.
+              Every rug is crafted with premium wool blends and durable woven backings, inspected individually, and delivered directly to your doorstep across India.
             </p>
           </div>
           <div className="flex items-center gap-4 shrink-0 text-xs font-semibold">
             <div className="flex items-center gap-1.5"><Check className="w-4 h-4 text-mint" /> Free Pan-India Delivery</div>
-            <div className="flex items-center gap-1.5"><Check className="w-4 h-4 text-mint" /> 7-Day Reprint Promise</div>
+            <div className="flex items-center gap-1.5"><Check className="w-4 h-4 text-mint" /> Bespoke Quality Guarantee</div>
           </div>
         </div>
       </section>

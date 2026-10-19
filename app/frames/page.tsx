@@ -8,20 +8,20 @@ import ProductCard from '@/components/ProductCard';
 
 const FAQS = [
   {
-    q: 'How are the frames made?',
-    a: 'Each piece is precision-printed layer by layer on our Bambu Lab P2S printers using custom high-definition elevation data. The relief model is then hand-finished, inspected for perfection, and mounted in a custom matte aluminum frame behind high-clarity archival acrylic.'
+    q: 'How are custom branded paper bags manufactured?',
+    a: 'Each batch is precision cut, folded, and printed using high-speed automated equipment with water-based eco-friendly inks and reinforced adhesives for dependable load-bearing strength.'
   },
   {
-    q: 'What is included in the box?',
-    a: 'You receive the assembled 3D frame, an individual metal certificate of authenticity stamped with your piece number, premium pre-installed wall-mounting brackets, and protective microfiber cloth.'
+    q: 'What handle styles and finishes do you offer?',
+    a: 'We offer twisted kraft handles, flat tape handles, premium woven cotton cords, and die-cut handles with matte, gloss, or textured finishes.'
   },
   {
-    q: 'How long does shipping take?',
-    a: 'Every piece is made to order in our Pune and Gurgaon workshops. Printing and curing takes 2–4 days, followed by 3–5 days express courier delivery via BlueDart or Delhivery across India. Shipping is completely free.'
+    q: 'How long does delivery take for bulk commercial orders?',
+    a: 'Ready catalog units ship within 24–48 hours. Custom printed and bespoke size runs typically dispatch in 5–8 business days with express tracking across India.'
   },
   {
-    q: 'Can I request a custom trek or circuit?',
-    a: 'Yes! We create bespoke 1-of-1 frames for personal treks, marathons, or favourite circuits. Head to our Custom Journey page or WhatsApp us directly.'
+    q: 'Can I get custom dimensions and branded samples?',
+    a: 'Yes! We manufacture custom sizes tailored precisely to your retail merchandise, takeaway food containers, or luxury gift boxes. Reach out to our B2B team for sample packs.'
   }
 ];
 
@@ -42,23 +42,23 @@ export default function FramesPage() {
       {/* Hero Section */}
       <section className="o-container">
         <div className="max-w-3xl">
-          <span className="o-chip">3D journey frames</span>
+          <span className="o-chip">Custom Utility &amp; Retail Packaging</span>
           <h1 className="o-display text-4xl sm:text-5xl md:text-6xl font-bold mt-4 leading-tight">
-            Journeys carved in relief.
+            All Paper Bags
           </h1>
           <p className="text-muted text-base md:text-lg mt-3 leading-relaxed max-w-2xl">
-            Treks, racetracks and iconic moments as numbered wall pieces. Designed with real topographic relief data, precision-printed, and framed by hand.
+            Brand-customisable utility paper bags for retail, events, and commercial B2B. Premium kraft stocks, durable twisted handles, and precision custom printing.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 mt-6 text-xs text-muted">
             <span className="inline-flex items-center gap-1.5 font-medium">
-              <Sparkles className="w-4 h-4 text-primary" /> Numbered editions
+              <Sparkles className="w-4 h-4 text-primary" /> Custom Brand Printing
             </span>
             <span className="inline-flex items-center gap-1.5 font-medium">
-              <Truck className="w-4 h-4 text-primary" /> Free shipping across India
+              <Truck className="w-4 h-4 text-primary" /> Free Pan-India Delivery
             </span>
             <span className="inline-flex items-center gap-1.5 font-medium">
-              <ShieldCheck className="w-4 h-4 text-primary" /> Transit damage guarantee
+              <ShieldCheck className="w-4 h-4 text-primary" /> High-GSM Durability Guarantee
             </span>
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function FramesPage() {
               selectedFilter === 'all' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
             }`}
           >
-            All frames ({FRAMES.length})
+            All Paper Bags ({FRAMES.length})
           </button>
           <button
             onClick={() => setSelectedFilter('treks')}
@@ -79,7 +79,7 @@ export default function FramesPage() {
               selectedFilter === 'treks' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
             }`}
           >
-            Treks &amp; Summits
+            Kraft &amp; Retail
           </button>
           <button
             onClick={() => setSelectedFilter('circuits')}
@@ -87,7 +87,7 @@ export default function FramesPage() {
               selectedFilter === 'circuits' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
             }`}
           >
-            Racetracks &amp; Circuits
+            Luxury Matte Bags
           </button>
           <button
             onClick={() => setSelectedFilter('sports')}
@@ -95,7 +95,7 @@ export default function FramesPage() {
               selectedFilter === 'sports' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
             }`}
           >
-            Legends &amp; Moments
+            B2B Bulk Utility
           </button>
         </div>
       </section>
@@ -123,17 +123,17 @@ export default function FramesPage() {
           <div className="flex items-center justify-between gap-6 flex-wrap">
             <div className="max-w-xl">
               <span className="text-[11px] uppercase tracking-[0.22em] font-bold text-primary">
-                Build a set
+                Bulk &amp; Wholesale
               </span>
               <h2 className="o-display text-2xl md:text-3xl lg:text-4xl font-bold mt-2">
-                One is a piece. Two is a collection.
+                Wholesale Volume Savings for Brands
               </h2>
               <p className="text-sm md:text-base text-muted mt-2 leading-relaxed">
-                Any 2 frames — 15% off. Three or more — 25% off. Applied automatically at checkout, no coupon code required.
+                Tiered volume pricing on commercial bag orders. Automatically applied at checkout for bulk quantities.
               </p>
             </div>
             <span className="o-btn-primary inline-flex items-center gap-2 shrink-0 group-hover:scale-105 transition-transform">
-              Start your set <ArrowRight className="w-4 h-4" />
+              Explore Wholesale <ArrowRight className="w-4 h-4" />
             </span>
           </div>
         </Link>
@@ -143,42 +143,42 @@ export default function FramesPage() {
       <section className="o-container">
         <div className="o-card p-8 md:p-12">
           <div className="max-w-2xl">
-            <span className="o-chip">Studio craft</span>
+            <span className="o-chip">Manufacturing Standards</span>
             <h2 className="o-display text-2xl md:text-3xl font-bold mt-3">
-              Precision 3D Craftsmanship
+              Engineered for Strength &amp; Presentation
             </h2>
             <p className="text-muted text-sm md:text-base mt-2 leading-relaxed">
-              Every Oruky frame is crafted with obsession. Real high-elevation topography translated into layered physical relief.
+              Every Qadri paper bag is manufactured with tear-resistant kraft and art paper stocks, reinforced handles, and razor-sharp print quality.
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             <div className="p-4 rounded-xl bg-surface-2 space-y-2">
               <CheckCircle2 className="w-5 h-5 text-primary" />
-              <h3 className="font-bold text-sm">Real Topographic Relief</h3>
+              <h3 className="font-bold text-sm">Heavy-Duty GSM Paper</h3>
               <p className="text-xs text-muted leading-relaxed">
-                Carved from geographic elevation matrices for tactile micro-ridges you can feel with your fingertips.
+                Engineered from 150–350 GSM virgin &amp; recycled kraft to ensure optimal load capacity without stretching.
               </p>
             </div>
             <div className="p-4 rounded-xl bg-surface-2 space-y-2">
               <CheckCircle2 className="w-5 h-5 text-primary" />
-              <h3 className="font-bold text-sm">Matte Aluminum Frame</h3>
+              <h3 className="font-bold text-sm">Reinforced Handles</h3>
               <p className="text-xs text-muted leading-relaxed">
-                Sleek, architectural grade aluminum profile with seamless corners and scratch-resistant matte coat.
+                Twisted paper cords and luxury cotton ribbons secured with reinforced top folds for maximum carry strength.
               </p>
             </div>
             <div className="p-4 rounded-xl bg-surface-2 space-y-2">
               <CheckCircle2 className="w-5 h-5 text-primary" />
-              <h3 className="font-bold text-sm">Certificate Included</h3>
+              <h3 className="font-bold text-sm">Vivid Pantone Fidelity</h3>
               <p className="text-xs text-muted leading-relaxed">
-                Each piece comes with an individually numbered metal certificate of authenticity.
+                Precision offset and flexographic printing delivering exact brand identity and crisp typography.
               </p>
             </div>
             <div className="p-4 rounded-xl bg-surface-2 space-y-2">
               <CheckCircle2 className="w-5 h-5 text-primary" />
-              <h3 className="font-bold text-sm">Archival Glazing</h3>
+              <h3 className="font-bold text-sm">100% Recyclable &amp; Eco-Safe</h3>
               <p className="text-xs text-muted leading-relaxed">
-                High-clarity optical grade acrylic protects the 3D relief while minimizing glare.
+                Biodegradable, sustainably sourced materials meeting strict environmental and food-grade packaging standards.
               </p>
             </div>
           </div>
