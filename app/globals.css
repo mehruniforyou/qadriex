@@ -17,17 +17,68 @@
   text-shadow: 0 2px 14px rgba(0,0,0,0.95), 0 0 4px rgba(0,0,0,0.9) !important;
 }
 
-/* Header styling - only the top bar is sticky */
-.site-header-top {
+/* Header styling - exact oruky.com structure & functionality */
+.site-header {
   transition: box-shadow 0.2s ease;
 }
-.site-header-top.is-scrolled {
-  box-shadow: 0 4px 20px -10px rgba(0, 0, 0, 0.15) !important;
+.site-header.is-scrolled {
+  box-shadow: 0 6px 24px -16px rgba(0, 0, 0, 0.18) !important;
 }
 .header-top-row {
   justify-content: space-between;
   align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  transition: padding-top 0.2s ease, padding-bottom 0.2s ease;
   display: flex;
+}
+.site-header.is-scrolled .header-top-row {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.header-nav-outer {
+  overflow: hidden;
+  position: relative;
+  transition: height 0.22s ease;
+}
+.site-header.is-scrolled .header-nav-outer {
+  height: 0 !important;
+}
+.header-nav-rail {
+  opacity: 1;
+  will-change: transform, opacity;
+  padding-bottom: 18px;
+  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.18s ease;
+  transform: translateY(0);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.header-nav-rail::-webkit-scrollbar {
+  display: none;
+}
+.site-header.is-scrolled .header-nav-rail {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(-110%) !important;
+}
+
+@media (max-width: 1132px) {
+  .header-nav-outer {
+    position: relative;
+  }
+  .header-nav-rail {
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-mask-image: linear-gradient(90deg, #0000 0, #000 24px calc(100% - 24px), #0000 100%);
+    mask-image: linear-gradient(90deg, #0000 0, #000 24px calc(100% - 24px), #0000 100%);
+    justify-content: flex-start !important;
+  }
+  .header-nav-rail ul {
+    padding-left: 16px;
+    padding-right: 16px;
+    flex-wrap: nowrap !important;
+  }
 }
 
 html, body {
