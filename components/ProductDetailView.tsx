@@ -20,6 +20,8 @@ import {
   Minus,
   ShoppingBag,
   Zap,
+  MessageSquare,
+  Mail,
 } from 'lucide-react';
 
 interface ProductDetailViewProps {
@@ -109,7 +111,9 @@ export default function ProductDetailView({ product, relatedProducts }: ProductD
           <div className="space-y-6">
             <div>
               <span className="o-chip text-xs">
-                {product.categoryType === 'frames' ? '3D journey frame' : `Collectible · ${product.category}`}
+                {product.categoryType === 'frames'
+                  ? 'Custom Packaging · Paper Bag'
+                  : `Bespoke Rug · ${product.category === 'cafe' ? 'Custom & Tufted' : product.category === 'deskmate' ? 'Luxury & Area' : 'Commercial & B2B'}`}
               </span>
               <h1 className="o-display text-3xl sm:text-4xl md:text-5xl font-bold mt-3 leading-tight">
                 {product.name}
@@ -120,30 +124,44 @@ export default function ProductDetailView({ product, relatedProducts }: ProductD
             </div>
 
             {/* Price Box */}
-            <div className="p-4 rounded-2xl bg-surface-2 space-y-1">
-              <div className="flex items-baseline gap-3">
-                <span className="font-bold text-3xl">₹{product.pricePaise / 100}</span>
-                {hasDiscount && (
-                  <>
-                    <span className="text-base text-muted line-through">
-                      ₹{product.compareAtPaise! / 100}
-                    </span>
-                    <span className="o-badge bg-mint/20 text-mint text-xs">
-                      Save ₹{savings}
-                    </span>
-                  </>
-                )}
+            {product.categoryType === 'shop' || product.pricePaise === 0 ? (
+              <div className="p-5 rounded-2xl bg-surface-2 space-y-2 border border-app" style={{ borderColor: 'var(--border)' }}>
+                <div className="flex items-center justify-between gap-3 flex-wrap">
+                  <span className="font-bold text-2xl sm:text-3xl text-primary">Request Quote</span>
+                  <span className="o-badge bg-primary/10 text-primary text-xs font-semibold">
+                    B2B Wholesale Catalog
+                  </span>
+                </div>
+                <p className="text-xs text-muted leading-relaxed">
+                  Bespoke sizing, custom pile heights, and volume tier pricing for architects, interior designers, and commercial projects.
+                </p>
               </div>
-              <p className="text-xs text-muted">
-                Taxes included. <b className="text-mint font-semibold">Free express delivery across India.</b>
-              </p>
-            </div>
+            ) : (
+              <div className="p-4 rounded-2xl bg-surface-2 space-y-1">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-bold text-3xl">₹{product.pricePaise / 100}</span>
+                  {hasDiscount && (
+                    <>
+                      <span className="text-base text-muted line-through">
+                        ₹{product.compareAtPaise! / 100}
+                      </span>
+                      <span className="o-badge bg-mint/20 text-mint text-xs">
+                        Save ₹{savings}
+                      </span>
+                    </>
+                  )}
+                </div>
+                <p className="text-xs text-muted">
+                  Taxes included. <b className="text-mint font-semibold">Free express delivery across India.</b>
+                </p>
+              </div>
+            )}
 
             {/* Colorway selector */}
             {product.colorways && product.colorways.length > 0 && (
               <div className="space-y-2">
                 <span className="text-xs font-semibold uppercase tracking-wider text-muted">
-                  Color / Finish: <b>{selectedColorway}</b>
+                  Palette / Colorways: <b>{selectedColorway}</b>
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {product.colorways.map((c) => (
@@ -161,64 +179,102 @@ export default function ProductDetailView({ product, relatedProducts }: ProductD
               </div>
             )}
 
-            {/* Quantity and Add to Cart */}
-            <div className="space-y-3 pt-2">
-              <div className="flex items-center gap-3">
-                {/* Quantity adjuster */}
-                <div className="flex items-center border border-app rounded-full p-1 bg-surface-2" style={{ borderColor: 'var(--border)' }}>
-                  <button
-                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="p-2 rounded-full hover:bg-surface transition-colors cursor-pointer"
-                    aria-label="Decrease quantity"
+            {/* Quantity and Actions */}
+            {product.categoryType === 'shop' || product.pricePaise === 0 ? (
+              <div className="space-y-3 pt-2">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                  {/* Quantity adjuster */}
+                  <div className="flex items-center justify-between border border-app rounded-full p-1 bg-surface-2 shrink-0" style={{ borderColor: 'var(--border)' }}>
+                    <button
+                      onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                      className="p-2 rounded-full hover:bg-surface transition-colors cursor-pointer"
+                      aria-label="Decrease quantity"
+                    >
+                      <Minus className="w-3.5 h-3.5" />
+                    </button>
+                    <span className="px-4 text-sm font-bold tabular-nums">{quantity} units</span>
+                    <button
+                      onClick={() => setQuantity(quantity + 1)}
+                      className="p-2 rounded-full hover:bg-surface transition-colors cursor-pointer"
+                      aria-label="Increase quantity"
+                    >
+                      <Plus className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+
+                  <a
+                    href={`https://wa.me/918521122231?text=${encodeURIComponent(`Hello QADRI team, I would like to request a quote for the rug "${product.name}" (SKU: ${product.slug}). Required quantity: ${quantity} units.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 o-btn-primary !py-3.5 gap-2 cursor-pointer text-center justify-center font-bold"
                   >
-                    <Minus className="w-3.5 h-3.5" />
-                  </button>
-                  <span className="px-4 text-sm font-bold tabular-nums">{quantity}</span>
+                    <MessageSquare className="w-4 h-4" /> Request Quote via WhatsApp
+                  </a>
+                </div>
+
+                <a
+                  href={`mailto:contact@qadriex.com?subject=${encodeURIComponent(`Quote Request: ${product.name} (${product.slug})`)}&body=${encodeURIComponent(`Hello QADRI Team,\n\nI am requesting a commercial quotation for:\n\nProduct: ${product.name}\nSKU: ${product.slug}\nUnits: ${quantity}\n\nPlease provide spec sheet, lead time, and B2B pricing.\n\nThank you!`)}`}
+                  className="w-full o-btn-ghost !py-3 gap-2 cursor-pointer font-bold justify-center"
+                >
+                  <Mail className="w-4 h-4 text-primary" /> Request Email Specification &amp; Quote
+                </a>
+              </div>
+            ) : (
+              <div className="space-y-3 pt-2">
+                <div className="flex items-center gap-3">
+                  <div className="flex items-center border border-app rounded-full p-1 bg-surface-2" style={{ borderColor: 'var(--border)' }}>
+                    <button
+                      onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                      className="p-2 rounded-full hover:bg-surface transition-colors cursor-pointer"
+                      aria-label="Decrease quantity"
+                    >
+                      <Minus className="w-3.5 h-3.5" />
+                    </button>
+                    <span className="px-4 text-sm font-bold tabular-nums">{quantity}</span>
+                    <button
+                      onClick={() => setQuantity(quantity + 1)}
+                      className="p-2 rounded-full hover:bg-surface transition-colors cursor-pointer"
+                      aria-label="Increase quantity"
+                    >
+                      <Plus className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+
                   <button
-                    onClick={() => setQuantity(quantity + 1)}
-                    className="p-2 rounded-full hover:bg-surface transition-colors cursor-pointer"
-                    aria-label="Increase quantity"
+                    onClick={handleAddToCart}
+                    className="flex-1 o-btn-primary !py-3.5 gap-2 cursor-pointer"
                   >
-                    <Plus className="w-3.5 h-3.5" />
+                    <ShoppingBag className="w-4 h-4" />
+                    {added ? 'Added to Cart!' : `Add to Cart · ₹${(product.pricePaise * quantity) / 100}`}
                   </button>
                 </div>
 
-                {/* Add to Cart Button */}
                 <button
                   onClick={handleAddToCart}
-                  className="flex-1 o-btn-primary !py-3.5 gap-2 cursor-pointer"
+                  className="w-full o-btn-ghost !py-3 gap-2 cursor-pointer font-bold"
                 >
-                  <ShoppingBag className="w-4 h-4" />
-                  {added ? 'Added to Cart!' : `Add to Cart · ₹${(product.pricePaise * quantity) / 100}`}
+                  <Zap className="w-4 h-4 text-primary" /> Instant Checkout via UPI / Card
                 </button>
               </div>
-
-              {/* Direct UPI Buy Button */}
-              <button
-                onClick={handleAddToCart}
-                className="w-full o-btn-ghost !py-3 gap-2 cursor-pointer font-bold"
-              >
-                <Zap className="w-4 h-4 text-primary" /> Instant Checkout via UPI / Card
-              </button>
-            </div>
+            )}
 
             {/* Trust Assurances */}
             <div className="grid grid-cols-2 gap-3 text-xs pt-2">
               <div className="flex items-center gap-2 text-muted">
                 <Sparkles className="w-4 h-4 text-primary shrink-0" />
-                <span>Numbered edition</span>
+                <span>{product.categoryType === 'shop' ? 'Artisan Hand-Tufted' : 'Numbered edition'}</span>
               </div>
               <div className="flex items-center gap-2 text-muted">
                 <Truck className="w-4 h-4 text-primary shrink-0" />
-                <span>Dispatches in 3–5 days</span>
+                <span>{product.categoryType === 'shop' ? 'Pan-India & Global Delivery' : 'Dispatches in 3–5 days'}</span>
               </div>
               <div className="flex items-center gap-2 text-muted">
                 <ShieldCheck className="w-4 h-4 text-primary shrink-0" />
-                <span>Transit damage reprint</span>
+                <span>{product.categoryType === 'shop' ? '100% Quality Assurance' : 'Transit damage reprint'}</span>
               </div>
               <div className="flex items-center gap-2 text-muted">
                 <Layers className="w-4 h-4 text-primary shrink-0" />
-                <span>Bambu Lab P2S precision</span>
+                <span>{product.categoryType === 'shop' ? 'Custom Dimensions Available' : 'Bambu Lab P2S precision'}</span>
               </div>
             </div>
 
@@ -231,32 +287,36 @@ export default function ProductDetailView({ product, relatedProducts }: ProductD
                 {product.dimensionsMm && (
                   <div>
                     <span className="text-muted block text-[11px]">Dimensions</span>
-                    <span className="font-semibold">{product.dimensionsMm.w} × {product.dimensionsMm.h} × {product.dimensionsMm.d} mm</span>
+                    <span className="font-semibold">
+                      {product.categoryType === 'shop'
+                        ? `${(product.dimensionsMm.w / 1000).toFixed(1)}m × ${(product.dimensionsMm.h / 1000).toFixed(1)}m (${product.dimensionsMm.d}mm pile)`
+                        : `${product.dimensionsMm.w} × ${product.dimensionsMm.h} × ${product.dimensionsMm.d} mm`}
+                    </span>
                   </div>
                 )}
                 {product.weightGrams > 0 && (
                   <div>
                     <span className="text-muted block text-[11px]">Weight</span>
-                    <span className="font-semibold">{product.weightGrams} grams</span>
-                  </div>
-                )}
-                {product.printMinutes > 0 && (
-                  <div>
-                    <span className="text-muted block text-[11px]">Print Time</span>
-                    <span className="font-semibold">{product.printMinutes} mins (slow-cured)</span>
+                    <span className="font-semibold">
+                      {product.weightGrams > 1000 ? `${(product.weightGrams / 1000).toFixed(1)} kg` : `${product.weightGrams} grams`}
+                    </span>
                   </div>
                 )}
                 <div>
-                  <span className="text-muted block text-[11px]">Studio</span>
-                  <span className="font-semibold">Pune &amp; Gurgaon</span>
+                  <span className="text-muted block text-[11px]">Craft Technique</span>
+                  <span className="font-semibold">{product.categoryType === 'shop' ? 'Hand Tufted & Carved' : `${product.printMinutes} mins (slow-cured)`}</span>
+                </div>
+                <div>
+                  <span className="text-muted block text-[11px]">Workshop</span>
+                  <span className="font-semibold">QADRI Studios, India</span>
                 </div>
                 <div>
                   <span className="text-muted block text-[11px]">Material</span>
-                  <span className="font-semibold">Precision PLA+ Composite</span>
+                  <span className="font-semibold">{product.categoryType === 'shop' ? 'Wool & Fiber Blend' : 'Precision PLA+ Composite'}</span>
                 </div>
                 <div>
-                  <span className="text-muted block text-[11px]">Certificate</span>
-                  <span className="font-semibold">Numbered Authenticity</span>
+                  <span className="text-muted block text-[11px]">Assurance</span>
+                  <span className="font-semibold">{product.categoryType === 'shop' ? 'Commercial Grade Durability' : 'Numbered Authenticity'}</span>
                 </div>
               </div>
             </div>

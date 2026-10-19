@@ -23,18 +23,21 @@ function ShopContent() {
     if (queryParam) setSearchFilter(queryParam);
   }, [queryParam]);
 
+  const counts = useMemo(() => {
+    return {
+      all: COLLECTIBLES.length,
+      cafe: COLLECTIBLES.filter(p => p.category === 'cafe').length,
+      deskmate: COLLECTIBLES.filter(p => p.category === 'deskmate').length,
+      keychains: COLLECTIBLES.filter(p => p.category === 'keychains').length,
+    };
+  }, []);
+
   const filteredProducts = useMemo(() => {
     let list = [...COLLECTIBLES];
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      if (selectedCategory === 'cafe') {
-        list = list.filter(p => p.category === 'cafe' || p.themes.includes('motorcycle') || p.slug.includes('drift') || p.slug.includes('pitstop'));
-      } else if (selectedCategory === 'deskmate') {
-        list = list.filter(p => p.category === 'deskmate' || p.category === 'home_decor' || p.slug.includes('vault') || p.slug.includes('clock') || p.slug.includes('calendar') || p.slug.includes('organizer'));
-      } else if (selectedCategory === 'keychains') {
-        list = list.filter(p => p.category === 'keychains' || p.slug.includes('lazy') || p.slug.includes('zip') || p.slug.includes('cookie') || p.slug.includes('wizard') || p.slug.includes('shelldon'));
-      }
+      list = list.filter(p => p.category === selectedCategory);
     }
 
     // Filter by search query
@@ -43,15 +46,17 @@ function ShopContent() {
       list = list.filter(p =>
         p.name.toLowerCase().includes(q) ||
         p.tagline.toLowerCase().includes(q) ||
-        p.story.toLowerCase().includes(q)
+        p.story.toLowerCase().includes(q) ||
+        (p.themes && p.themes.some(t => t.toLowerCase().includes(q))) ||
+        (p.colorways && p.colorways.some(c => c.toLowerCase().includes(q)))
       );
     }
 
     // Sort
-    if (sortBy === 'price-low') {
-      list.sort((a, b) => a.pricePaise - b.pricePaise);
-    } else if (sortBy === 'price-high') {
-      list.sort((a, b) => b.pricePaise - a.pricePaise);
+    if (sortBy === 'name-asc') {
+      list.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortBy === 'name-desc') {
+      list.sort((a, b) => b.name.localeCompare(a.name));
     } else if (sortBy === 'newest') {
       list.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
     }
@@ -83,7 +88,7 @@ function ShopContent() {
                 selectedCategory === 'all' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
               }`}
             >
-              All Rugs ({COLLECTIBLES.length})
+              All Rugs ({counts.all})
             </button>
             <button
               onClick={() => setSelectedCategory('cafe')}
@@ -91,7 +96,7 @@ function ShopContent() {
                 selectedCategory === 'cafe' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
               }`}
             >
-              Custom &amp; Tufted
+              Custom &amp; Tufted ({counts.cafe})
             </button>
             <button
               onClick={() => setSelectedCategory('deskmate')}
@@ -99,7 +104,7 @@ function ShopContent() {
                 selectedCategory === 'deskmate' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
               }`}
             >
-              Luxury &amp; Area
+              Luxury &amp; Area ({counts.deskmate})
             </button>
             <button
               onClick={() => setSelectedCategory('keychains')}
@@ -107,7 +112,7 @@ function ShopContent() {
                 selectedCategory === 'keychains' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
               }`}
             >
-              Commercial &amp; B2B
+              Commercial &amp; B2B ({counts.keychains})
             </button>
           </div>
 
@@ -120,10 +125,10 @@ function ShopContent() {
               className="o-chip !py-1.5 !px-3 text-xs bg-surface-2 border border-app cursor-pointer"
               style={{ borderColor: 'var(--border)' }}
             >
-              <option value="featured">Featured collections</option>
-              <option value="price-low">Price: Low to High</option>
-              <option value="price-high">Price: High to Low</option>
-              <option value="newest">Latest designs</option>
+              <option value="featured">Featured designs</option>
+              <option value="name-asc">Name: A to Z</option>
+              <option value="name-desc">Name: Z to A</option>
+              <option value="newest">Latest additions</option>
             </select>
           </div>
         </div>

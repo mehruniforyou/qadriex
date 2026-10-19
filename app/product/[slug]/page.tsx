@@ -11,13 +11,13 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const product = getProductBySlug(params.slug);
-  if (!product) return { title: 'Collectible Not Found · Oruky' };
+  if (!product) return { title: 'Product Not Found · QADRI' };
 
   return {
-    title: `${product.name} — ${product.tagline} · Oruky`,
+    title: `${product.name} — ${product.tagline} · QADRI`,
     description: product.tagline || product.story.slice(0, 160),
     openGraph: {
-      title: `${product.name} — ${product.tagline} · Oruky`,
+      title: `${product.name} — ${product.tagline} · QADRI`,
       description: product.tagline,
       images: [product.localImageUrl || product.imageUrl],
     },

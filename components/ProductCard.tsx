@@ -32,11 +32,11 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
           {product.categoryType === 'frames' ? (
             <span className="o-chip !text-[10px] !py-1 !px-2.5 bg-black/60 text-white backdrop-blur-md border-0">
-              3D Frame
+              Paper Bag
             </span>
           ) : (
             <span className="o-chip !text-[10px] !py-1 !px-2.5 bg-black/60 text-white backdrop-blur-md border-0 capitalize">
-              {product.category}
+              {product.category === 'cafe' ? 'Custom & Tufted' : product.category === 'deskmate' ? 'Luxury & Area' : product.category === 'keychains' ? 'Commercial & B2B' : 'Handcrafted Rug'}
             </span>
           )}
           {product.isPreorder && (
@@ -46,19 +46,21 @@ export default function ProductCard({ product }: ProductCardProps) {
           )}
         </div>
 
-        {/* Quick Add Overlay Button */}
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            addToCart(product);
-          }}
-          className="absolute bottom-3 right-3 p-2.5 rounded-full bg-surface text-text shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-200 hover:scale-110 cursor-pointer"
-          aria-label={`Add ${product.name} to cart`}
-          title="Quick add to cart"
-        >
-          <ShoppingBag className="w-4 h-4" />
-        </button>
+        {/* Quick Add Overlay Button (Frames only) */}
+        {product.categoryType === 'frames' && (
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              addToCart(product);
+            }}
+            className="absolute bottom-3 right-3 p-2.5 rounded-full bg-surface text-text shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-200 hover:scale-110 cursor-pointer"
+            aria-label={`Add ${product.name} to cart`}
+            title="Quick add to cart"
+          >
+            <ShoppingBag className="w-4 h-4" />
+          </button>
+        )}
       </Link>
 
       {/* Product Content */}
@@ -78,15 +80,22 @@ export default function ProductCard({ product }: ProductCardProps) {
             {product.dimensionsMm && (
               <span className="inline-flex items-center gap-1">
                 <Box className="w-3 h-3" />
-                {product.dimensionsMm.w}×{product.dimensionsMm.h} mm
+                {product.categoryType === 'shop'
+                  ? `${(product.dimensionsMm.w / 1000).toFixed(1)}m × ${(product.dimensionsMm.h / 1000).toFixed(1)}m`
+                  : `${product.dimensionsMm.w}×${product.dimensionsMm.h} mm`}
               </span>
             )}
-            {product.printMinutes > 0 && (
+            {product.categoryType === 'shop' ? (
+              <span className="inline-flex items-center gap-1">
+                <Clock className="w-3 h-3" />
+                Artisan Hand-Tufted
+              </span>
+            ) : product.printMinutes > 0 ? (
               <span className="inline-flex items-center gap-1">
                 <Clock className="w-3 h-3" />
                 {product.printMinutes} min
               </span>
-            )}
+            ) : null}
           </div>
         </div>
 
@@ -94,23 +103,33 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="pt-4 mt-3 border-t border-app flex items-center justify-between" style={{ borderColor: 'var(--border)' }}>
           <div>
             <div className="flex items-baseline gap-2">
-              <span className="font-bold text-base md:text-lg">
-                ₹{product.pricePaise / 100}
-              </span>
-              {hasDiscount && (
-                <span className="text-xs text-muted line-through">
-                  ₹{product.compareAtPaise! / 100}
+              {product.categoryType === 'shop' || product.pricePaise === 0 ? (
+                <span className="font-bold text-sm sm:text-base text-primary">
+                  Request Quote
                 </span>
+              ) : (
+                <>
+                  <span className="font-bold text-base md:text-lg">
+                    ₹{product.pricePaise / 100}
+                  </span>
+                  {hasDiscount && (
+                    <span className="text-xs text-muted line-through">
+                      ₹{product.compareAtPaise! / 100}
+                    </span>
+                  )}
+                </>
               )}
             </div>
-            <span className="text-[10px] text-mint font-semibold">Free Shipping</span>
+            <span className="text-[10px] text-muted font-medium">
+              {product.categoryType === 'shop' ? 'B2B Wholesale Catalog' : 'Free Shipping'}
+            </span>
           </div>
 
           <Link
             href={href}
-            className="o-btn-ghost !py-1.5 !px-3 !text-xs gap-1"
+            className="o-btn-ghost !py-1.5 !px-3 !text-xs gap-1 font-semibold"
           >
-            View <ArrowRight className="w-3 h-3" />
+            {product.categoryType === 'shop' ? 'Request Quote' : 'View'} <ArrowRight className="w-3 h-3" />
           </Link>
         </div>
       </div>
