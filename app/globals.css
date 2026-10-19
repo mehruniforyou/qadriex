@@ -17,50 +17,17 @@
   text-shadow: 0 2px 14px rgba(0,0,0,0.95), 0 0 4px rgba(0,0,0,0.9) !important;
 }
 
-/* Header scroll hide/collapse animations */
-.site-header {
+/* Header styling - only the top bar is sticky */
+.site-header-top {
   transition: box-shadow 0.2s ease;
 }
-.site-header.is-scrolled {
-  box-shadow: 0 6px 24px -16px rgba(0, 0, 0, 0.18) !important;
+.site-header-top.is-scrolled {
+  box-shadow: 0 4px 20px -10px rgba(0, 0, 0, 0.15) !important;
 }
 .header-top-row {
   justify-content: space-between;
   align-items: center;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  transition: padding-top 0.22s ease, padding-bottom 0.22s ease;
   display: flex;
-}
-.site-header.is-scrolled .header-top-row {
-  padding-top: 9px !important;
-  padding-bottom: 9px !important;
-}
-.header-nav-outer {
-  position: relative;
-  overflow: hidden;
-  max-height: 80px;
-  transition: max-height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
-}
-.site-header.is-scrolled .header-nav-outer {
-  height: 0 !important;
-  max-height: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-.header-nav-rail {
-  opacity: 1;
-  will-change: transform, opacity;
-  padding-bottom: 12px;
-  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.18s ease;
-  transform: translateY(0);
-}
-.site-header.is-scrolled .header-nav-rail {
-  opacity: 0 !important;
-  pointer-events: none !important;
-  transform: translateY(-110%) !important;
 }
 
 html, body {

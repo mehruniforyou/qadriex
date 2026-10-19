@@ -21,16 +21,15 @@ export default function Header() {
 
   const isPaperBags = pathname?.startsWith('/paper-bags') || pathname?.startsWith('/frames');
 
-  // Handle scroll to collapse sub-navigation rail
+  // Handle subtle elevation shadow on sticky top bar when scrolled
   useEffect(() => {
     function handleScroll() {
       const headerEl = headerRef.current;
       if (!headerEl) return;
-      const t = window.scrollY;
       const isScrolled = headerEl.classList.contains('is-scrolled');
-      if (!isScrolled && t > 50) {
+      if (!isScrolled && window.scrollY > 15) {
         headerEl.classList.add('is-scrolled');
-      } else if (isScrolled && t < 16) {
+      } else if (isScrolled && window.scrollY <= 15) {
         headerEl.classList.remove('is-scrolled');
       }
     }
@@ -70,17 +69,19 @@ export default function Header() {
   };
 
   return (
-    <header
-      ref={headerRef}
-      className="site-header sticky top-0 z-50 backdrop-blur-xl"
-      style={{
-        background: 'color-mix(in srgb, var(--bg) 86%, transparent)',
-        borderBottom: '1px solid var(--border)',
-      }}
-    >
-      <div className="o-container">
-        {/* Top Header Row */}
-        <div className="header-top-row flex items-center justify-between gap-4">
+    <header className="site-header">
+      {/* 1. Only this part is sticked at top */}
+      <div
+        ref={headerRef}
+        className="site-header-top sticky top-0 z-50 backdrop-blur-xl"
+        style={{
+          background: 'color-mix(in srgb, var(--bg) 86%, transparent)',
+          borderBottom: '1px solid var(--border)',
+        }}
+      >
+        <div className="o-container">
+          {/* Top Header Row */}
+          <div className="header-top-row flex items-center justify-between py-3.5 gap-4">
           {/* Logo */}
           <Link href="/" aria-label="Qadri home" className="flex items-center shrink-0">
             <img
@@ -248,9 +249,52 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Sub-Navigation Rail */}
-        <div className="header-nav-outer">
-          <nav aria-label="Primary" className="header-nav-rail hidden md:flex items-center justify-center">
+        {/* Mobile Slide-down Drawer (inside sticky top container) */}
+        {mobileMenuOpen && (
+          <div
+            className="md:hidden py-4 border-t border-app space-y-3"
+            style={{ borderColor: 'var(--border)' }}
+          >
+            <div className="grid grid-cols-2 gap-2">
+              <Link
+                href="/paper-bags"
+                className="o-card p-3 text-center font-bold text-sm"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Paper Bags
+              </Link>
+              <Link
+                href="/shop"
+                className="o-card p-3 text-center font-bold text-sm"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Rugs
+              </Link>
+            </div>
+            <div className="flex flex-col space-y-2 text-sm pt-2">
+              <Link href="/about" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>About QADRI</Link>
+              <Link href="/bulk-orders" className="px-2 py-1.5 hover:underline font-semibold" onClick={() => setMobileMenuOpen(false)}>Bulk Orders &amp; Exports</Link>
+              <Link href="/b2b" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>B2B Commercial</Link>
+              <Link href="/paper-bags" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>Paper Bags Collection</Link>
+              <Link href="/shop" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>Rugs Collection</Link>
+              <Link href="/contact" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+
+    {/* 2. Sub-Navigation Rail - Normal document flow, NOT sticky (scrolls naturally with page) */}
+    <div
+      className="site-header-nav relative z-40 hidden md:block"
+      style={{
+        background: 'var(--bg)',
+        borderBottom: '1px solid var(--border)',
+      }}
+    >
+      <div className="o-container">
+        <div className="header-nav-outer py-2.5">
+          <nav aria-label="Primary" className="header-nav-rail flex items-center justify-center">
             {isPaperBags ? (
               <ul className="flex items-center gap-7 lg:gap-9 text-[13px] font-semibold tracking-tight">
                 <li>
@@ -388,40 +432,8 @@ export default function Header() {
             )}
           </nav>
         </div>
-
-        {/* Mobile Slide-down Drawer */}
-        {mobileMenuOpen && (
-          <div
-            className="md:hidden py-4 border-t border-app space-y-3"
-            style={{ borderColor: 'var(--border)' }}
-          >
-            <div className="grid grid-cols-2 gap-2">
-              <Link
-                href="/paper-bags"
-                className="o-card p-3 text-center font-bold text-sm"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Paper Bags
-              </Link>
-              <Link
-                href="/shop"
-                className="o-card p-3 text-center font-bold text-sm"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Rugs
-              </Link>
-            </div>
-            <div className="flex flex-col space-y-2 text-sm pt-2">
-              <Link href="/about" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>About QADRI</Link>
-              <Link href="/bulk-orders" className="px-2 py-1.5 hover:underline font-semibold" onClick={() => setMobileMenuOpen(false)}>Bulk Orders &amp; Exports</Link>
-              <Link href="/b2b" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>B2B Commercial</Link>
-              <Link href="/paper-bags" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>Paper Bags Collection</Link>
-              <Link href="/shop" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>Rugs Collection</Link>
-              <Link href="/contact" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-            </div>
-          </div>
-        )}
       </div>
-    </header>
+    </div>
+  </header>
   );
 }
