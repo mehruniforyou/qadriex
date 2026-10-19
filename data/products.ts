@@ -598,7 +598,7 @@ export const PRODUCTS: Product[] = [
         "question": "What is KedarPath made of?"
       },
       {
-        "answer": "KedarPath is our Kedarnath edition. For another route — Char Dham, Amarnath, Valley of Flowers, or Everest Base Camp — our bespoke service can model it from the route's terrain data. Email oruky@adalwin.com to commission one.",
+        "answer": "KedarPath is our Kedarnath edition. For another route — Char Dham, Amarnath, Valley of Flowers, or Everest Base Camp — our bespoke service can model it from the route's terrain data. Email contact@qadriex.com to commission one.",
         "question": "Can I get a custom trek — Char Dham, Amarnath, or Everest Base Camp?"
       }
     ],

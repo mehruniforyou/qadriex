@@ -194,8 +194,7 @@ export default function PortalPage() {
         style={{ color: 'var(--text-muted)', borderTop: '1px solid var(--border)' }}
       >
         <span className="whitespace-nowrap">
-          © 2026 Qadri
-          <span className="hidden sm:inline"> · Adalwin Commerce™ LLP · Pune &amp; Gurgaon</span>
+          © 2026 Qadri. All rights reserved.
         </span>
         <nav className="flex gap-4">
           <Link className="hover:underline" href="/about">About</Link>

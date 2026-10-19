@@ -32,8 +32,8 @@ export default function ReturnsPolicyPage() {
           </p>
           <p className="mt-3">
             Please use the product page details, dimensions, and photos to make sure it&apos;s the right fit before ordering. If you&apos;re unsure, email{' '}
-            <a href="mailto:oruky@adalwin.com" className="text-primary font-semibold hover:underline">
-              oruky@adalwin.com
+            <a href="mailto:contact@qadriex.com" className="text-primary font-semibold hover:underline">
+              contact@qadriex.com
             </a>{' '}
             — we reply in under 4 hours during launch week.
           </p>
@@ -45,8 +45,8 @@ export default function ReturnsPolicyPage() {
           </h2>
           <p>
             If your Oruky arrives damaged, send a photo to{' '}
-            <a href="mailto:oruky@adalwin.com" className="text-primary font-semibold hover:underline">
-              oruky@adalwin.com
+            <a href="mailto:contact@qadriex.com" className="text-primary font-semibold hover:underline">
+              contact@qadriex.com
             </a>{' '}
             within <strong className="text-text">48 hours of delivery</strong>. We&apos;ll queue a reprint and ship a replacement at no charge — usually back in your hands within 5-7 business days.
           </p>
@@ -79,7 +79,7 @@ export default function ReturnsPolicyPage() {
           </p>
           <p className="mt-3 font-semibold text-text">To claim a lifetime reprint:</p>
           <ol className="list-decimal pl-6 space-y-2 mt-2">
-            <li>Email <a href="mailto:oruky@adalwin.com" className="text-primary font-semibold hover:underline">oruky@adalwin.com</a> with a photo of the broken Oruky and your original order number.</li>
+            <li>Email <a href="mailto:contact@qadriex.com" className="text-primary font-semibold hover:underline">contact@qadriex.com</a> with a photo of the broken Oruky and your original order number.</li>
             <li>We confirm the design is still on file (everything from April 2026 onwards is).</li>
             <li>You pay ₹150 + shipping via the link we send.</li>
           </ol>

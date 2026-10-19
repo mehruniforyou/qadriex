@@ -22,7 +22,7 @@ export default function ContactPage() {
           We&apos;d love to hear from you
         </span>
         <h1 className="o-display text-4xl md:text-6xl font-bold tracking-tight mt-4 leading-[1.05]">
-          Contact Oruky
+          Contact Qadri
         </h1>
         <p className="text-lg text-muted mt-4 leading-relaxed">
           One inbox, one team, one fast reply. We answer most messages within four business hours.
@@ -47,15 +47,15 @@ export default function ContactPage() {
               One address handles everything: order help, lifetime-reprint claims, B2B and bulk inquiries, press, partnerships. Replies typically land within 4 business hours during launch week.
             </p>
             <a
-              href="mailto:oruky@adalwin.com"
+              href="mailto:contact@qadriex.com"
               className="o-btn-primary inline-flex items-center gap-2 mt-5 self-start"
             >
-              <Mail className="w-4 h-4" /> oruky@adalwin.com
+              <Mail className="w-4 h-4" /> contact@qadriex.com
             </a>
           </div>
           <p className="text-xs text-muted mt-6">
             For order-specific questions, please include your order ID (e.g.{' '}
-            <span className="font-mono font-semibold">ORK-XXXXXXXX</span>) in the subject line — speeds us up considerably.
+            <span className="font-mono font-semibold">QAD-XXXXXXXX</span>) in the subject line — speeds us up considerably.
           </p>
         </div>
 
@@ -70,7 +70,7 @@ export default function ContactPage() {
             </span>
             <h2 className="o-display text-xl font-bold mt-4">Direct WhatsApp &amp; Phone</h2>
             <p className="text-xs text-muted mt-2 leading-relaxed">
-              Chat directly with our studio founders regarding custom drops or quick queries.
+              Chat directly with our team regarding custom catalog runs or quick inquiries.
             </p>
             <a
               href="https://wa.me/918521122231"
@@ -83,7 +83,7 @@ export default function ContactPage() {
           </div>
 
           <div className="pt-6 border-t border-app mt-6" style={{ borderColor: 'var(--border)' }}>
-            <span className="text-xs text-muted block">Studio Hours:</span>
+            <span className="text-xs text-muted block">Office Hours:</span>
             <span className="text-xs font-semibold">Mon–Sat: 10:00 AM – 7:00 PM IST</span>
           </div>
         </div>
@@ -96,17 +96,16 @@ export default function ContactPage() {
           </div>
           <div className="grid sm:grid-cols-2 gap-6 mt-4 text-xs text-muted leading-relaxed">
             <div>
-              <b className="text-text block text-sm mb-1">Registered Office &amp; Pune Studio</b>
-              Adalwin Commerce LLP<br />
-              302, Unity Paradise, Behind Krome Mall<br />
-              BT Kawade Road, Raskar Nagar, Pune 411013, Maharashtra, India<br />
-              <span className="font-mono mt-1 block">GSTIN: 27ABZFA4553G1ZZ</span>
+              <b className="text-text block text-sm mb-1">Corporate Office &amp; Pune Studio</b>
+              QADRI<br />
+              Krome Business District<br />
+              BT Kawade Road, Pune 411013, Maharashtra, India
             </div>
             <div>
-              <b className="text-text block text-sm mb-1">Gurgaon Print Hub</b>
-              DLF Cyber City &amp; Golf Course Extension Corridor<br />
+              <b className="text-text block text-sm mb-1">Manufacturing &amp; Dispatch Hub</b>
+              DLF Cyber City Corridor<br />
               Gurgaon 122002, Haryana, India<br />
-              Specializing in high-volume multi-colour AMS Bambu Lab print queues.
+              Specializing in high-volume utility paper bags and artisan luxury rugs.
             </div>
           </div>
         </div>

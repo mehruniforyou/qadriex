@@ -27,8 +27,7 @@ export default function TermsPolicyPage() {
             1. Who you&apos;re dealing with
           </h2>
           <p>
-            The brand <strong className="text-text">Oruky</strong> is operated by{' '}
-            <strong className="text-text">Adalwin Commerce LLP</strong> (registered in Pune, Maharashtra, India; GSTIN: 27ABZFA4553G1ZZ), an affiliate of Adalwin Group.
+            The brand <strong className="text-text">Qadri</strong> specializes in custom manufacturing of utility paper bags and bespoke luxury rugs in India.
           </p>
         </div>
 

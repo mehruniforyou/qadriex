@@ -41,25 +41,7 @@ export default function AboutPage() {
 
         <div className="prose prose-lg mt-10 space-y-5 leading-relaxed text-muted">
           <p>
-            Oruky is a rider-led 3D-printing studio for enthusiast collectibles, operated by{' '}
-            <a
-              href="https://adalwin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: 'var(--text)', fontWeight: 700 }}
-            >
-              Adalwin Commerce™ LLP
-            </a>{' '}
-            — part of{' '}
-            <a
-              href="https://adalwingroup.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: 'var(--text)', fontWeight: 700 }}
-            >
-              Adalwin Group
-            </a>{' '}
-            — with workshops in <b>Pune</b> and <b>Gurgaon, India</b>. We lead with <b>The Café</b> — cafe-racer silhouettes, vintage-bike pieces, helmet display stands, and ride-club gift tags — because that’s the world the founder lives in. Sister tribes are <b>The Garage</b> (cars), <b>The Wall</b> (original-IP figures in the visual language of fandoms), and <b>Studio Classics</b>, the heritage line of original characters Oruky started with. For collectors who want something that doesn’t exist yet, we run <b>bespoke 1-of-1 commissions</b> on a four-week lead.
+            Qadri is an Indian design and manufacturing studio specializing in brand-customised utility paper bags and bespoke handcrafted luxury rugs, with workshops in <b>Pune</b> and <b>Gurgaon, India</b>. For corporate partners and retail brands, we deliver high-capacity custom packaging and bespoke artisan rugs designed for distinction and durability.
           </p>
 
           <p>

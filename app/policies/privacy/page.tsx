@@ -66,8 +66,8 @@ export default function PrivacyPolicyPage() {
           </h2>
           <p>
             You have the right to request access to the personal data we hold about you, or ask us to delete your customer profile, by emailing{' '}
-            <a href="mailto:oruky@adalwin.com" className="text-primary font-semibold hover:underline">
-              oruky@adalwin.com
+            <a href="mailto:contact@qadriex.com" className="text-primary font-semibold hover:underline">
+              contact@qadriex.com
             </a>.
           </p>
         </div>
