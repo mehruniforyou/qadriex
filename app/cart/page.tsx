@@ -14,11 +14,11 @@ export default function CartPage() {
 
   const handleApplyCoupon = (e: React.FormEvent) => {
     e.preventDefault();
-    if (coupon.trim().toUpperCase() === 'ORUKY10') {
+    if (coupon.trim().toUpperCase() === 'QADRI10') {
       setAppliedDiscount(10);
       setCouponError('');
     } else {
-      setCouponError('Invalid coupon code. Try ORUKY10 for 10% off.');
+      setCouponError('Invalid coupon code. Try QADRI10 for 10% off.');
     }
   };
 
@@ -26,7 +26,7 @@ export default function CartPage() {
   const totalPaise = subtotalPaise - discountAmount;
 
   const handleCheckout = () => {
-    const generatedId = `ORK-${Math.floor(10000000 + Math.random() * 90000000)}`;
+    const generatedId = `QAD-${Math.floor(10000000 + Math.random() * 90000000)}`;
     setOrderSuccess(generatedId);
     clearCart();
   };
@@ -39,25 +39,25 @@ export default function CartPage() {
         </div>
         <h1 className="o-display text-3xl font-bold">Order Confirmed!</h1>
         <p className="text-sm text-muted">
-          Your order <span className="font-mono font-bold text-text">{orderSuccess}</span> has entered our studio print queue. We have sent tracking and confirmation details to your email.
+          Your order <span className="font-mono font-bold text-text">{orderSuccess}</span> has entered our production queue. We have sent tracking and confirmation details to your email.
         </p>
         <div className="p-5 rounded-2xl bg-surface-2 text-xs text-muted text-left space-y-2">
           <div className="flex justify-between">
             <span>Status:</span>
-            <span className="text-mint font-semibold">Queued on Bambu Lab P2S</span>
+            <span className="text-mint font-semibold">Dispatched to QADRI Production Facility</span>
           </div>
           <div className="flex justify-between">
             <span>Estimated Dispatch:</span>
-            <span className="font-semibold text-text">3–4 business days</span>
+            <span className="font-semibold text-text">3–5 business days</span>
           </div>
           <div className="flex justify-between">
             <span>Shipping:</span>
-            <span className="font-semibold text-text">Free BlueDart / Delhivery Express</span>
+            <span className="font-semibold text-text">Express Air / Surface Logistics</span>
           </div>
         </div>
         <div className="pt-4">
-          <Link href="/frames" className="o-btn-primary">
-            Explore More Pieces
+          <Link href="/paper-bags" className="o-btn-primary">
+            Explore More Products
           </Link>
         </div>
       </div>
@@ -69,7 +69,7 @@ export default function CartPage() {
       <header className="o-container max-w-5xl">
         <h1 className="o-display text-3xl sm:text-4xl md:text-5xl font-bold">Your Cart</h1>
         <p className="text-sm text-muted mt-1">
-          Review your Oruky collectibles and check out. Made to order — 12–15 days for delivery.
+          Review your selected items and request production or dispatch. Made to order & export grade.
         </p>
       </header>
 
@@ -81,14 +81,14 @@ export default function CartPage() {
             </div>
             <h2 className="o-display font-bold text-xl">Your cart is empty</h2>
             <p className="text-xs text-muted max-w-xs mx-auto leading-relaxed">
-              There&apos;s always something new running in the printer. Pick your favourite piece.
+              Explore our premium Kraft Paper Bags or Hand-tufted Export Rugs catalog.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
-              <Link href="/frames" className="o-btn-primary">
-                Browse 3D Frames
+              <Link href="/paper-bags" className="o-btn-primary">
+                Browse Paper Bags
               </Link>
               <Link href="/shop" className="o-btn-ghost">
-                Browse Collectibles
+                Browse Rugs Collection
               </Link>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function CartPage() {
                         <div className="flex items-start justify-between gap-2">
                           <div>
                             <Link
-                              href={item.product.categoryType === 'frames' ? `/frames/product/${item.product.slug}` : `/product/${item.product.slug}`}
+                              href={item.product.categoryType === 'paper-bags' || item.product.categoryType === 'frames' ? `/paper-bags/product/${item.product.slug}` : `/product/${item.product.slug}`}
                               className="font-bold text-base sm:text-lg hover:underline truncate block"
                             >
                               {item.product.name}
@@ -196,7 +196,7 @@ export default function CartPage() {
                   <div className="flex gap-2">
                     <input
                       type="text"
-                      placeholder="Promo code (e.g. ORUKY10)"
+                      placeholder="Promo code (e.g. QADRI10)"
                       value={coupon}
                       onChange={(e) => setCoupon(e.target.value)}
                       className="o-input !py-2 text-xs uppercase font-mono"

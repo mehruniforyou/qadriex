@@ -19,7 +19,7 @@ export default function Header() {
   const headerRef = useRef<HTMLElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
 
-  const isFrames = pathname?.startsWith('/frames');
+  const isPaperBags = pathname?.startsWith('/paper-bags') || pathname?.startsWith('/frames');
 
   // Handle scroll to collapse sub-navigation rail
   useEffect(() => {
@@ -251,19 +251,19 @@ export default function Header() {
         {/* Sub-Navigation Rail */}
         <div className="header-nav-outer">
           <nav aria-label="Primary" className="header-nav-rail hidden md:flex items-center justify-center">
-            {isFrames ? (
+            {isPaperBags ? (
               <ul className="flex items-center gap-7 lg:gap-9 text-[13px] font-semibold tracking-tight">
                 <li>
                   <Link
                     className="relative inline-block py-1 group transition-colors duration-200"
-                    style={{ color: pathname === '/frames' ? 'var(--text)' : 'var(--text-muted)' }}
-                    href="/frames"
+                    style={{ color: pathname === '/paper-bags' || pathname === '/frames' ? 'var(--text)' : 'var(--text-muted)' }}
+                    href="/paper-bags"
                   >
                     <span className="group-hover:text-app transition-colors duration-200">All Paper Bags</span>
                     <span
                       aria-hidden="true"
                       className={`pointer-events-none absolute left-0 right-0 -bottom-0.5 h-[1.5px] origin-left transition-transform duration-300 ${
-                        pathname === '/frames' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                        pathname === '/paper-bags' || pathname === '/frames' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                       }`}
                       style={{ background: 'var(--primary)' }}
                     />
@@ -272,14 +272,14 @@ export default function Header() {
                 <li>
                   <Link
                     className="relative inline-block py-1 group transition-colors duration-200"
-                    style={{ color: pathname === '/frames/bundles' ? 'var(--text)' : 'var(--text-muted)' }}
-                    href="/frames/bundles"
+                    style={{ color: pathname === '/bulk-orders' ? 'var(--text)' : 'var(--text-muted)' }}
+                    href="/bulk-orders"
                   >
                     <span className="group-hover:text-app transition-colors duration-200">Bulk &amp; Custom</span>
                     <span
                       aria-hidden="true"
                       className={`pointer-events-none absolute left-0 right-0 -bottom-0.5 h-[1.5px] origin-left transition-transform duration-300 ${
-                        pathname === '/frames/bundles' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                        pathname === '/bulk-orders' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                       }`}
                       style={{ background: 'var(--primary)' }}
                     />
@@ -291,10 +291,12 @@ export default function Header() {
                     style={{ color: pathname === '/b2b' ? 'var(--text)' : 'var(--text-muted)' }}
                     href="/b2b"
                   >
-                    <span className="group-hover:text-app transition-colors duration-200">Brand Inquiries</span>
+                    <span className="group-hover:text-app transition-colors duration-200">Export &amp; B2B</span>
                     <span
                       aria-hidden="true"
-                      className="pointer-events-none absolute left-0 right-0 -bottom-0.5 h-[1.5px] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                      className={`pointer-events-none absolute left-0 right-0 -bottom-0.5 h-[1.5px] origin-left transition-transform duration-300 ${
+                        pathname === '/b2b' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                      }`}
                       style={{ background: 'var(--primary)' }}
                     />
                   </Link>
@@ -359,13 +361,15 @@ export default function Header() {
                 <li>
                   <Link
                     className="relative inline-block py-1 group transition-colors duration-200"
-                    style={{ color: 'var(--text-muted)' }}
-                    href="/shop?c=keychains"
+                    style={{ color: pathname === '/bulk-orders' ? 'var(--text)' : 'var(--text-muted)' }}
+                    href="/bulk-orders"
                   >
-                    <span className="group-hover:text-app transition-colors duration-200">Commercial &amp; B2B</span>
+                    <span className="group-hover:text-app transition-colors duration-200">Wholesale &amp; Export</span>
                     <span
                       aria-hidden="true"
-                      className="pointer-events-none absolute left-0 right-0 -bottom-0.5 h-[1.5px] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                      className={`pointer-events-none absolute left-0 right-0 -bottom-0.5 h-[1.5px] origin-left transition-transform duration-300 ${
+                        pathname === '/bulk-orders' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                      }`}
                       style={{ background: 'var(--primary)' }}
                     />
                   </Link>
@@ -374,7 +378,7 @@ export default function Header() {
                   <Link
                     className="o-chip !h-8 !px-3 !text-[12px] transition font-semibold"
                     style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}
-                    href="/frames"
+                    href="/paper-bags"
                   >
                     <ArrowLeftRight className="w-3 h-3 mr-1" aria-hidden="true" />
                     Paper Bags
@@ -393,7 +397,7 @@ export default function Header() {
           >
             <div className="grid grid-cols-2 gap-2">
               <Link
-                href="/frames"
+                href="/paper-bags"
                 className="o-card p-3 text-center font-bold text-sm"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -409,8 +413,9 @@ export default function Header() {
             </div>
             <div className="flex flex-col space-y-2 text-sm pt-2">
               <Link href="/about" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>About QADRI</Link>
-              <Link href="/b2b" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>B2B &amp; Bulk Orders</Link>
-              <Link href="/frames" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>Paper Bags Collection</Link>
+              <Link href="/bulk-orders" className="px-2 py-1.5 hover:underline font-semibold" onClick={() => setMobileMenuOpen(false)}>Bulk Orders &amp; Exports</Link>
+              <Link href="/b2b" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>B2B Commercial</Link>
+              <Link href="/paper-bags" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>Paper Bags Collection</Link>
               <Link href="/shop" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>Rugs Collection</Link>
               <Link href="/contact" className="px-2 py-1.5 hover:underline" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
             </div>

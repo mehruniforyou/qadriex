@@ -13,7 +13,7 @@ export default function PortalPage() {
   const split = hoveredDoor === 'paper-bags' ? '100%' : hoveredDoor === 'rugs' ? '0%' : '50%';
 
   return (
-    <div className="portal" style={{ background: 'var(--bg)', color: 'var(--text)' }}>
+    <div className="portal w-full max-w-full overflow-x-hidden" style={{ background: 'var(--bg)', color: 'var(--text)' }}>
       {/* Screen-reader H1 */}
       <h1 className="sr-only">Customisable Paper Bags &amp; Rugs for B2B and Brands</h1>
 
@@ -41,10 +41,10 @@ export default function PortalPage() {
       </header>
 
       {/* Portal Doors */}
-      <div className="portal-doors" onMouseLeave={() => setHoveredDoor(null)}>
+      <div className="portal-doors w-full max-w-full overflow-hidden" onMouseLeave={() => setHoveredDoor(null)}>
         {/* Door 1: Paper Bags */}
         <Link
-          href="/frames"
+          href="/paper-bags"
           onMouseEnter={() => setHoveredDoor('paper-bags')}
           className="portal-door group overflow-hidden relative"
           style={{
@@ -69,7 +69,7 @@ export default function PortalPage() {
           <span className="portal-layers" aria-hidden="true" />
           <div className="relative w-full h-full flex items-center md:items-end p-6 sm:p-8 md:px-12 md:pb-16 md:pt-8">
             <div className="relative z-10 max-w-[34rem]">
-              <h2 className="o-display text-5xl lg:text-6xl xl:text-7xl font-bold mt-3 leading-[0.95] tracking-tight whitespace-nowrap text-[#111111] [text-shadow:_0_2px_14px_rgba(255,255,255,0.95)]">
+              <h2 className="o-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mt-3 leading-[0.95] tracking-tight whitespace-nowrap text-[#111111] [text-shadow:_0_2px_14px_rgba(255,255,255,0.95)]">
                 <span className="pl-char" style={{ ['--i' as any]: 0 }}>P</span>
                 <span className="pl-char" style={{ ['--i' as any]: 1 }}>a</span>
                 <span className="pl-char" style={{ ['--i' as any]: 2 }}>p</span>
@@ -124,7 +124,7 @@ export default function PortalPage() {
           <div className="relative w-full h-full flex items-center md:items-end p-6 sm:p-8 md:px-12 md:pb-16 md:pt-8">
             <div className="relative z-10 max-w-[34rem]">
               <h2
-                className="o-display text-5xl lg:text-6xl xl:text-7xl font-bold mt-3 leading-[0.95] tracking-tight whitespace-nowrap rugs-text-white"
+                className="o-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mt-3 leading-[0.95] tracking-tight whitespace-nowrap rugs-text-white"
                 style={{
                   color: '#FFFFFF',
                   textShadow: '0 2px 14px rgba(0,0,0,0.95), 0 0 4px rgba(0,0,0,0.9)',
@@ -196,7 +196,11 @@ export default function PortalPage() {
         <span className="whitespace-nowrap">
           © {new Date().getFullYear()} <b style={{ color: 'var(--text)' }}>Qadri</b>. All rights reserved.
         </span>
-        <nav aria-label="Legal Links" className="flex flex-wrap gap-x-5 gap-y-1 items-center pointer-events-auto">
+        <nav
+          aria-label="Legal Links"
+          className="flex flex-wrap gap-x-6 gap-y-2 items-center pointer-events-auto"
+          style={{ columnGap: '22px', rowGap: '8px' }}
+        >
           <Link className="hover:text-text hover:underline py-1 transition-colors" href="/policies/shipping">Shipping</Link>
           <Link className="hover:text-text hover:underline py-1 transition-colors" href="/policies/returns">Returns</Link>
           <Link className="hover:text-text hover:underline py-1 transition-colors" href="/policies/privacy">Privacy</Link>

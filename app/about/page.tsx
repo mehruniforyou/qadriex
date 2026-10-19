@@ -1,18 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
+import { ArrowRight, Globe2, ShieldCheck, Sparkles, Building2 } from 'lucide-react';
 
 export const metadata = {
-  title: 'About Qadri · the studio · Qadri',
-  description: 'Qadri is a B2B and design studio, operated in Pune & Gurgaon.',
+  title: 'About QADRI · Artisan Rugs & Custom Paper Packaging · India',
+  description: 'QADRI is an Indian manufacturing enterprise and export house specializing in bespoke handcrafted luxury rugs and custom branded utility paper bags.',
 };
 
 export default function AboutPage() {
   return (
     <div className="py-12 md:py-20">
-      <section className="o-container max-w-3xl">
-        <span className="o-chip">About the studio</span>
+      <section className="o-container max-w-3xl space-y-6">
+        <span className="o-chip">About QADRI</span>
 
-        <div className="mt-6">
+        <div className="mt-4">
           <img
             alt="Qadri"
             width={136}
@@ -32,37 +33,56 @@ export default function AboutPage() {
           />
         </div>
 
-        <h1 className="o-display text-4xl md:text-6xl font-bold mt-4 leading-tight">
-          Made for the obsession.
+        <h1 className="o-display text-4xl md:text-5xl lg:text-6xl font-bold mt-4 leading-tight">
+          Two Master Crafts. One Global Standard.
         </h1>
-        <p className="o-hand text-2xl mt-2 text-primary">
-          — a rider-led studio out of Pune &amp; Gurgaon, founded April 2026
+        <p className="text-xl text-primary font-medium">
+          Manufacturer &amp; Exporter of Handcrafted Luxury Rugs &amp; Custom Utility Paper Packaging — Jaipur &amp; Pan-India.
         </p>
 
-        <div className="prose prose-lg mt-10 space-y-5 leading-relaxed text-muted">
+        <div className="space-y-6 mt-8 leading-relaxed text-muted text-base">
           <p>
-            Qadri is an Indian design and manufacturing studio specializing in brand-customised utility paper bags and bespoke handcrafted luxury rugs, with workshops in <b>Pune</b> and <b>Gurgaon, India</b>. For corporate partners and retail brands, we deliver high-capacity custom packaging and bespoke artisan rugs designed for distinction and durability.
+            <b>QADRI</b> is an Indian manufacturing enterprise and certified export house uniting two complementary disciplines under one standard of excellence: <b>artisan-crafted luxury rugs</b> and <b>sustainable, brand-customised utility paper bags</b>.
           </p>
 
           <p>
-            The studio runs on a simple bet. Mass-produced collectibles — diecast, Funko-style figures, dealership freebies — are everywhere. Things you put on the garage shelf and actually look at every day are not. We make those things. One drop at a time, one edition at a time.
+            Founded on the conviction that tactile craftsmanship and commercial utility must go hand in hand, we serve retail chains, luxury hospitality groups, architectural studios, and international importers across India, North America, the United Kingdom, Europe, the Middle East, and Australia.
+          </p>
+
+          <div className="grid sm:grid-cols-2 gap-4 py-4">
+            <div className="o-card p-5 space-y-2">
+              <Sparkles className="w-5 h-5 text-primary" />
+              <h3 className="font-bold text-sm text-text">Artisanal Textile Division</h3>
+              <p className="text-xs text-muted leading-relaxed">
+                Hand-tufted, hand-knotted, and flat-weave carpets crafted in Jaipur, Rajasthan, using 100% pure New Zealand wool, organic dyes, and precision hand-carved relief.
+              </p>
+            </div>
+            <div className="o-card p-5 space-y-2">
+              <Building2 className="w-5 h-5 text-primary" />
+              <h3 className="font-bold text-sm text-text">Packaging Converting Division</h3>
+              <p className="text-xs text-muted leading-relaxed">
+                Heavy-duty virgin kraft paper bags, twisted cord handles, flat handles, and self-opening block-bottom grocery bags manufactured with food-safe inks and export-grade cartons.
+              </p>
+            </div>
+          </div>
+
+          <p>
+            Our manufacturing operations are built around factory-direct transparency. Whether executing a boutique run of 10 bespoke hotel rugs or delivering an export container of 100,000 custom-printed kraft shopping bags, we maintain rigorous quality audits at every stage of converting, weaving, dyeing, and dispatch.
           </p>
 
           <p>
-            Each piece is designed in-house, slow-printed on a <b>Bambu Lab P2S</b> with the AMS 2 Pro multi-material system (up to four colours per piece without manual swaps), checked continuously by an on-device AI camera, and hand-finished. We don’t hold stock — every piece is made to order. Editions are numbered as they leave the studio. Once an edition closes, it does not come back.
+            As a registered Indian exporter (IEC certified), we handle end-to-end trade logistics, sea freight containerization (FCL/LCL), expedited air cargo, and complete export documentation to ensure seamless customs clearance at destination ports worldwide.
           </p>
 
-          <p>
-            We’re a small team. Sameer designs the pieces, runs the printers, and rides on weekends. The studio leads with The Café because that’s the audience the founder is part of — riders who recognise the era a silhouette came from, and want a piece of it on the shelf. We answer every DM and every email. We don’t pay influencers, we don’t discount, and we don’t ship a piece we’re not willing to put on our own shelves.
-          </p>
-
-          <p>
-            If you ride a single, twin, or modern parallel; restore a coupe on weekends; or have a fandom you’d like to honour with something that isn’t at every airport gift shop — you’re who we’re making for.
-          </p>
-
-          <p className="o-hand text-2xl pt-4" style={{ color: 'var(--primary)' }}>
-            Made for the obsession.
-          </p>
+          <div className="pt-6 border-t border-app flex flex-wrap gap-4 items-center justify-between" style={{ borderColor: 'var(--border)' }}>
+            <div>
+              <h4 className="font-bold text-text text-sm">Commercial Inquiries &amp; Trade Desks</h4>
+              <p className="text-xs text-muted">Email: contact@qadriex.com · Phone/WhatsApp: +91 9829062390</p>
+            </div>
+            <Link href="/bulk-orders" className="o-btn-primary gap-2 text-xs font-bold py-2.5 px-5">
+              Explore Bulk Orders <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
       </section>
     </div>

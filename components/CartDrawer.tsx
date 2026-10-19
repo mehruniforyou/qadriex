@@ -88,7 +88,7 @@ export default function CartDrawer() {
                     <div>
                       <div className="flex items-start justify-between gap-2">
                         <Link
-                          href={item.product.categoryType === 'frames' ? `/frames/product/${item.product.slug}` : `/product/${item.product.slug}`}
+                          href={item.product.categoryType === 'frames' ? `/paper-bags/product/${item.product.slug}` : `/product/${item.product.slug}`}
                           onClick={() => setIsCartOpen(false)}
                           className="font-bold text-sm hover:underline truncate"
                         >

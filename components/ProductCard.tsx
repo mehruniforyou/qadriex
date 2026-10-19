@@ -38,7 +38,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const { addToCart } = useCart();
-  const href = product.categoryType === 'frames' ? `/frames/product/${product.slug}` : `/product/${product.slug}`;
+  const href = product.categoryType === 'frames' ? `/paper-bags/product/${product.slug}` : `/product/${product.slug}`;
 
   const hasDiscount = product.compareAtPaise && product.compareAtPaise > product.pricePaise;
 

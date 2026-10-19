@@ -87,7 +87,7 @@ export default function ProductDetailView({ product, relatedProducts }: ProductD
           <Link href="/" className="hover:underline">Home</Link>
           <ChevronRight className="w-3 h-3" />
           <Link
-            href={product.categoryType === 'frames' ? '/frames' : '/shop'}
+            href={product.categoryType === 'frames' ? '/paper-bags' : '/shop'}
             className="hover:underline capitalize"
           >
             {product.categoryType === 'frames' ? 'Paper Bags' : 'Rugs'}

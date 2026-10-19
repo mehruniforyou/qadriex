@@ -62,11 +62,11 @@ export default function Footer() {
         <div>
           <h2 className="o-display text-sm font-semibold mb-4">Paper Bags</h2>
           <ul className="space-y-2 text-sm text-muted">
-            <li><Link href="/frames" className="hover:underline">All Paper Bags</Link></li>
-            <li><Link href="/frames" className="hover:underline">Kraft &amp; Retail Bags</Link></li>
-            <li><Link href="/frames" className="hover:underline">Luxury Matte Bags</Link></li>
-            <li><Link href="/frames" className="hover:underline">B2B Bulk Utility</Link></li>
-            <li><Link href="/frames/bundles" className="hover:underline">Bulk &amp; Wholesale</Link></li>
+            <li><Link href="/paper-bags" className="hover:underline">All Paper Bags</Link></li>
+            <li><Link href="/paper-bags" className="hover:underline">Twisted Handle Bags</Link></li>
+            <li><Link href="/paper-bags" className="hover:underline">Flat Handle Bags</Link></li>
+            <li><Link href="/paper-bags" className="hover:underline">Block Bottom SOS Bags</Link></li>
+            <li><Link href="/bulk-orders" className="hover:underline">Bulk &amp; Wholesale Exports</Link></li>
           </ul>
         </div>
 
@@ -77,7 +77,8 @@ export default function Footer() {
             <li><Link href="/shop" className="hover:underline">All Luxury Rugs</Link></li>
             <li><Link href="/shop?c=cafe" className="hover:underline">Custom &amp; Tufted</Link></li>
             <li><Link href="/shop?c=deskmate" className="hover:underline">Luxury &amp; Area</Link></li>
-            <li><Link href="/shop?c=keychains" className="hover:underline">Commercial &amp; B2B</Link></li>
+            <li><Link href="/shop?c=keychains" className="hover:underline">Commercial &amp; Hospitality</Link></li>
+            <li><Link href="/bulk-orders" className="hover:underline">Contract Rug Manufacturing</Link></li>
           </ul>
         </div>
 
@@ -86,9 +87,9 @@ export default function Footer() {
           <h2 className="o-display text-sm font-semibold mb-4">Company</h2>
           <ul className="space-y-2 text-sm text-muted">
             <li><Link href="/about" className="hover:underline">About QADRI</Link></li>
-            <li><Link href="/b2b" className="hover:underline">B2B &amp; Bulk Orders</Link></li>
-            <li><Link href="/b2b" className="hover:underline">Custom Branding</Link></li>
-            <li><Link href="/contact" className="hover:underline">Contact</Link></li>
+            <li><Link href="/bulk-orders" className="hover:underline">Bulk Orders &amp; Exports</Link></li>
+            <li><Link href="/b2b" className="hover:underline">B2B Manufacturing</Link></li>
+            <li><Link href="/contact" className="hover:underline">Contact Us</Link></li>
           </ul>
         </div>
 
