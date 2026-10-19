@@ -60,7 +60,15 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
           {product.categoryType === 'frames' ? (
             <span className="o-chip !text-[10px] !py-1 !px-2.5 bg-black/60 text-white backdrop-blur-md border-0">
-              Paper Bag
+              {product.category === 'twisted-handle'
+                ? 'Twisted Handle'
+                : product.category === 'flat-handle'
+                ? 'Flat Handle'
+                : product.category === 'handleless'
+                ? 'Block Bottom'
+                : product.category === 'customise-completely'
+                ? 'Bespoke Custom'
+                : 'Paper Bag'}
             </span>
           ) : (
             <span className="o-chip !text-[10px] !py-1 !px-2.5 bg-black/60 text-white backdrop-blur-md border-0 capitalize">
@@ -110,13 +118,18 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <Box className="w-3 h-3" />
                 {product.categoryType === 'shop'
                   ? `${(product.dimensionsMm.w / 1000).toFixed(1)}m × ${(product.dimensionsMm.h / 1000).toFixed(1)}m`
-                  : `${product.dimensionsMm.w}×${product.dimensionsMm.h} mm`}
+                  : `${product.dimensionsMm.w}×${product.dimensionsMm.d || 0}×${product.dimensionsMm.h} mm`}
               </span>
             )}
             {product.categoryType === 'shop' ? (
               <span className="inline-flex items-center gap-1">
                 <Clock className="w-3 h-3" />
                 Artisan Hand-Tufted
+              </span>
+            ) : product.categoryType === 'frames' ? (
+              <span className="inline-flex items-center gap-1">
+                <Clock className="w-3 h-3" />
+                High-GSM Kraft
               </span>
             ) : product.printMinutes > 0 ? (
               <span className="inline-flex items-center gap-1">
@@ -150,7 +163,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 )}
               </div>
               <span className="text-[10px] text-muted font-medium block">
-                {product.categoryType === 'shop' ? 'B2B Wholesale Catalog' : 'Free Shipping'}
+                {product.categoryType === 'shop' ? 'B2B Wholesale Catalog' : 'Bulk Wholesale MOQ'}
               </span>
             </div>
 

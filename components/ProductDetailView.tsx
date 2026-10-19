@@ -299,7 +299,17 @@ export default function ProductDetailView({ product, relatedProducts }: ProductD
               </div>
               <div className="flex items-center gap-2 text-muted">
                 <Layers className="w-4 h-4 text-primary shrink-0" />
-                <span>{product.categoryType === 'shop' ? 'Custom Dimensions Available' : 'Reinforced Twisted Handles'}</span>
+                <span>
+                  {product.categoryType === 'shop'
+                    ? 'Custom Dimensions Available'
+                    : product.category === 'flat-handle'
+                    ? 'Reinforced Flat Tape Handles'
+                    : product.category === 'handleless'
+                    ? 'Self-Opening Block Bottom'
+                    : product.category === 'customise-completely'
+                    ? 'Fully Bespoke Specifications'
+                    : 'Reinforced Twisted Handles'}
+                </span>
               </div>
             </div>
 

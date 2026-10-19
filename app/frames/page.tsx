@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { ArrowRight, ShieldCheck, Truck, Sparkles, CheckCircle2, ChevronDown } from 'lucide-react';
 import { FRAMES } from '@/data/products';
@@ -8,34 +8,41 @@ import ProductCard from '@/components/ProductCard';
 
 const FAQS = [
   {
-    q: 'How are custom branded paper bags manufactured?',
-    a: 'Each batch is precision cut, folded, and printed using high-speed automated equipment with water-based eco-friendly inks and reinforced adhesives for dependable load-bearing strength.'
+    q: 'What is the minimum order quantity (MOQ) for custom branded paper bags?',
+    a: 'Ready-to-dispatch plain catalog sizes can be ordered in carton quantities starting at 250–500 units. Custom single-color printed runs start at 1,000 units, and full multi-color flexo/offset branded runs start at 3,000 to 5,000 units with volume tier discounts.',
   },
   {
-    q: 'What handle styles and finishes do you offer?',
-    a: 'We offer twisted kraft handles, flat tape handles, premium woven cotton cords, and die-cut handles with matte, gloss, or textured finishes.'
+    q: 'Can I order custom sizes, paper colors, and handle types?',
+    a: 'Yes! Under our "Customise Your Bag Completely" program, we manufacture bags to your exact millimeter dimensions. You can choose natural virgin brown kraft, bleached white kraft, or coated art paper (100–350 GSM), and select twisted paper cords, flat tape, herringbone cotton ribbons, or die-cut handles.',
   },
   {
     q: 'How long does delivery take for bulk commercial orders?',
-    a: 'Ready catalog units ship within 24–48 hours. Custom printed and bespoke size runs typically dispatch in 5–8 business days with express tracking across India.'
+    a: 'Ready catalog units ship within 24–48 hours. Custom printed and bespoke size runs typically dispatch in 7–12 business days with express freight tracking across India and international cargo export.',
   },
   {
-    q: 'Can I get custom dimensions and branded samples?',
-    a: 'Yes! We manufacture custom sizes tailored precisely to your retail merchandise, takeaway food containers, or luxury gift boxes. Reach out to our B2B team for sample packs.'
-  }
+    q: 'Are your paper bags food-grade and eco-friendly?',
+    a: 'Yes! All QADRI paper bags are manufactured using 100% recyclable, biodegradable, sustainably harvested wood pulp and non-toxic water-based food-safe inks, meeting strict Indian and international environmental standards.',
+  },
 ];
 
 export default function FramesPage() {
   const [selectedFilter, setSelectedFilter] = useState('all');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const filteredFrames = FRAMES.filter((f) => {
-    if (selectedFilter === 'all') return true;
-    if (selectedFilter === 'treks') return f.slug.includes('kedar');
-    if (selectedFilter === 'circuits') return f.slug.includes('grid') || f.slug.includes('gta');
-    if (selectedFilter === 'sports') return !f.slug.includes('kedar') && !f.slug.includes('grid');
-    return true;
-  });
+  const counts = useMemo(() => {
+    return {
+      all: FRAMES.length,
+      twisted: FRAMES.filter((f) => f.category === 'twisted-handle').length,
+      flat: FRAMES.filter((f) => f.category === 'flat-handle').length,
+      handleless: FRAMES.filter((f) => f.category === 'handleless').length,
+      customise: FRAMES.filter((f) => f.category === 'customise-completely').length,
+    };
+  }, []);
+
+  const filteredFrames = useMemo(() => {
+    if (selectedFilter === 'all') return FRAMES;
+    return FRAMES.filter((f) => f.category === selectedFilter);
+  }, [selectedFilter]);
 
   return (
     <div className="py-10 md:py-16 space-y-16">
@@ -47,12 +54,12 @@ export default function FramesPage() {
             All Paper Bags
           </h1>
           <p className="text-muted text-base md:text-lg mt-3 leading-relaxed max-w-2xl">
-            Brand-customisable utility paper bags for retail, events, and commercial B2B. Premium kraft stocks, durable twisted handles, and precision custom printing.
+            Brand-customisable utility paper bags for retail, events, and commercial B2B. Premium kraft stocks, durable twisted handles, flat tape handles, and block bottom food bags with precision custom printing.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 mt-6 text-xs text-muted">
             <span className="inline-flex items-center gap-1.5 font-medium">
-              <Sparkles className="w-4 h-4 text-primary" /> Custom Brand Printing
+              <Sparkles className="w-4 h-4 text-primary" /> Custom Brand Logo Printing
             </span>
             <span className="inline-flex items-center gap-1.5 font-medium">
               <Truck className="w-4 h-4 text-primary" /> Free Pan-India Delivery
@@ -64,38 +71,49 @@ export default function FramesPage() {
         </div>
 
         {/* Filter Pills */}
-        <div className="flex flex-wrap items-center gap-2 mt-10 pb-4 border-b border-app" style={{ borderColor: 'var(--border)' }}>
+        <div
+          className="flex flex-wrap items-center gap-2 mt-10 pb-4 border-b border-app"
+          style={{ borderColor: 'var(--border)' }}
+        >
           <button
             onClick={() => setSelectedFilter('all')}
             className={`o-chip !py-2 !px-4 cursor-pointer transition-colors ${
               selectedFilter === 'all' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
             }`}
           >
-            All Paper Bags ({FRAMES.length})
+            All Paper Bags ({counts.all})
           </button>
           <button
-            onClick={() => setSelectedFilter('treks')}
+            onClick={() => setSelectedFilter('twisted-handle')}
             className={`o-chip !py-2 !px-4 cursor-pointer transition-colors ${
-              selectedFilter === 'treks' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
+              selectedFilter === 'twisted-handle' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
             }`}
           >
-            Kraft &amp; Retail
+            Twisted Handle Bags ({counts.twisted})
           </button>
           <button
-            onClick={() => setSelectedFilter('circuits')}
+            onClick={() => setSelectedFilter('flat-handle')}
             className={`o-chip !py-2 !px-4 cursor-pointer transition-colors ${
-              selectedFilter === 'circuits' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
+              selectedFilter === 'flat-handle' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
             }`}
           >
-            Luxury Matte Bags
+            Flat Handle Bags ({counts.flat})
           </button>
           <button
-            onClick={() => setSelectedFilter('sports')}
+            onClick={() => setSelectedFilter('handleless')}
             className={`o-chip !py-2 !px-4 cursor-pointer transition-colors ${
-              selectedFilter === 'sports' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
+              selectedFilter === 'handleless' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
             }`}
           >
-            B2B Bulk Utility
+            Handleless Block Bottom ({counts.handleless})
+          </button>
+          <button
+            onClick={() => setSelectedFilter('customise-completely')}
+            className={`o-chip !py-2 !px-4 cursor-pointer transition-colors ${
+              selectedFilter === 'customise-completely' ? 'bg-primary text-white font-bold' : 'hover:bg-surface-2'
+            }`}
+          >
+            Customise Your Bag Completely ({counts.customise})
           </button>
         </div>
       </section>
@@ -109,10 +127,12 @@ export default function FramesPage() {
         </div>
       </section>
 
-      {/* Bundle Banner */}
+      {/* Wholesale & Custom Program Banner */}
       <section className="o-container">
-        <Link
-          href="/frames/bundles"
+        <a
+          href="https://wa.me/919829062390?text=Hi%20QADRI,%20I%20would%20like%20to%20discuss%20a%20bulk%20custom%20paper%20bag%20order."
+          target="_blank"
+          rel="noopener noreferrer"
           className="group block rounded-[24px] p-8 md:p-12 transition-all duration-300 hover:shadow-lift"
           style={{
             background: 'color-mix(in srgb, var(--heat, #1D1D1F) 8%, var(--surface))',
@@ -123,20 +143,20 @@ export default function FramesPage() {
           <div className="flex items-center justify-between gap-6 flex-wrap">
             <div className="max-w-xl">
               <span className="text-[11px] uppercase tracking-[0.22em] font-bold text-primary">
-                Bulk &amp; Wholesale
+                Bulk Wholesale &amp; Customization
               </span>
               <h2 className="o-display text-2xl md:text-3xl lg:text-4xl font-bold mt-2">
-                Wholesale Volume Savings for Brands
+                Wholesale Volume Savings for Brands &amp; Retailers
               </h2>
               <p className="text-sm md:text-base text-muted mt-2 leading-relaxed">
-                Tiered volume pricing on commercial bag orders. Automatically applied at checkout for bulk quantities.
+                Factory-direct volume pricing on custom printed bags. Complete flexibility on dimensions, paper GSM, handle styles, and Pantone branding.
               </p>
             </div>
             <span className="o-btn-primary inline-flex items-center gap-2 shrink-0 group-hover:scale-105 transition-transform">
-              Explore Wholesale <ArrowRight className="w-4 h-4" />
+              Inquire Wholesale Pricing <ArrowRight className="w-4 h-4" />
             </span>
           </div>
-        </Link>
+        </a>
       </section>
 
       {/* Craftsmanship Section */}
@@ -148,7 +168,7 @@ export default function FramesPage() {
               Engineered for Strength &amp; Presentation
             </h2>
             <p className="text-muted text-sm md:text-base mt-2 leading-relaxed">
-              Every Qadri paper bag is manufactured with tear-resistant kraft and art paper stocks, reinforced handles, and razor-sharp print quality.
+              Every QADRI paper bag is manufactured with tear-resistant virgin kraft paper stocks, reinforced handles, and razor-sharp print quality.
             </p>
           </div>
 
@@ -157,14 +177,14 @@ export default function FramesPage() {
               <CheckCircle2 className="w-5 h-5 text-primary" />
               <h3 className="font-bold text-sm">Heavy-Duty GSM Paper</h3>
               <p className="text-xs text-muted leading-relaxed">
-                Engineered from 150–350 GSM virgin &amp; recycled kraft to ensure optimal load capacity without stretching.
+                Engineered from 100–350 GSM virgin &amp; recycled kraft to ensure optimal load capacity without stretching.
               </p>
             </div>
             <div className="p-4 rounded-xl bg-surface-2 space-y-2">
               <CheckCircle2 className="w-5 h-5 text-primary" />
               <h3 className="font-bold text-sm">Reinforced Handles</h3>
               <p className="text-xs text-muted leading-relaxed">
-                Twisted paper cords and luxury cotton ribbons secured with reinforced top folds for maximum carry strength.
+                Twisted paper cords, internal flat tape handles, and luxury cotton ribbons secured with reinforced top folds.
               </p>
             </div>
             <div className="p-4 rounded-xl bg-surface-2 space-y-2">
@@ -207,7 +227,10 @@ export default function FramesPage() {
                 />
               </button>
               {openFaq === idx && (
-                <div className="px-5 pb-5 text-xs text-muted leading-relaxed border-t border-app pt-3" style={{ borderColor: 'var(--border)' }}>
+                <div
+                  className="px-5 pb-5 text-xs text-muted leading-relaxed border-t border-app pt-3"
+                  style={{ borderColor: 'var(--border)' }}
+                >
                   {faq.a}
                 </div>
               )}

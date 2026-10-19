@@ -42,574 +42,1071 @@ export interface Product {
 }
 
 export const PRODUCTS: Product[] = [
-  {
-    "id": "p_tlzfmirmf",
-    "slug": "grid-27",
-    "name": "F1 Grid 2027",
-    "tagline": "Every Circuit. One Frame.",
-    "story": "From Bahrain to Abu Dhabi, Grid 27 brings the entire F1 2027 calendar together in one statement piece.\nEvery circuit. Every destination. Every race weekend — mapped out for the fans who know that the countdown to lights out never really stops.",
-    "function": "Premium 3D-printed F1 2027 circuit calendar featuring individually raised circuit outlines, race locations and dates, finished with a bold F1-inspired layout. Designed as a collectible display piece for Formula 1 enthusiasts.",
-    "pricePaise": 129900,
-    "printMinutes": 200,
-    "weightGrams": 120,
+{
+    "id": "pb_twisted_xs",
+    "slug": "twisted-handle-kraft-bag-xs",
+    "name": "Twisted Handle Kraft Bag — XS (6\" × 3\" × 8\")",
+    "tagline": "Jewelry, Cosmetics & Counter Gift Bag · 120 GSM Natural Kraft",
+    "story": "Engineered from premium 120 GSM unbleached virgin kraft paper, this extra-small twisted handle bag is the benchmark luxury packaging solution for jewelry boutiques, cosmetics, artisanal soaps, and luxury gift counters.\nFeatures reinforced twisted paper cord handles and a solid bottom fold capable of carrying up to 2.5 kg with complete confidence.",
+    "function": "Commercial retail packaging for compact luxury items. Compatible with 1 to 4-color flexo and offset custom logo printing, hot foil stamping, and Pantone color matching.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 22,
     "dimensionsMm": {
-      "d": 8,
-      "h": 230,
-      "w": 230
+      "d": 80,
+      "h": 200,
+      "w": 150
     },
     "edition": null,
     "status": "in_stock",
-    "category": "frames",
-    "ageGroup": "adults-18+",
-    "themes": [],
+    "category": "twisted-handle",
+    "ageGroup": "all-ages",
+    "themes": [
+      "Retail",
+      "Jewelry",
+      "Boutique",
+      "Cosmetics"
+    ],
     "colorways": [
-      "Black"
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
     ],
     "imageGradient": [
-      "#1D1D1F",
-      "#F5F5F7"
+      "#8B5A2B",
+      "#D2B48C"
     ],
-    "imageUrl": "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Sep-26--2026-at-10_48_58-PM-JezCUNr6EKuhuQUMqANFLa0311j5IH.png",
+    "imageUrl": "/paperbags/twisted-handle-kraft-bag.jpg",
+    "localImageUrl": "/paperbags/twisted-handle-kraft-bag.jpg",
     "gallery": [
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/IMG_7798-32OxLtHw9E3uVWPScabkABy6RzrtWx.jpg",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Sep-26--2026-at-10_56_22-PM-nLYDKuoL4VooCE2oywuKIvGXrUBe3W.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Sep-26--2026-at-11_04_26-PM-p0PrlOcdy6r6FU7xY74FDPAfCb9tlu.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Sep-26--2026-at-11_06_48-PM-1v7KCb7K3KDhCOl52izgd2eREiCqBk.png"
+      "/paperbags/twisted-handle-kraft-bag.jpg"
     ],
-    "rating": 5,
-    "reviews": 0,
-    "createdAt": "2026-09-26",
-    "updatedAt": "2026-09-26",
-    "compareAtPaise": 199900,
-    "freeShipping": true,
-    "isPreorder": true,
-    "preorderShipBy": null,
-    "preorderDaysMin": 4,
-    "preorderDaysMax": 6,
-    "customFields": [],
-    "seoTitle": null,
-    "seoDescription": null,
-    "faq": null,
-    "categoryType": "frames",
-    "localImageUrl": "/images/ChatGPT-Image-Sep-26--2026-at-10_48_58-PM-JezCUNr6EKuhuQUMqANFLa0311j5IH.png",
     "localGallery": [
-      "/images/IMG_7798-32OxLtHw9E3uVWPScabkABy6RzrtWx.jpg",
-      "/images/ChatGPT-Image-Sep-26--2026-at-10_56_22-PM-nLYDKuoL4VooCE2oywuKIvGXrUBe3W.png",
-      "/images/ChatGPT-Image-Sep-26--2026-at-11_04_26-PM-p0PrlOcdy6r6FU7xY74FDPAfCb9tlu.png",
-      "/images/ChatGPT-Image-Sep-26--2026-at-11_06_48-PM-1v7KCb7K3KDhCOl52izgd2eREiCqBk.png"
-    ]
-  },
-  {
-    "id": "p_tl3uvdgex",
-    "slug": "king-18",
-    "name": "King 18",
-    "tagline": "The Number That Became an Emotion.",
-    "story": "Some numbers are worn. Some numbers become legends.\n\nKing 18 captures the aura of Indian cricket’s most iconic No. 18 — the intensity, the attitude, the hunger and the moments that made millions of fans believe.\n\nA statement piece for the fans who don't just watch cricket — they live it.",
-    "function": "Premium luxury 3D cricket frame featuring Ultra HD Metal Print artwork, a physically extruded 3D cricket ball, and a deep black shadowbox frame for an ultra-realistic, collectible finish.",
-    "pricePaise": 249900,
-    "printMinutes": 120,
-    "weightGrams": 200,
-    "dimensionsMm": {
-      "d": 24,
-      "h": 330,
-      "w": 240
-    },
-    "edition": null,
-    "status": "made_to_order",
-    "category": "frames",
-    "ageGroup": "adults-18+",
-    "themes": [],
-    "colorways": [],
-    "imageGradient": [
-      "#1D1D1F",
-      "#F5F5F7"
-    ],
-    "imageUrl": "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Sep-9--2026-at-09_09_28-PM-DzT5js4Yz4oPxg6F8eSyhe5XNSv737.png",
-    "gallery": [
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Sep-9--2026-at-09_44_22-PM-uYi0w6a1bSaNJfffJIT81XP2DMBvfA.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Sep-9--2026-at-09_10_23-PM-HjcAvQlBAoDHxnAG6yt9zpFuPpntEW.png"
+      "/paperbags/twisted-handle-kraft-bag.jpg"
     ],
     "rating": 5,
-    "reviews": 0,
-    "createdAt": "2026-09-09",
-    "updatedAt": "2026-09-26",
-    "compareAtPaise": 299900,
+    "reviews": 14,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
     "freeShipping": true,
     "isPreorder": false,
     "preorderShipBy": null,
     "preorderDaysMin": null,
     "preorderDaysMax": null,
     "customFields": [],
-    "seoTitle": null,
-    "seoDescription": null,
+    "seoTitle": "Twisted Handle Kraft Bag XS (6x3x8 in) · QADRI Paper Bags",
+    "seoDescription": "Wholesale extra-small twisted handle kraft bags. 120 GSM natural kraft paper for jewelry and cosmetics. Custom logo printing available.",
     "faq": null,
-    "categoryType": "frames",
-    "localImageUrl": "/images/ChatGPT-Image-Sep-9--2026-at-09_09_28-PM-DzT5js4Yz4oPxg6F8eSyhe5XNSv737.png",
-    "localGallery": [
-      "/images/ChatGPT-Image-Sep-9--2026-at-09_44_22-PM-uYi0w6a1bSaNJfffJIT81XP2DMBvfA.png",
-      "/images/ChatGPT-Image-Sep-9--2026-at-09_10_23-PM-HjcAvQlBAoDHxnAG6yt9zpFuPpntEW.png"
-    ]
+    "categoryType": "frames"
   },
   {
-    "id": "p_tl000or1h",
-    "slug": "malibu-after-dark",
-    "name": "Malibu After Dark",
-    "tagline": "The Neon Side.",
-    "story": "Neon skies. Wet streets. Fast cars. Late nights. Malibu After Dark captures the electric nightlife energy of the iconic Malibu Club — the kind of place where every night feels like the beginning of another story.\n\nA statement piece for gamers who remember the thrill of cruising through neon-lit streets and stepping into a world where the rules were optional and the nights were legendary.",
-    "function": "A premium gaming wall frame featuring Ultra HD Metal Print with a physical 3D extruded GTA logo with a cinematic neon finish and a luxury deep black frame. Designed to bring the unmistakable Malibu Club atmosphere to gaming rooms, bedrooms, desks and entertainment spaces.",
-    "pricePaise": 249900,
-    "printMinutes": 140,
-    "weightGrams": 200,
+    "id": "pb_twisted_s",
+    "slug": "twisted-handle-kraft-bag-s",
+    "name": "Twisted Handle Kraft Bag — Small (8\" × 4\" × 11\")",
+    "tagline": "Cafe, Books & Boutique Apparel Size · 140 GSM High-Tensile Kraft",
+    "story": "The essential small retail bag for boutique apparel, bookstores, gourmet bakeries, and lifestyle concept stores. Crafted with 140 GSM high-tensile kraft paper that resists tearing under load.\nFinished with durable twisted rope handles anchored with internal patch reinforcement.",
+    "function": "Standard small retail and takeaway bag. Offers crisp fold lines, high dimensional stability, and dependable load-bearing up to 4 kg.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 34,
     "dimensionsMm": {
-      "d": 10,
-      "h": 330,
-      "w": 240
+      "d": 100,
+      "h": 280,
+      "w": 200
     },
     "edition": null,
-    "status": "made_to_order",
-    "category": "frames",
-    "ageGroup": "adults-18+",
-    "themes": [],
-    "colorways": [],
-    "imageGradient": [
-      "#1D1D1F",
-      "#F5F5F7"
-    ],
-    "imageUrl": "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Sep-7--2026-at-07_46_03-PM-GYCsWxnxf8yLOzCIjJpciVRRp5Q3jf.png",
-    "gallery": [
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Sep-7--2026-at-07_53_25-PM-A16rUo16grtmFH5YA3E5lETjWb2R9B.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Sep-7--2026-at-07_53_08-PM-quaKNVBlvwUBQPi3xcBJUhSFaWx0sD.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Sep-26--2026-at-11_04_26-PM-XufgBpmOd7INKxdqNJm5ly1ynywX3s.png"
-    ],
-    "rating": 5,
-    "reviews": 0,
-    "createdAt": "2026-09-07",
-    "updatedAt": "2026-09-26",
-    "compareAtPaise": 299900,
-    "freeShipping": true,
-    "isPreorder": false,
-    "preorderShipBy": null,
-    "preorderDaysMin": null,
-    "preorderDaysMax": null,
-    "customFields": [],
-    "seoTitle": null,
-    "seoDescription": null,
-    "faq": null,
-    "categoryType": "frames",
-    "localImageUrl": "/images/ChatGPT-Image-Sep-7--2026-at-07_46_03-PM-GYCsWxnxf8yLOzCIjJpciVRRp5Q3jf.png",
-    "localGallery": [
-      "/images/ChatGPT-Image-Sep-7--2026-at-07_53_25-PM-A16rUo16grtmFH5YA3E5lETjWb2R9B.png",
-      "/images/ChatGPT-Image-Sep-7--2026-at-07_53_08-PM-quaKNVBlvwUBQPi3xcBJUhSFaWx0sD.png",
-      "/images/ChatGPT-Image-Sep-26--2026-at-11_04_26-PM-XufgBpmOd7INKxdqNJm5ly1ynywX3s.png"
-    ]
-  },
-  {
-    "id": "p_tl00lmmsm",
-    "slug": "gta-rush",
-    "name": "GTA Rush",
-    "tagline": "Live the Chaos.",
-    "story": "Fast cars. Neon nights. Unforgettable characters. GTA Rush brings the attitude and chaos of the Grand Theft Auto universe to your wall in one bold, cinematic piece.\n\nCreated for gamers who grew up exploring every street, chasing every mission and making their own stories along the way. This isn't just game artwork — it's a piece of the gaming world you never really left behind.",
-    "function": "A premium gaming wall frame featuring Ultra HD Metal Poster artwork with vibrant cinematic details and a luxury deep black frame. Designed to elevate gaming setups, bedrooms, offices and entertainment spaces.",
-    "pricePaise": 249900,
-    "printMinutes": 140,
-    "weightGrams": 200,
-    "dimensionsMm": {
-      "d": 25,
-      "h": 330,
-      "w": 240
-    },
-    "edition": null,
-    "status": "made_to_order",
-    "category": "frames",
-    "ageGroup": "adults-18+",
-    "themes": [],
-    "colorways": [],
-    "imageGradient": [
-      "#1D1D1F",
-      "#F5F5F7"
-    ],
-    "imageUrl": "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Sep-7--2026-at-07_44_59-PM-AnLPfoNQmsDwljQjgQObXJijtstCtf.png",
-    "gallery": [
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Sep-7--2026-at-07_53_31-PM-toMCbLMWCYPdlzQIApDSZBZZVHwwL0.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Sep-7--2026-at-07_53_00-PM-BYS4B2Lh1ty8kdKoClN7UbA8NYxEgG.png"
-    ],
-    "rating": 5,
-    "reviews": 0,
-    "createdAt": "2026-09-07",
-    "updatedAt": "2026-09-26",
-    "compareAtPaise": 299900,
-    "freeShipping": true,
-    "isPreorder": false,
-    "preorderShipBy": null,
-    "preorderDaysMin": null,
-    "preorderDaysMax": null,
-    "customFields": [],
-    "seoTitle": null,
-    "seoDescription": null,
-    "faq": null,
-    "categoryType": "frames",
-    "localImageUrl": "/images/ChatGPT-Image-Sep-7--2026-at-07_44_59-PM-AnLPfoNQmsDwljQjgQObXJijtstCtf.png",
-    "localGallery": [
-      "/images/ChatGPT-Image-Sep-7--2026-at-07_53_31-PM-toMCbLMWCYPdlzQIApDSZBZZVHwwL0.png",
-      "/images/ChatGPT-Image-Sep-7--2026-at-07_53_00-PM-BYS4B2Lh1ty8kdKoClN7UbA8NYxEgG.png"
-    ]
-  },
-  {
-    "id": "p_tjz1lbmll",
-    "slug": "the-bicycle-king",
-    "name": "The Bicycle King",
-    "tagline": "Defying Gravity. Defining Greatness.",
-    "story": "Some moments belong in football history. This is one of them. A tribute to Ronaldo’s gravity-defying bicycle kick — captured in a cinematic golden frame for fans who remember exactly where they were when football witnessed something extraordinary. Designed for Indian football lovers who don't just watch the game — they live it.",
-    "function": "Luxury collectible football wall frame featuring an Ultra HD Metal Print with a physical 3D extruded football element mounted onto the artwork for a striking depth effect. Crafted exclusively by Oruky for fans who want their football obsession to become part of their space.",
-    "pricePaise": 249900,
-    "printMinutes": 120,
-    "weightGrams": 200,
-    "dimensionsMm": {
-      "d": 25,
-      "h": 330,
-      "w": 240
-    },
-    "edition": null,
-    "status": "made_to_order",
-    "category": "frames",
-    "ageGroup": "all-ages",
-    "themes": [],
-    "colorways": [],
-    "imageGradient": [
-      "#1D1D1F",
-      "#F5F5F7"
-    ],
-    "imageUrl": "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-18--2026-at-08_29_51-PM-IjjwMMqsFi8TEnvM2NsCkhTLo2b17u.png",
-    "gallery": [
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-25--2026-at-07_06_01-PM-lwA1Hf2BfF3XqKq33VvjUHSCkkQIjJ.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-18--2026-at-07_28_09-PM-4V76rQarDG8iYKbfQi8QieLQF3PObT.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-25--2026-at-06_59_58-PM-cMKCk7sl86mEKl3d7JO8wAwhNOWHrS.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Sep-26--2026-at-11_04_26-PM-rYDfXd01Cv6R6zvxPKfX8t2Vdg2npg.png"
-    ],
-    "rating": 5,
-    "reviews": 0,
-    "createdAt": "2026-08-18",
-    "updatedAt": "2026-09-26",
-    "compareAtPaise": 299900,
-    "freeShipping": true,
-    "isPreorder": false,
-    "preorderShipBy": null,
-    "preorderDaysMin": null,
-    "preorderDaysMax": null,
-    "customFields": [],
-    "seoTitle": null,
-    "seoDescription": null,
-    "faq": null,
-    "categoryType": "frames",
-    "localImageUrl": "/images/ChatGPT-Image-Aug-18--2026-at-08_29_51-PM-IjjwMMqsFi8TEnvM2NsCkhTLo2b17u.png",
-    "localGallery": [
-      "/images/ChatGPT-Image-Aug-25--2026-at-07_06_01-PM-lwA1Hf2BfF3XqKq33VvjUHSCkkQIjJ.png",
-      "/images/ChatGPT-Image-Aug-18--2026-at-07_28_09-PM-4V76rQarDG8iYKbfQi8QieLQF3PObT.png",
-      "/images/ChatGPT-Image-Aug-25--2026-at-06_59_58-PM-cMKCk7sl86mEKl3d7JO8wAwhNOWHrS.png",
-      "/images/ChatGPT-Image-Sep-26--2026-at-11_04_26-PM-rYDfXd01Cv6R6zvxPKfX8t2Vdg2npg.png"
-    ]
-  },
-  {
-    "id": "p_tjz0x53zq",
-    "slug": "the-golden-bolt",
-    "name": "The Golden Bolt",
-    "tagline": "Built for Speed. Made for Greatness.",
-    "story": "Few players can change the game in a heartbeat. The Golden Bolt captures the explosive presence of Kylian Mbappé — the acceleration, confidence and fearless energy that have made him one of football’s most electrifying stars.\n\nMore than a poster, this is a premium 3D football collectible. The artwork is produced as an Ultra HD Metal Print, paired with a physically extruded 3D football mounted onto the artwork, creating real depth and an ultra-realistic finish.",
-    "function": "A luxury framed football collectible crafted for Mbappé fans and football enthusiasts. Featuring an Ultra HD Metal Print, physical 3D football element and premium deep-frame construction, it transforms an iconic football moment into a statement piece for your space.\n\nEXCLUSIVELY BY ORUKY\nYou don't just watch the moment.\n\nYou put it on your wall.",
-    "pricePaise": 249900,
-    "printMinutes": 120,
-    "weightGrams": 200,
-    "dimensionsMm": {
-      "d": 25,
-      "h": 297,
-      "w": 210
-    },
-    "edition": null,
-    "status": "made_to_order",
-    "category": "frames",
+    "status": "in_stock",
+    "category": "twisted-handle",
     "ageGroup": "all-ages",
     "themes": [
-      "The Golden Shots"
+      "Retail",
+      "Apparel",
+      "Bakery",
+      "Gifts"
     ],
-    "colorways": [],
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
     "imageGradient": [
-      "#1D1D1F",
-      "#F5F5F7"
+      "#8B5A2B",
+      "#D2B48C"
     ],
-    "imageUrl": "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-18--2026-at-08_12_38-PM-oRqvw2Ch4wWmDFamgZSErFfdNK9GCq.png",
+    "imageUrl": "/paperbags/twisted-handle-kraft-bag.jpg",
+    "localImageUrl": "/paperbags/twisted-handle-kraft-bag.jpg",
     "gallery": [
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-25--2026-at-07_05_10-PM-d4Q9ipbXKF0n4FV7rGJERyBr5vOgzT.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-18--2026-at-07_28_28-PM-vWCYzdPuLKbUb9DI8S8ZHPhZAs88KE.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-25--2026-at-07_03_22-PM-iZUJoGSjAYOrdVvWY3OOdX2JtbWjtC.png"
+      "/paperbags/twisted-handle-kraft-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/twisted-handle-kraft-bag.jpg"
     ],
     "rating": 5,
-    "reviews": 0,
-    "createdAt": "2026-08-18",
-    "updatedAt": "2026-09-26",
-    "compareAtPaise": 299900,
+    "reviews": 22,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
     "freeShipping": true,
     "isPreorder": false,
     "preorderShipBy": null,
     "preorderDaysMin": null,
     "preorderDaysMax": null,
     "customFields": [],
-    "seoTitle": null,
-    "seoDescription": null,
+    "seoTitle": "Twisted Handle Kraft Bag Small (8x4x11 in) · QADRI Paper Bags",
+    "seoDescription": "Small twisted handle kraft paper bags for retail boutiques and cafes. 140 GSM virgin kraft with custom branding.",
     "faq": null,
-    "categoryType": "frames",
-    "localImageUrl": "/images/ChatGPT-Image-Aug-18--2026-at-08_12_38-PM-oRqvw2Ch4wWmDFamgZSErFfdNK9GCq.png",
-    "localGallery": [
-      "/images/ChatGPT-Image-Aug-25--2026-at-07_05_10-PM-d4Q9ipbXKF0n4FV7rGJERyBr5vOgzT.png",
-      "/images/ChatGPT-Image-Aug-18--2026-at-07_28_28-PM-vWCYzdPuLKbUb9DI8S8ZHPhZAs88KE.png",
-      "/images/ChatGPT-Image-Aug-25--2026-at-07_03_22-PM-iZUJoGSjAYOrdVvWY3OOdX2JtbWjtC.png"
-    ]
+    "categoryType": "frames"
   },
   {
-    "id": "p_tjz17y16q",
-    "slug": "neymar-jr-samba-showstopper",
-    "name": "Neymar Jr.",
-    "tagline": "The Samba Showstopper",
-    "story": "For the football fan who believes the beautiful game should look as unforgettable as it feels. Inspired by Neymar Jr.’s flair, creativity and outrageous skill, this premium 3D frame turns a football moment into a statement piece. Crafted with an Ultra HD Metal Print and a physically extruded 3D football element, it brings Neymar’s magic to life with depth, detail and a luxury finish.",
-    "function": "Luxury 3D football display frame featuring an Ultra HD Metal Print, premium deep black frame and a physically extruded 3D football element mounted onto the artwork for a striking realistic effect. Designed for football enthusiasts, collectors and premium sports-inspired spaces. \n\nExclusively available at Oruky.",
-    "pricePaise": 249900,
-    "printMinutes": 120,
-    "weightGrams": 200,
+    "id": "pb_twisted_m",
+    "slug": "twisted-handle-kraft-bag-m",
+    "name": "Twisted Handle Kraft Bag — Medium (10\" × 5\" × 13\")",
+    "tagline": "Standard Apparel & Lifestyle Size · 160 GSM Reinforced Kraft",
+    "story": "Our most popular multi-purpose retail bag. With a generous 5-inch gusset, this medium carrier comfortably accommodates folded shirts, footwear boxes, lifestyle homeware, and medium gift merchandise.\nManufactured with 160 GSM kraft paper and heavy-gauge twisted cords for a luxurious tactile in-hand experience.",
+    "function": "Versatile retail and commercial carrier. Tested for repeated handling and maximum load-bearing up to 6 kg.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 48,
     "dimensionsMm": {
-      "d": 24,
-      "h": 297,
-      "w": 210
+      "d": 120,
+      "h": 320,
+      "w": 250
     },
     "edition": null,
-    "status": "made_to_order",
-    "category": "frames",
+    "status": "in_stock",
+    "category": "twisted-handle",
     "ageGroup": "all-ages",
     "themes": [
-      "The Golden Shots",
-      "Footballers"
+      "Fashion",
+      "Retail",
+      "Lifestyle",
+      "Footwear"
     ],
-    "colorways": [],
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
     "imageGradient": [
-      "#1D1D1F",
-      "#F5F5F7"
+      "#8B5A2B",
+      "#D2B48C"
     ],
-    "imageUrl": "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-18--2026-at-08_15_00-PM-YlSvaAFFt7yuxCUCMLsIBwVlqNgD56.png",
+    "imageUrl": "/paperbags/twisted-handle-kraft-bag.jpg",
+    "localImageUrl": "/paperbags/twisted-handle-kraft-bag.jpg",
     "gallery": [
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-25--2026-at-07_11_07-PM-oyPX4U6FjkGAGfY2BtbqTKwA2cV9xj.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-18--2026-at-07_34_54-PM-19sBkTdHhbpAziozGTSE9JJmf1kVMt.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-25--2026-at-07_00_20-PM-9Y6v4Rb3R71INUuaQloGjW8o1PC7te.png"
+      "/paperbags/twisted-handle-kraft-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/twisted-handle-kraft-bag.jpg"
     ],
     "rating": 5,
-    "reviews": 0,
-    "createdAt": "2026-08-18",
-    "updatedAt": "2026-09-26",
-    "compareAtPaise": 299900,
+    "reviews": 47,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
     "freeShipping": true,
     "isPreorder": false,
     "preorderShipBy": null,
     "preorderDaysMin": null,
     "preorderDaysMax": null,
     "customFields": [],
-    "seoTitle": null,
-    "seoDescription": null,
+    "seoTitle": "Twisted Handle Kraft Bag Medium (10x5x13 in) · QADRI Paper Bags",
+    "seoDescription": "Medium 160 GSM twisted handle kraft shopping bags. The gold standard for fashion retail and apparel brands.",
     "faq": null,
-    "categoryType": "frames",
-    "localImageUrl": "/images/ChatGPT-Image-Aug-18--2026-at-08_15_00-PM-YlSvaAFFt7yuxCUCMLsIBwVlqNgD56.png",
-    "localGallery": [
-      "/images/ChatGPT-Image-Aug-25--2026-at-07_11_07-PM-oyPX4U6FjkGAGfY2BtbqTKwA2cV9xj.png",
-      "/images/ChatGPT-Image-Aug-18--2026-at-07_34_54-PM-19sBkTdHhbpAziozGTSE9JJmf1kVMt.png",
-      "/images/ChatGPT-Image-Aug-25--2026-at-07_00_20-PM-9Y6v4Rb3R71INUuaQloGjW8o1PC7te.png"
-    ]
+    "categoryType": "frames"
   },
   {
-    "id": "p_tjz0rs2oj",
-    "slug": "messi-magic",
-    "name": "Messi Magic",
-    "tagline": "The Magic of No. 10. Made 3D.",
-    "story": "Some football moments deserve more than a print. The Golden 10 brings the magic of Messi to life through an ultra-high-definition metal print, paired with a meticulously extruded 3D football physically mounted onto the artwork.\n\nThe result is a striking piece that goes beyond the wall — depth, detail and realism you can actually see and feel.",
-    "function": "A premium 3D football collectible created for Messi fans and football enthusiasts. Featuring an Ultra HD Metal Print, a physical 3D-extruded football, and a premium deep-frame finish, every detail is designed to deliver an ultra-realistic display experience.\n\nEXCLUSIVELY BY ORUKY\n\nNot just a football poster. A moment, brought to life.",
-    "pricePaise": 249900,
-    "printMinutes": 120,
-    "weightGrams": 200,
+    "id": "pb_twisted_l",
+    "slug": "twisted-handle-kraft-bag-l",
+    "name": "Twisted Handle Kraft Bag — Large (12\" × 6\" × 16\")",
+    "tagline": "Spacious Department Store Carrier · 180 GSM Heavy Kraft",
+    "story": "Designed for substantial volume retail, winter apparel, shoe packaging, and department store transactions. Features an expanded 6-inch gusset and 180 GSM virgin pulp construction.\nReinforced base fold ensures the bag stands upright independently on retail countertops for fast packing.",
+    "function": "High-capacity retail packaging with reinforced base and heavy load capacity up to 8 kg.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 68,
     "dimensionsMm": {
-      "d": 25,
-      "h": 297,
-      "w": 210
+      "d": 150,
+      "h": 400,
+      "w": 300
     },
     "edition": null,
-    "status": "made_to_order",
-    "category": "frames",
+    "status": "in_stock",
+    "category": "twisted-handle",
     "ageGroup": "all-ages",
     "themes": [
-      "The Golden Shots",
-      "Footballers"
+      "Department Store",
+      "Winterwear",
+      "Bulk Retail"
     ],
-    "colorways": [],
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
     "imageGradient": [
-      "#1D1D1F",
-      "#F5F5F7"
+      "#8B5A2B",
+      "#D2B48C"
     ],
-    "imageUrl": "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/Artboard-2-100-5xhQWDn2NTEOq16YKpWPMux7Q4YxhC.jpg",
+    "imageUrl": "/paperbags/twisted-handle-kraft-bag.jpg",
+    "localImageUrl": "/paperbags/twisted-handle-kraft-bag.jpg",
     "gallery": [
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-25--2026-at-07_07_14-PM-bt05MXj8RggtLmO3q5z6Fl9QPRZGfy.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-18--2026-at-07_28_25-PM-GvPs8fZomsqOToNyuxlG1JtFgp52GL.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-25--2026-at-07_01_27-PM-TO0YiHz8kUhJX9gKCSKNnYE1DjYLO7.png"
+      "/paperbags/twisted-handle-kraft-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/twisted-handle-kraft-bag.jpg"
     ],
     "rating": 5,
-    "reviews": 0,
-    "createdAt": "2026-08-18",
-    "updatedAt": "2026-09-26",
-    "compareAtPaise": 299900,
+    "reviews": 31,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
     "freeShipping": true,
     "isPreorder": false,
     "preorderShipBy": null,
     "preorderDaysMin": null,
     "preorderDaysMax": null,
     "customFields": [],
-    "seoTitle": null,
-    "seoDescription": null,
+    "seoTitle": "Twisted Handle Kraft Bag Large (12x6x16 in) · QADRI Paper Bags",
+    "seoDescription": "Large 180 GSM heavy-duty kraft shopping bags with twisted handles. Ideal for department stores and winter apparel.",
     "faq": null,
-    "categoryType": "frames",
-    "localImageUrl": "/images/Artboard-2-100-5xhQWDn2NTEOq16YKpWPMux7Q4YxhC.jpg",
-    "localGallery": [
-      "/images/ChatGPT-Image-Aug-25--2026-at-07_07_14-PM-bt05MXj8RggtLmO3q5z6Fl9QPRZGfy.png",
-      "/images/ChatGPT-Image-Aug-18--2026-at-07_28_25-PM-GvPs8fZomsqOToNyuxlG1JtFgp52GL.png",
-      "/images/ChatGPT-Image-Aug-25--2026-at-07_01_27-PM-TO0YiHz8kUhJX9gKCSKNnYE1DjYLO7.png"
-    ]
+    "categoryType": "frames"
   },
   {
-    "id": "p_tjz1vtku0",
-    "slug": "the-aerial-king",
-    "name": "Born to Rise",
-    "tagline": "When Gravity Meets Greatness.",
-    "story": "He doesn't just rise above the defence — he rises above expectations. The Aerial King captures Ronaldo at his most iconic: suspended in the air, eyes locked on the ball, and pure athleticism frozen in a golden moment. Made for the fans who know that some football moments deserve more than a poster — they deserve a place on the wall.",
-    "function": "A premium luxury football collectible featuring an Ultra HD Metal Print and a physically mounted 3D extruded football, creating a dramatic real-world depth effect. Finished in a premium deep frame and crafted exclusively by Oruky — turning one of football's most iconic aerial moments into a statement piece.",
-    "pricePaise": 249900,
-    "printMinutes": 120,
-    "weightGrams": 200,
+    "id": "pb_twisted_xl",
+    "slug": "twisted-handle-kraft-bag-xl",
+    "name": "Twisted Handle Kraft Bag — XL (14\" × 7\" × 18\")",
+    "tagline": "Outerwear & Multi-Item Retail Bag · 200 GSM Heavy-Duty Kraft",
+    "story": "Our heavy-duty extra-large format carrier. Built with premium 200 GSM kraft paper to support multiple outerwear garments, large gift sets, and bulky merchandise.\nComfort-grip twisted paper handles with triple-bonded glue lines ensure total reliability.",
+    "function": "Heavyweight commercial packaging for jackets, corporate gift hampers, and bulky retail merchandise up to 10 kg.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 92,
     "dimensionsMm": {
-      "d": 25,
-      "h": 297,
-      "w": 210
+      "d": 180,
+      "h": 450,
+      "w": 350
     },
     "edition": null,
-    "status": "made_to_order",
-    "category": "frames",
+    "status": "in_stock",
+    "category": "twisted-handle",
     "ageGroup": "all-ages",
-    "themes": [],
-    "colorways": [],
-    "imageGradient": [
-      "#1D1D1F",
-      "#F5F5F7"
+    "themes": [
+      "Outerwear",
+      "Hampers",
+      "Large Format",
+      "Luxury"
     ],
-    "imageUrl": "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-18--2026-at-09_10_21-PM-IaTFCFhqtHqogr4s7vHS6YGTEkRW4v.png",
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
+    "imageGradient": [
+      "#8B5A2B",
+      "#D2B48C"
+    ],
+    "imageUrl": "/paperbags/twisted-handle-kraft-bag.jpg",
+    "localImageUrl": "/paperbags/twisted-handle-kraft-bag.jpg",
     "gallery": [
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-25--2026-at-07_04_30-PM-j1KWgtkfX3bjIpdP53r6vRQCTl7933.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-18--2026-at-07_49_15-PM-Jvu7x2Mxt6GN4D5EfbgVeChr5Uwfl6.png",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/ChatGPT-Image-Aug-25--2026-at-07_00_57-PM-p7Fym1O8zauLStEoersVTkjRemRRvd.png"
+      "/paperbags/twisted-handle-kraft-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/twisted-handle-kraft-bag.jpg"
     ],
     "rating": 5,
-    "reviews": 0,
-    "createdAt": "2026-08-18",
-    "updatedAt": "2026-09-26",
-    "compareAtPaise": 299900,
+    "reviews": 19,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
     "freeShipping": true,
     "isPreorder": false,
     "preorderShipBy": null,
     "preorderDaysMin": null,
     "preorderDaysMax": null,
     "customFields": [],
-    "seoTitle": null,
-    "seoDescription": null,
+    "seoTitle": "Twisted Handle Kraft Bag XL (14x7x18 in) · QADRI Paper Bags",
+    "seoDescription": "Extra large 200 GSM kraft carrier bags with reinforced twisted handles for luxury hampers and coats.",
     "faq": null,
-    "categoryType": "frames",
-    "localImageUrl": "/images/ChatGPT-Image-Aug-18--2026-at-09_10_21-PM-IaTFCFhqtHqogr4s7vHS6YGTEkRW4v.png",
-    "localGallery": [
-      "/images/ChatGPT-Image-Aug-25--2026-at-07_04_30-PM-j1KWgtkfX3bjIpdP53r6vRQCTl7933.png",
-      "/images/ChatGPT-Image-Aug-18--2026-at-07_49_15-PM-Jvu7x2Mxt6GN4D5EfbgVeChr5Uwfl6.png",
-      "/images/ChatGPT-Image-Aug-25--2026-at-07_00_57-PM-p7Fym1O8zauLStEoersVTkjRemRRvd.png"
-    ]
+    "categoryType": "frames"
   },
   {
-    "id": "p_tf8ut49wz",
-    "slug": "kedarpath-framed-journey",
-    "name": "KedarPath",
-    "tagline": "Carry the journey. Not just the destination",
-    "story": "Not every memory is captured in photographs.\nSome live in exhausted footsteps, freezing mountain air, silent prayers, and the feeling of finally seeing Kedarnath after the long climb.\nKedarPath transforms that sacred journey into a physical keepsake — featuring the topographic terrain of the Himalayas and the iconic pilgrimage route leading to the temple. Designed for devotees, trekkers, and mountain lovers who wish to keep a piece of Kedarnath close to them forever.",
-    "function": "A premium framed topographic artwork featuring the 3D terrain map and sacred Kedarnath trek route, designed as a spiritual memory piece, wall decor collectible, and meaningful keepsake for devotees and travelers.",
-    "pricePaise": 199900,
-    "printMinutes": 120,
-    "weightGrams": 300,
+    "id": "pb_twisted_bottle",
+    "slug": "twisted-handle-kraft-bag-bottle",
+    "name": "Twisted Handle Kraft Bag — Wine & Bottle (5.5\" × 3.5\" × 15\")",
+    "tagline": "Slim Reinforced Bottle & Tall Gift Bag · 180 GSM Rigid Kraft",
+    "story": "An elongated vertical silhouette designed specifically for wine bottles, champagne, cold-pressed artisanal oils, and tall vertical gift sets.\nReinforced with a thick base card insert to prevent tilting and ensure stability during transport.",
+    "function": "Specialty vertical packaging with rigid bottom reinforcement for bottles and slender luxury gifts.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 38,
     "dimensionsMm": {
-      "d": 15,
-      "h": 210,
+      "d": 90,
+      "h": 380,
       "w": 140
     },
     "edition": null,
     "status": "in_stock",
-    "category": "frames",
-    "ageGroup": "adults-18+",
-    "themes": [],
+    "category": "twisted-handle",
+    "ageGroup": "all-ages",
+    "themes": [
+      "Wine",
+      "Beverage",
+      "Gourmet",
+      "Gifting"
+    ],
     "colorways": [
-      "White & Black"
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
     ],
     "imageGradient": [
-      "#D214FF",
-      "#DAFF02"
+      "#8B5A2B",
+      "#D2B48C"
     ],
-    "imageUrl": "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/WhatsApp-Image-2026-05-18-at-7.45.28-PM-Be2p5NGeo9TjuBsniq7GbvAeti7vHH.jpeg",
+    "imageUrl": "/paperbags/twisted-handle-kraft-bag.jpg",
+    "localImageUrl": "/paperbags/twisted-handle-kraft-bag.jpg",
     "gallery": [
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/IMG_7925-G5EfNh7ZEwp0m2IQRvsfIkJ4U2QtBq.PNG",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/IMG_7924-zl3dzso3MehZhlLVBAT0KiSWGtWkeI.PNG",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/IMG_7926-85N7asBjotUBJLFRdzaWi3IwLLGgCN.PNG",
-      "https://h6smb4mhncfdx1rf.public.blob.vercel-storage.com/products/IMG_7923-1BrjlNKR12N48cO0n5619e4A5WMs4n.PNG"
+      "/paperbags/twisted-handle-kraft-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/twisted-handle-kraft-bag.jpg"
     ],
     "rating": 5,
-    "reviews": 0,
-    "createdAt": "2026-05-18",
-    "updatedAt": "2026-09-03",
-    "compareAtPaise": 249900,
+    "reviews": 26,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
     "freeShipping": true,
     "isPreorder": false,
     "preorderShipBy": null,
     "preorderDaysMin": null,
     "preorderDaysMax": null,
     "customFields": [],
-    "seoTitle": "Kedarnath Trek 3D Map Frame — KedarPath Keepsake",
-    "seoDescription": "A premium 3D topographic frame of the sacred Kedarnath trek route — a keepsake of your yatra. Handmade in India, hand-finished. ₹1,999. Made to order — 12–15 days for delivery.",
-    "faq": [
-      {
-        "answer": "KedarPath is a premium 3D-printed topographic frame of the sacred Kedarnath trek route in Uttarakhand, India. It recreates the Himalayan terrain along the climb to the Kedarnath temple in a 140×210 mm wall frame — a keepsake of the yatra, hand-finished by Oruky in Pune & Gurgaon.",
-        "question": "What is the KedarPath frame?"
-      },
-      {
-        "answer": "Yes — it's made for exactly that. For a devotee, trekker, or family member who completed the Kedarnath yatra, KedarPath turns the journey into a lasting wall piece they'll see every day. It's made to order — 12–15 days for delivery from the date you order, anywhere in India.",
-        "question": "Is KedarPath a good gift for someone who did the Kedarnath yatra?"
-      },
-      {
-        "answer": "Yes. The terrain is modelled on the actual topography of the route up to Kedarnath, so the ridgelines, valleys, and the final climb read true to anyone who has walked it.",
-        "question": "Does the frame show the real Kedarnath trek route?"
-      },
-      {
-        "answer": "It's 140 × 210 mm (about A5), 15 mm deep, and around 300 g — sized for a study wall, pooja room, mantel, or office shelf. It arrives framed and ready to display.",
-        "question": "How big is KedarPath and where can I place it?"
-      },
-      {
-        "answer": "The terrain is 3D-printed in durable PLA on a Bambu Lab P2S and hand-finished in a white-and-black palette, then framed. Each piece is made to order — printed when you buy, so there's no warehouse stock.",
-        "question": "What is KedarPath made of?"
-      },
-      {
-        "answer": "KedarPath is our Kedarnath edition. For another route — Char Dham, Amarnath, Valley of Flowers, or Everest Base Camp — our bespoke service can model it from the route's terrain data. Email contact@qadriex.com to commission one.",
-        "question": "Can I get a custom trek — Char Dham, Amarnath, or Everest Base Camp?"
-      }
+    "seoTitle": "Wine & Bottle Twisted Handle Kraft Bag · QADRI Paper Bags",
+    "seoDescription": "Custom printed wine bottle kraft paper bags. 180 GSM rigid construction with base reinforcement.",
+    "faq": null,
+    "categoryType": "frames"
+  },
+  {
+    "id": "pb_flat_xs",
+    "slug": "flat-handle-kraft-bag-xs",
+    "name": "Flat Handle Kraft Bag — Compact F&B (7\" × 4\" × 9\")",
+    "tagline": "Cafe Takeaway & Pastry Size · 100 GSM Grease-Resistant Kraft",
+    "story": "Lightweight and eco-friendly flat handle bag tailored for cafes, pastry shops, sandwich kiosks, and single takeaway items.\nFolded flat paper tape handles lay flush inside delivery bags, reducing storage volume and streamlining packing operations.",
+    "function": "Foodservice and cafe packaging. Biodegradable, grease-resistant, and 100% recyclable.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 20,
+    "dimensionsMm": {
+      "d": 100,
+      "h": 230,
+      "w": 180
+    },
+    "edition": null,
+    "status": "in_stock",
+    "category": "flat-handle",
+    "ageGroup": "all-ages",
+    "themes": [
+      "Food & Beverage",
+      "Cafe",
+      "Bakery",
+      "Takeaway"
     ],
-    "categoryType": "frames",
-    "localImageUrl": "/images/WhatsApp-Image-2026-05-18-at-7.45.28-PM-Be2p5NGeo9TjuBsniq7GbvAeti7vHH.jpeg",
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
+    "imageGradient": [
+      "#8B5A2B",
+      "#D2B48C"
+    ],
+    "imageUrl": "/paperbags/flat-handle-kraft-bag.jpg",
+    "localImageUrl": "/paperbags/flat-handle-kraft-bag.jpg",
+    "gallery": [
+      "/paperbags/flat-handle-kraft-bag.jpg"
+    ],
     "localGallery": [
-      "/images/IMG_7925-G5EfNh7ZEwp0m2IQRvsfIkJ4U2QtBq.PNG",
-      "/images/IMG_7924-zl3dzso3MehZhlLVBAT0KiSWGtWkeI.PNG",
-      "/images/IMG_7926-85N7asBjotUBJLFRdzaWi3IwLLGgCN.PNG",
-      "/images/IMG_7923-1BrjlNKR12N48cO0n5619e4A5WMs4n.PNG"
-    ]
+      "/paperbags/flat-handle-kraft-bag.jpg"
+    ],
+    "rating": 5,
+    "reviews": 18,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "freeShipping": true,
+    "isPreorder": false,
+    "preorderShipBy": null,
+    "preorderDaysMin": null,
+    "preorderDaysMax": null,
+    "customFields": [],
+    "seoTitle": "Flat Handle Kraft Bag Compact (7x4x9 in) · QADRI Paper Bags",
+    "seoDescription": "Compact flat tape handle kraft bags for cafes and takeaways. 100 GSM eco-friendly food packaging.",
+    "faq": null,
+    "categoryType": "frames"
+  },
+  {
+    "id": "pb_flat_s",
+    "slug": "flat-handle-kraft-bag-s",
+    "name": "Flat Handle Kraft Bag — Medium Delivery (8.5\" × 4.5\" × 11\")",
+    "tagline": "QSR Delivery & Deli Carrier · 120 GSM High-Tensile Kraft",
+    "story": "The industry standard for cloud kitchens, delis, and quick-service restaurant delivery orders. Internal flat tape handles are machine-glued with food-safe water-based adhesive for maximum reliability under warm food container loads.",
+    "function": "Food delivery and retail carrier. Flat handle design stacks compactly for delivery drivers.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 30,
+    "dimensionsMm": {
+      "d": 115,
+      "h": 280,
+      "w": 220
+    },
+    "edition": null,
+    "status": "in_stock",
+    "category": "flat-handle",
+    "ageGroup": "all-ages",
+    "themes": [
+      "Delivery",
+      "Restaurant",
+      "Cloud Kitchen",
+      "QSR"
+    ],
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
+    "imageGradient": [
+      "#8B5A2B",
+      "#D2B48C"
+    ],
+    "imageUrl": "/paperbags/flat-handle-kraft-bag.jpg",
+    "localImageUrl": "/paperbags/flat-handle-kraft-bag.jpg",
+    "gallery": [
+      "/paperbags/flat-handle-kraft-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/flat-handle-kraft-bag.jpg"
+    ],
+    "rating": 5,
+    "reviews": 35,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "freeShipping": true,
+    "isPreorder": false,
+    "preorderShipBy": null,
+    "preorderDaysMin": null,
+    "preorderDaysMax": null,
+    "customFields": [],
+    "seoTitle": "Flat Handle Kraft Bag Medium (8.5x4.5x11 in) · QADRI Paper Bags",
+    "seoDescription": "Food delivery kraft paper bags with internal flat handles. 120 GSM high tensile strength for restaurants.",
+    "faq": null,
+    "categoryType": "frames"
+  },
+  {
+    "id": "pb_flat_m",
+    "slug": "flat-handle-kraft-bag-m",
+    "name": "Flat Handle Kraft Bag — Standard Grocery (10\" × 6\" × 12\")",
+    "tagline": "Wide-Base Food & Grocery Carrier · 140 GSM Reinforced Kraft",
+    "story": "Featuring an expanded 6-inch gusset, this bag allows square food containers and meal trays to sit flat at the bottom without tilting. Ideal for gourmet markets, burger joints, and meal kit services.",
+    "function": "Wide-gusset meal container and grocery carrier supporting up to 5 kg.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 44,
+    "dimensionsMm": {
+      "d": 150,
+      "h": 310,
+      "w": 260
+    },
+    "edition": null,
+    "status": "in_stock",
+    "category": "flat-handle",
+    "ageGroup": "all-ages",
+    "themes": [
+      "Grocery",
+      "Meal Kit",
+      "Wide Base",
+      "Takeaway"
+    ],
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
+    "imageGradient": [
+      "#8B5A2B",
+      "#D2B48C"
+    ],
+    "imageUrl": "/paperbags/flat-handle-kraft-bag.jpg",
+    "localImageUrl": "/paperbags/flat-handle-kraft-bag.jpg",
+    "gallery": [
+      "/paperbags/flat-handle-kraft-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/flat-handle-kraft-bag.jpg"
+    ],
+    "rating": 5,
+    "reviews": 42,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "freeShipping": true,
+    "isPreorder": false,
+    "preorderShipBy": null,
+    "preorderDaysMin": null,
+    "preorderDaysMax": null,
+    "customFields": [],
+    "seoTitle": "Flat Handle Kraft Bag Standard (10x6x12 in) · QADRI Paper Bags",
+    "seoDescription": "Wide-base flat handle kraft grocery bags. 140 GSM reinforced paper for spill-free food transport.",
+    "faq": null,
+    "categoryType": "frames"
+  },
+  {
+    "id": "pb_flat_l",
+    "slug": "flat-handle-kraft-bag-l",
+    "name": "Flat Handle Kraft Bag — Large Catering (12\" × 7\" × 15\")",
+    "tagline": "Family Meal & Catering Carrier · 160 GSM Heavy-Duty Kraft",
+    "story": "Spacious catering carrier built to hold multiple stacked bento boxes, family meal packages, or gourmet market groceries. Dual reinforced flat paper tape handles provide high carrying comfort.",
+    "function": "Catering and bulk F&B carrier engineered for multi-container meal transport up to 7 kg.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 62,
+    "dimensionsMm": {
+      "d": 175,
+      "h": 380,
+      "w": 300
+    },
+    "edition": null,
+    "status": "in_stock",
+    "category": "flat-handle",
+    "ageGroup": "all-ages",
+    "themes": [
+      "Catering",
+      "Family Meals",
+      "Bulk F&B"
+    ],
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
+    "imageGradient": [
+      "#8B5A2B",
+      "#D2B48C"
+    ],
+    "imageUrl": "/paperbags/flat-handle-kraft-bag.jpg",
+    "localImageUrl": "/paperbags/flat-handle-kraft-bag.jpg",
+    "gallery": [
+      "/paperbags/flat-handle-kraft-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/flat-handle-kraft-bag.jpg"
+    ],
+    "rating": 5,
+    "reviews": 29,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "freeShipping": true,
+    "isPreorder": false,
+    "preorderShipBy": null,
+    "preorderDaysMin": null,
+    "preorderDaysMax": null,
+    "customFields": [],
+    "seoTitle": "Flat Handle Kraft Bag Large (12x7x15 in) · QADRI Paper Bags",
+    "seoDescription": "Large catering kraft bags with flat handles. 160 GSM strength for commercial food deliveries.",
+    "faq": null,
+    "categoryType": "frames"
+  },
+  {
+    "id": "pb_flat_xl",
+    "slug": "flat-handle-kraft-bag-xl",
+    "name": "Flat Handle Kraft Bag — Jumbo Catering (14\" × 8.5\" × 17\")",
+    "tagline": "Heavyweight Multi-Pack Carrier · 180 GSM Kraft",
+    "story": "Super jumbo carrier with heavy-duty flat handles and an expansive 8.5-inch flat bottom. Engineered for bulk food delivery, catering platters, and wholesale market supplies.",
+    "function": "Extra-capacity F&B carrier for bulk wholesale orders and large catering trays.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 84,
+    "dimensionsMm": {
+      "d": 215,
+      "h": 430,
+      "w": 350
+    },
+    "edition": null,
+    "status": "in_stock",
+    "category": "flat-handle",
+    "ageGroup": "all-ages",
+    "themes": [
+      "Jumbo",
+      "Wholesale",
+      "Platter",
+      "Heavyweight"
+    ],
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
+    "imageGradient": [
+      "#8B5A2B",
+      "#D2B48C"
+    ],
+    "imageUrl": "/paperbags/flat-handle-kraft-bag.jpg",
+    "localImageUrl": "/paperbags/flat-handle-kraft-bag.jpg",
+    "gallery": [
+      "/paperbags/flat-handle-kraft-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/flat-handle-kraft-bag.jpg"
+    ],
+    "rating": 5,
+    "reviews": 15,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "freeShipping": true,
+    "isPreorder": false,
+    "preorderShipBy": null,
+    "preorderDaysMin": null,
+    "preorderDaysMax": null,
+    "customFields": [],
+    "seoTitle": "Flat Handle Kraft Bag Jumbo (14x8.5x17 in) · QADRI Paper Bags",
+    "seoDescription": "Super jumbo flat handle kraft bags for catering platters and wholesale deliveries. 180 GSM kraft.",
+    "faq": null,
+    "categoryType": "frames"
+  },
+  {
+    "id": "pb_flat_square",
+    "slug": "flat-handle-kraft-bag-square-cake",
+    "name": "Flat Handle Kraft Bag — Square Cake & Platter (11\" × 11\" × 11\")",
+    "tagline": "1:1 Square Base Cake Box Carrier · 150 GSM Rigid Kraft",
+    "story": "A dedicated square-bottom profile designed specifically for pastry platters, cake boxes, pizza boxes, and circular containers requiring a completely flat base during delivery.",
+    "function": "Specialty bakery and cake box carrier preventing box tilt or icing damage.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 58,
+    "dimensionsMm": {
+      "d": 280,
+      "h": 280,
+      "w": 280
+    },
+    "edition": null,
+    "status": "in_stock",
+    "category": "flat-handle",
+    "ageGroup": "all-ages",
+    "themes": [
+      "Bakery",
+      "Cake Box",
+      "Square Base",
+      "Pastry"
+    ],
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
+    "imageGradient": [
+      "#8B5A2B",
+      "#D2B48C"
+    ],
+    "imageUrl": "/paperbags/flat-handle-kraft-bag.jpg",
+    "localImageUrl": "/paperbags/flat-handle-kraft-bag.jpg",
+    "gallery": [
+      "/paperbags/flat-handle-kraft-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/flat-handle-kraft-bag.jpg"
+    ],
+    "rating": 5,
+    "reviews": 28,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "freeShipping": true,
+    "isPreorder": false,
+    "preorderShipBy": null,
+    "preorderDaysMin": null,
+    "preorderDaysMax": null,
+    "customFields": [],
+    "seoTitle": "Square Cake Box Flat Handle Kraft Bag (11x11x11 in) · QADRI",
+    "seoDescription": "Square flat-bottom kraft paper bags for 8-inch and 10-inch cake boxes. Prevents tilting during bakery transit.",
+    "faq": null,
+    "categoryType": "frames"
+  },
+  {
+    "id": "pb_block_05kg",
+    "slug": "handleless-block-bottom-bag-05kg",
+    "name": "Handleless Block Bottom Bag — 0.5 kg (4\" × 2.5\" × 8\")",
+    "tagline": "Apothecary, Tea & Spice Size · 70 GSM Food-Safe Virgin Kraft",
+    "story": "Compact block bottom grocery bag designed for tea leaves, freshly roasted coffee beans, dry spices, confectionery, and small pharmacy dispensaries. Self-standing block bottom ensures rapid counter packing.",
+    "function": "Counter-service food-grade pouch. Top folds down easily for clip, tape, or sticker sealing.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 8,
+    "dimensionsMm": {
+      "d": 60,
+      "h": 200,
+      "w": 100
+    },
+    "edition": null,
+    "status": "in_stock",
+    "category": "handleless",
+    "ageGroup": "all-ages",
+    "themes": [
+      "Apothecary",
+      "Coffee",
+      "Tea",
+      "Spices"
+    ],
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
+    "imageGradient": [
+      "#8B5A2B",
+      "#D2B48C"
+    ],
+    "imageUrl": "/paperbags/handleless-block-bottom-bag.jpg",
+    "localImageUrl": "/paperbags/handleless-block-bottom-bag.jpg",
+    "gallery": [
+      "/paperbags/handleless-block-bottom-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/handleless-block-bottom-bag.jpg"
+    ],
+    "rating": 5,
+    "reviews": 21,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "freeShipping": true,
+    "isPreorder": false,
+    "preorderShipBy": null,
+    "preorderDaysMin": null,
+    "preorderDaysMax": null,
+    "customFields": [],
+    "seoTitle": "Handleless Block Bottom Bag 0.5kg (4x2.5x8 in) · QADRI Paper Bags",
+    "seoDescription": "Small block bottom kraft paper bags for dry coffee, tea, and confectionery. Food-grade virgin kraft paper.",
+    "faq": null,
+    "categoryType": "frames"
+  },
+  {
+    "id": "pb_block_1kg",
+    "slug": "handleless-block-bottom-bag-1kg",
+    "name": "Handleless Block Bottom Bag — 1 kg (5\" × 3.5\" × 10\")",
+    "tagline": "Artisan Bakery Loaf & Coffee Pouch · 80 GSM Breathable Kraft",
+    "story": "The classic bakery counter bag. Breathable natural virgin kraft maintains bread crust crispness and freshness while offering an authentic rustic look for artisan sourdoughs, cookies, and dry beans.",
+    "function": "Bakery and dry food packing sack with high burst resistance.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 14,
+    "dimensionsMm": {
+      "d": 90,
+      "h": 250,
+      "w": 130
+    },
+    "edition": null,
+    "status": "in_stock",
+    "category": "handleless",
+    "ageGroup": "all-ages",
+    "themes": [
+      "Bakery",
+      "Sourdough",
+      "Cookies",
+      "Dry Beans"
+    ],
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
+    "imageGradient": [
+      "#8B5A2B",
+      "#D2B48C"
+    ],
+    "imageUrl": "/paperbags/handleless-block-bottom-bag.jpg",
+    "localImageUrl": "/paperbags/handleless-block-bottom-bag.jpg",
+    "gallery": [
+      "/paperbags/handleless-block-bottom-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/handleless-block-bottom-bag.jpg"
+    ],
+    "rating": 5,
+    "reviews": 38,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "freeShipping": true,
+    "isPreorder": false,
+    "preorderShipBy": null,
+    "preorderDaysMin": null,
+    "preorderDaysMax": null,
+    "customFields": [],
+    "seoTitle": "Handleless Block Bottom Bag 1kg (5x3.5x10 in) · QADRI Paper Bags",
+    "seoDescription": "1 kg block bottom kraft bags for artisan bakeries and coffee roasters. Breathable natural virgin kraft.",
+    "faq": null,
+    "categoryType": "frames"
+  },
+  {
+    "id": "pb_block_2kg",
+    "slug": "handleless-block-bottom-bag-2kg",
+    "name": "Handleless Block Bottom Bag — 2 kg (6\" × 4\" × 12\")",
+    "tagline": "Classic Grocery & Produce Sack · 90 GSM Tear-Resistant Kraft",
+    "story": "Traditional grocery counter sack with flat standing base for fast packing of pulses, organic grains, dry groceries, and farm-fresh produce. Automatic self-opening sack (SOS) design pop-opens in one hand.",
+    "function": "Eco-safe grocery and farm produce sack replacing single-use plastic bags.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 22,
+    "dimensionsMm": {
+      "d": 100,
+      "h": 300,
+      "w": 150
+    },
+    "edition": null,
+    "status": "in_stock",
+    "category": "handleless",
+    "ageGroup": "all-ages",
+    "themes": [
+      "Grocery",
+      "Organic Grain",
+      "Farm Produce"
+    ],
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
+    "imageGradient": [
+      "#8B5A2B",
+      "#D2B48C"
+    ],
+    "imageUrl": "/paperbags/handleless-block-bottom-bag.jpg",
+    "localImageUrl": "/paperbags/handleless-block-bottom-bag.jpg",
+    "gallery": [
+      "/paperbags/handleless-block-bottom-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/handleless-block-bottom-bag.jpg"
+    ],
+    "rating": 5,
+    "reviews": 44,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "freeShipping": true,
+    "isPreorder": false,
+    "preorderShipBy": null,
+    "preorderDaysMin": null,
+    "preorderDaysMax": null,
+    "customFields": [],
+    "seoTitle": "Handleless Block Bottom Bag 2kg (6x4x12 in) · QADRI Paper Bags",
+    "seoDescription": "2 kg self-opening block bottom grocery bags. 90 GSM tear-resistant unbleached kraft paper.",
+    "faq": null,
+    "categoryType": "frames"
+  },
+  {
+    "id": "pb_block_35kg",
+    "slug": "handleless-block-bottom-bag-35kg",
+    "name": "Handleless Block Bottom Bag — 3.5 kg (8\" × 5\" × 14\")",
+    "tagline": "Fast Food Combo & Dry Provisions · 110 GSM Heavyweight Kraft",
+    "story": "High-capacity SOS grocery sack built for burger combos, fries, takeaway meal packaging, and bulk dry provisions. Stands upright automatically for streamlined kitchen assembly lines.",
+    "function": "Heavyweight food delivery combo bag and grocery dry goods carrier.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 36,
+    "dimensionsMm": {
+      "d": 125,
+      "h": 360,
+      "w": 200
+    },
+    "edition": null,
+    "status": "in_stock",
+    "category": "handleless",
+    "ageGroup": "all-ages",
+    "themes": [
+      "Fast Food",
+      "Takeaway",
+      "Meal Combo",
+      "Dry Provisions"
+    ],
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
+    "imageGradient": [
+      "#8B5A2B",
+      "#D2B48C"
+    ],
+    "imageUrl": "/paperbags/handleless-block-bottom-bag.jpg",
+    "localImageUrl": "/paperbags/handleless-block-bottom-bag.jpg",
+    "gallery": [
+      "/paperbags/handleless-block-bottom-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/handleless-block-bottom-bag.jpg"
+    ],
+    "rating": 5,
+    "reviews": 27,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "freeShipping": true,
+    "isPreorder": false,
+    "preorderShipBy": null,
+    "preorderDaysMin": null,
+    "preorderDaysMax": null,
+    "customFields": [],
+    "seoTitle": "Handleless Block Bottom Bag 3.5kg (8x5x14 in) · QADRI Paper Bags",
+    "seoDescription": "Heavy-duty 110 GSM SOS paper bags for fast-food meal combos and gourmet dry provisions.",
+    "faq": null,
+    "categoryType": "frames"
+  },
+  {
+    "id": "pb_block_5kg",
+    "slug": "handleless-block-bottom-bag-5kg",
+    "name": "Handleless Block Bottom Bag — 5 kg (10\" × 6\" × 16\")",
+    "tagline": "Supermarket Bulk Packing Sack · 130 GSM Industrial Kraft",
+    "story": "Sturdy 5 kg grocery sack with reinforced bottom fold. Engineered for heavy organic flour, pet supplies, bulk farm-to-table groceries, and hardware parts.",
+    "function": "Industrial-grade grocery sack supporting heavy granular dry goods up to 5 kg.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 52,
+    "dimensionsMm": {
+      "d": 150,
+      "h": 410,
+      "w": 250
+    },
+    "edition": null,
+    "status": "in_stock",
+    "category": "handleless",
+    "ageGroup": "all-ages",
+    "themes": [
+      "Supermarket",
+      "Heavy Duty",
+      "Industrial",
+      "Bulk Grocery"
+    ],
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
+    "imageGradient": [
+      "#8B5A2B",
+      "#D2B48C"
+    ],
+    "imageUrl": "/paperbags/handleless-block-bottom-bag.jpg",
+    "localImageUrl": "/paperbags/handleless-block-bottom-bag.jpg",
+    "gallery": [
+      "/paperbags/handleless-block-bottom-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/handleless-block-bottom-bag.jpg"
+    ],
+    "rating": 5,
+    "reviews": 19,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "freeShipping": true,
+    "isPreorder": false,
+    "preorderShipBy": null,
+    "preorderDaysMin": null,
+    "preorderDaysMax": null,
+    "customFields": [],
+    "seoTitle": "Handleless Block Bottom Bag 5kg (10x6x16 in) · QADRI Paper Bags",
+    "seoDescription": "Supermarket 5 kg block bottom kraft sacks. 130 GSM industrial kraft for grains, flour, and bulk retail.",
+    "faq": null,
+    "categoryType": "frames"
+  },
+  {
+    "id": "pb_block_baguette",
+    "slug": "handleless-block-bottom-bag-baguette",
+    "name": "Handleless Block Bottom Bag — Baguette & Scroll (4.5\" × 2\" × 18\")",
+    "tagline": "Long French Bread & Art Print Sack · 80 GSM Kraft",
+    "story": "An extended slim profile specifically sized for artisan French baguettes, long bakery breads, blueprints, and architectural scroll protection.",
+    "function": "Specialty elongated protective sack for baguettes and rolled documents.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 18,
+    "dimensionsMm": {
+      "d": 50,
+      "h": 460,
+      "w": 115
+    },
+    "edition": null,
+    "status": "in_stock",
+    "category": "handleless",
+    "ageGroup": "all-ages",
+    "themes": [
+      "Bakery",
+      "Baguette",
+      "Bread",
+      "Prints"
+    ],
+    "colorways": [
+      "Natural Brown Kraft",
+      "Bleached White Kraft"
+    ],
+    "imageGradient": [
+      "#8B5A2B",
+      "#D2B48C"
+    ],
+    "imageUrl": "/paperbags/handleless-block-bottom-bag.jpg",
+    "localImageUrl": "/paperbags/handleless-block-bottom-bag.jpg",
+    "gallery": [
+      "/paperbags/handleless-block-bottom-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/handleless-block-bottom-bag.jpg"
+    ],
+    "rating": 5,
+    "reviews": 16,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "freeShipping": true,
+    "isPreorder": false,
+    "preorderShipBy": null,
+    "preorderDaysMin": null,
+    "preorderDaysMax": null,
+    "customFields": [],
+    "seoTitle": "Baguette & Scroll Block Bottom Paper Bag · QADRI Paper Bags",
+    "seoDescription": "Slim elongated kraft paper bags for French baguettes, bread rolls, and architectural drawings.",
+    "faq": null,
+    "categoryType": "frames"
+  },
+  {
+    "id": "pb_custom_bespoke",
+    "slug": "customise-your-bag-completely",
+    "name": "Customise Your Bag Completely (Bespoke Sizing & Print)",
+    "tagline": "Any Custom Size · 100–350 GSM · Twisted, Flat, Ribbon or Die-Cut Handles · Full Pantone Branding",
+    "story": "Total packaging freedom for enterprise retail chains, corporate gifting, and luxury fashion brands.\nSpecify your exact width, gusset, and height dimensions down to the millimeter. Choose from unbleached virgin brown kraft, bleached white kraft, or luxury coated art board (100–350 GSM). Select from twisted paper cord, flat tape, woven cotton herringbone tape, satin ribbon, or die-cut handles.\nAdd spot UV, gold/silver foil deboss, matte/gloss lamination, and full-coverage 6-color flexographic or offset Pantone printing.",
+    "function": "Bespoke enterprise paper packaging program. Digital proofs provided within 24 hours, physical pre-production samples available for large corporate contracts.",
+    "pricePaise": 0,
+    "printMinutes": 0,
+    "weightGrams": 60,
+    "dimensionsMm": {
+      "d": 120,
+      "h": 350,
+      "w": 250
+    },
+    "edition": null,
+    "status": "in_stock",
+    "category": "customise-completely",
+    "ageGroup": "all-ages",
+    "themes": [
+      "Custom Packaging",
+      "Bespoke Branding",
+      "Enterprise",
+      "Pantone"
+    ],
+    "colorways": [
+      "Custom Virgin Kraft",
+      "Bleached White Kraft",
+      "Custom Coated Art Board"
+    ],
+    "imageGradient": [
+      "#8B5A2B",
+      "#D2B48C"
+    ],
+    "imageUrl": "/paperbags/twisted-handle-kraft-bag.jpg",
+    "localImageUrl": "/paperbags/twisted-handle-kraft-bag.jpg",
+    "gallery": [
+      "/paperbags/twisted-handle-kraft-bag.jpg",
+      "/paperbags/flat-handle-kraft-bag.jpg",
+      "/paperbags/handleless-block-bottom-bag.jpg"
+    ],
+    "localGallery": [
+      "/paperbags/twisted-handle-kraft-bag.jpg",
+      "/paperbags/flat-handle-kraft-bag.jpg",
+      "/paperbags/handleless-block-bottom-bag.jpg"
+    ],
+    "rating": 5,
+    "reviews": 50,
+    "createdAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "freeShipping": true,
+    "isPreorder": false,
+    "preorderShipBy": null,
+    "preorderDaysMin": null,
+    "preorderDaysMax": null,
+    "customFields": [],
+    "seoTitle": "Customise Your Bag Completely · Bespoke B2B Paper Bags · QADRI",
+    "seoDescription": "Custom manufactured paper bags to your exact dimensions, paper GSM, handle style, and multi-color logo printing. Direct factory pricing.",
+    "faq": null,
+    "categoryType": "frames"
   },
   {
     "id": "p_rug_001",
