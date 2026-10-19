@@ -190,17 +190,18 @@ export default function PortalPage() {
 
       {/* Minimal Footer */}
       <footer
-        className="shrink-0 flex items-center justify-between gap-4 px-5 sm:px-8 py-3 text-[11px]"
+        className="shrink-0 flex flex-col sm:flex-row items-center justify-between gap-3 px-5 sm:px-8 py-3 text-[12px] relative z-20"
         style={{ color: 'var(--text-muted)', borderTop: '1px solid var(--border)' }}
       >
         <span className="whitespace-nowrap">
-          © 2026 Qadri. All rights reserved.
+          © {new Date().getFullYear()} <b style={{ color: 'var(--text)' }}>Qadri</b>. All rights reserved.
         </span>
-        <nav className="flex gap-4">
-          <Link className="hover:underline" href="/about">About</Link>
-          <Link className="hover:underline" href="/contact">Contact</Link>
-          <Link className="hover:underline" href="/policies/shipping">Shipping</Link>
-          <Link className="hover:underline" href="/policies/privacy">Privacy</Link>
+        <nav aria-label="Legal Links" className="flex flex-wrap gap-x-5 gap-y-1 items-center pointer-events-auto">
+          <Link className="hover:text-text hover:underline py-1 transition-colors" href="/policies/shipping">Shipping</Link>
+          <Link className="hover:text-text hover:underline py-1 transition-colors" href="/policies/returns">Returns</Link>
+          <Link className="hover:text-text hover:underline py-1 transition-colors" href="/policies/privacy">Privacy</Link>
+          <Link className="hover:text-text hover:underline py-1 transition-colors" href="/policies/terms">Terms</Link>
+          <Link className="hover:text-text hover:underline py-1 transition-colors" href="/contact">Contact</Link>
         </nav>
       </footer>
     </div>

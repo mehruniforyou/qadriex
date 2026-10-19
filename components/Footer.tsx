@@ -124,18 +124,43 @@ export default function Footer() {
       </div>
 
       {/* Bottom Legal Bar */}
-      <div className="border-t border-app py-6" style={{ borderColor: 'var(--border)' }}>
+      <div className="border-t border-app py-6 relative z-20" style={{ borderColor: 'var(--border)' }}>
         <div className="o-container flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted">
           <div>
             © {new Date().getFullYear()} <b style={{ color: 'var(--text)' }}>Qadri</b>. All rights reserved. Pan-India Delivery &amp; Custom Manufacturing.
           </div>
-          <div className="flex flex-wrap gap-5 items-center">
-            <Link href="/policies/shipping" className="hover:underline">Shipping</Link>
-            <Link href="/policies/returns" className="hover:underline">Returns</Link>
-            <Link href="/policies/privacy" className="hover:underline">Privacy</Link>
-            <Link href="/policies/terms" className="hover:underline">Terms</Link>
-            <Link href="/contact" className="hover:underline">Contact</Link>
-          </div>
+          <nav aria-label="Legal and Policy Links" className="flex flex-wrap gap-x-6 gap-y-2 items-center pointer-events-auto">
+            <Link
+              href="/policies/shipping"
+              className="text-[13px] font-medium transition-colors hover:text-text hover:underline py-1"
+            >
+              Shipping
+            </Link>
+            <Link
+              href="/policies/returns"
+              className="text-[13px] font-medium transition-colors hover:text-text hover:underline py-1"
+            >
+              Returns
+            </Link>
+            <Link
+              href="/policies/privacy"
+              className="text-[13px] font-medium transition-colors hover:text-text hover:underline py-1"
+            >
+              Privacy
+            </Link>
+            <Link
+              href="/policies/terms"
+              className="text-[13px] font-medium transition-colors hover:text-text hover:underline py-1"
+            >
+              Terms
+            </Link>
+            <Link
+              href="/contact"
+              className="text-[13px] font-medium transition-colors hover:text-text hover:underline py-1"
+            >
+              Contact
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>

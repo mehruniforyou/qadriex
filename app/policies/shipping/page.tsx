@@ -1,8 +1,8 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'Shipping Policy · Oruky',
-  description: 'Shipping & delivery timelines and policies for Oruky pieces across India and internationally.',
+  title: 'Shipping & Delivery Policy · QADRI',
+  description: 'Logistics, bulk cargo freight, and delivery timelines for QADRI custom paper bags and handcrafted luxury rugs across India and worldwide.',
 };
 
 export default function ShippingPolicyPage() {
@@ -11,64 +11,97 @@ export default function ShippingPolicyPage() {
       <header className="o-container pt-4 pb-8 max-w-3xl">
         <span className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] font-bold text-primary">
           <span className="block h-px w-7 bg-primary" />
-          Logistics
+          Logistics &amp; Fulfillment
         </span>
         <h1 className="o-display text-4xl md:text-6xl font-bold tracking-tight mt-4 leading-[1.05]">
-          Shipping &amp; delivery
+          Shipping &amp; Freight Policy
         </h1>
         <p className="text-lg text-muted mt-4 leading-relaxed">
-          Most Oruky products are made to order — meaning we print yours after you order it. Here&apos;s exactly how long that takes and what it costs.
+          Comprehensive freight logistics, production turnarounds, and Pan-India / global export shipping guidelines for QADRI commercial packaging and bespoke rugs.
         </p>
       </header>
 
-      <div className="o-container max-w-3xl pb-24 leading-relaxed space-y-8 text-muted">
+      <div className="o-container max-w-3xl pb-24 leading-relaxed space-y-10 text-muted">
         <div>
           <h2 className="o-display text-2xl md:text-3xl font-bold text-text mb-3">
-            Production time
+            Manufacturing &amp; Fulfillment Timelines
           </h2>
           <p>
-            Every order spends 3–5 business days in our studio before it ships. This is the actual print + post-processing + QA + packing time. Limited-edition drops occasionally take up to 7 business days when print queues are full — we&apos;ll always email you the day your order goes onto the printer.
+            Because QADRI specializes in tailored industrial converting and artisanal craftsmanship, production schedules depend on project scope and custom specifications:
           </p>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            <div className="p-5 rounded-2xl bg-surface border border-border">
+              <h3 className="font-bold text-text text-base">Custom Paper Packaging</h3>
+              <ul className="text-sm space-y-2 mt-2">
+                <li><strong className="text-text">Standard Catalog Bags:</strong> 3–5 business days dispatch.</li>
+                <li><strong className="text-text">Custom Printed Runs:</strong> 7–12 business days following final die-line approval and plate setup.</li>
+                <li><strong className="text-text">High-Volume Runs (25K+):</strong> Phased dispatch scheduled per client contract.</li>
+              </ul>
+            </div>
+            <div className="p-5 rounded-2xl bg-surface border border-border">
+              <h3 className="font-bold text-text text-base">Bespoke Artisan Rugs</h3>
+              <ul className="text-sm space-y-2 mt-2">
+                <li><strong className="text-text">Hand-Tufted Wool Rugs:</strong> 14–21 business days for weaving, latex backing, and precision carving.</li>
+                <li><strong className="text-text">Hand-Knotted Collector Rugs:</strong> 4–8 weeks depending on knot density (KPSI) and dimensions.</li>
+                <li><strong className="text-text">Sample Swatches &amp; Pom-Poms:</strong> 4–6 business days dispatch.</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div>
           <h2 className="o-display text-2xl md:text-3xl font-bold text-text mb-3">
-            Shipping inside India
-          </h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li><strong className="text-text">Standard, free</strong> — 3-5 business days · free on all orders across India.</li>
-            <li><strong className="text-text">Express (metros only)</strong> — 1-2 business days · priority courier queue.</li>
-            <li><strong className="text-text">Insurance</strong> — automatically added on all orders (no charge).</li>
-          </ul>
-          <p className="mt-4">
-            We ship via DTDC, Delhivery, and Bluedart, picking the carrier with the best track record for your PIN code. You&apos;ll receive a tracking link the day your package leaves our studio.
-          </p>
-        </div>
-
-        <div>
-          <h2 className="o-display text-2xl md:text-3xl font-bold text-text mb-3">
-            Shipping internationally
-          </h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li><strong className="text-text">Asia-Pacific</strong> — 7-10 business days · from ₹1,400.</li>
-            <li><strong className="text-text">Europe / UK</strong> — 8-14 business days · from ₹1,800.</li>
-            <li><strong className="text-text">North America</strong> — 8-14 business days · from ₹2,100.</li>
-            <li><strong className="text-text">Rest of world</strong> — 10-21 business days · from ₹2,400.</li>
-          </ul>
-          <p className="mt-4">
-            All international shipments go via DHL Express with full tracking and insurance. Import duties and taxes are payable by the recipient on delivery, per local customs rules.
-          </p>
-        </div>
-
-        <div>
-          <h2 className="o-display text-2xl md:text-3xl font-bold text-text mb-3">
-            Cash on delivery
+            Pan-India Domestic Logistics
           </h2>
           <p>
-            COD is available across India on most orders, with a handling fee that scales with the order value and is shown at checkout before you pay. It isn’t offered on bespoke commissions or personalised pieces — those are modelled to your brief and can’t be resold if a parcel is refused.
+            We manage nationwide delivery across Tier 1, 2, and 3 industrial hubs through dedicated logistics channels:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 mt-2">
+            <li>
+              <strong className="text-text">Express Air Courier (Samples &amp; Compact Rugs):</strong> Dispatched via BlueDart, DTDC Air, or Delhivery Express with guaranteed 1–3 business day transit to metro cities (Mumbai, Delhi-NCR, Bengaluru, Hyderabad, Chennai, Kolkata, Pune).
+            </li>
+            <li>
+              <strong className="text-text">Palletized Surface Freight (Bulk Paper Bags &amp; Oversized Rugs):</strong> High-volume carton shipments are shrink-wrapped on wooden pallets and transported via reputable surface cargo networks (TCI Freight, V-Trans, Safechem, Spoton) with full consignment tracking.
+            </li>
+            <li>
+              <strong className="text-text">Statutory E-Way Bills:</strong> Every commercial shipment is dispatched with an official GST invoice and statutory government E-Way bill to ensure frictionless transit across state checkposts.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="o-display text-2xl md:text-3xl font-bold text-text mb-3">
+            Global Export &amp; International Shipping
+          </h2>
+          <p>
+            QADRI supplies retail chains, luxury hospitality groups, and interior architecture studios across the Middle East, Europe, North America, and Southeast Asia.
+          </p>
+          <ul className="list-disc pl-6 space-y-2 mt-2">
+            <li>
+              <strong className="text-text">Air Express (DHL / FedEx):</strong> Door-to-door delivery within 5–9 business days with customs clearance assistance.
+            </li>
+            <li>
+              <strong className="text-text">Sea Freight (FCL / LCL):</strong> Dispatched from Nhava Sheva (JNPT) or Mundra ports for cost-effective 20ft/40ft container movements.
+            </li>
+            <li>
+              <strong className="text-text">Incoterms:</strong> International quotes are generally provided on FOB, CIF, or DAP basis. Destination customs duties and regional import taxes are payable by the consignee in accordance with local national laws.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="o-display text-2xl md:text-3xl font-bold text-text mb-3">
+            Consignment Tracking &amp; Receiving Protocol
+          </h2>
+          <p>
+            Upon factory dispatch, tracking manifests and consignment notes (LR copy / AWB) are emailed directly to your procurement team.
           </p>
           <p className="mt-3">
-            For larger COD orders we may send a short confirmation code to your WhatsApp number before the piece goes on the printer. Nothing is printed until you confirm, and your order waits safely until you do.
+            <strong className="text-text">Important Receiving Note:</strong> Please ensure your facility receiving staff inspect the integrity of outer strapping and weatherproofing before signing proof of delivery (POD). In the unlikely event of visible carton damage, annotate the delivery receipt and contact our dispatch desk at{' '}
+            <a href="mailto:contact@qadriex.com" className="text-primary font-semibold hover:underline">
+              contact@qadriex.com
+            </a>{' '}
+            within 48 hours.
           </p>
         </div>
       </div>

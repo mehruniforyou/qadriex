@@ -44,7 +44,7 @@ export default function ContactPage() {
             </span>
             <h2 className="o-display text-2xl font-bold mt-4">Email us — fastest path</h2>
             <p className="text-sm text-muted mt-2 leading-relaxed">
-              One address handles everything: order help, lifetime-reprint claims, B2B and bulk inquiries, press, partnerships. Replies typically land within 4 business hours during launch week.
+              One address handles everything: custom paper bag quotations, bespoke rug commissions, sample swatch requests, order status, and corporate partnerships. Replies typically land within 4 business hours.
             </p>
             <a
               href="mailto:contact@qadriex.com"
@@ -148,7 +148,7 @@ export default function ContactPage() {
                 <label className="block text-xs font-semibold mb-1 text-muted">Subject / Order ID (Optional)</label>
                 <input
                   type="text"
-                  placeholder="e.g. Inquiry about Custom Frame or ORK-12345"
+                  placeholder="e.g. Bulk Paper Bag Quotation or Bespoke Rug Inquiry (QAD-12345)"
                   className="o-input"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
