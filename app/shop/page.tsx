@@ -2,9 +2,36 @@
 
 import React, { useState, useMemo, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 import { COLLECTIBLES } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
-import { Sparkles, SlidersHorizontal, Check } from 'lucide-react';
+import {
+  Sparkles,
+  Truck,
+  ShieldCheck,
+  CheckCircle2,
+  ChevronDown,
+  ArrowRight,
+} from 'lucide-react';
+
+const RUG_FAQS = [
+  {
+    q: 'Can I order custom sizes or organic shapes for my space?',
+    a: 'Yes! Every rug in our catalog can be commissioned to your room’s exact dimensions, runner lengths, or unique organic silhouette. Contact our studio with your floor plan or dimensions to receive a tailored digital proof.',
+  },
+  {
+    q: 'How are QADRI luxury rugs crafted?',
+    a: 'Our pieces are artisan hand-tufted by master weavers using imported New Zealand wool blends, hand-sheared for relief depth, and finished with reinforced natural latex and heavy cotton canvas backings.',
+  },
+  {
+    q: 'What is the delivery timeline for bespoke rugs?',
+    a: 'Ready-to-dispatch catalog designs ship within 3–5 days. Bespoke commissioned colorways and custom dimensional pieces dispatch within 14–21 business days with free Pan-India freight and express tracking.',
+  },
+  {
+    q: 'Do you offer trade discounts for interior designers and architects?',
+    a: 'Yes. We collaborate closely with architecture firms, interior stylists, and hospitality procurement teams, providing exclusive B2B volume pricing, yarn pom-pom match kits, and dedicated project management.',
+  },
+];
 
 function ShopContent() {
   const searchParams = useSearchParams();
@@ -14,6 +41,7 @@ function ShopContent() {
   const [selectedCategory, setSelectedCategory] = useState(categoryParam);
   const [searchFilter, setSearchFilter] = useState(queryParam);
   const [sortBy, setSortBy] = useState('featured');
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
     if (categoryParam) setSelectedCategory(categoryParam);
@@ -26,9 +54,9 @@ function ShopContent() {
   const counts = useMemo(() => {
     return {
       all: COLLECTIBLES.length,
-      cafe: COLLECTIBLES.filter(p => p.category === 'cafe').length,
-      deskmate: COLLECTIBLES.filter(p => p.category === 'deskmate').length,
-      keychains: COLLECTIBLES.filter(p => p.category === 'keychains').length,
+      cafe: COLLECTIBLES.filter((p) => p.category === 'cafe').length,
+      deskmate: COLLECTIBLES.filter((p) => p.category === 'deskmate').length,
+      keychains: COLLECTIBLES.filter((p) => p.category === 'keychains').length,
     };
   }, []);
 
@@ -37,18 +65,19 @@ function ShopContent() {
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      list = list.filter(p => p.category === selectedCategory);
+      list = list.filter((p) => p.category === selectedCategory);
     }
 
     // Filter by search query
     if (searchFilter.trim()) {
       const q = searchFilter.toLowerCase();
-      list = list.filter(p =>
-        p.name.toLowerCase().includes(q) ||
-        p.tagline.toLowerCase().includes(q) ||
-        p.story.toLowerCase().includes(q) ||
-        (p.themes && p.themes.some(t => t.toLowerCase().includes(q))) ||
-        (p.colorways && p.colorways.some(c => c.toLowerCase().includes(q)))
+      list = list.filter(
+        (p) =>
+          p.name.toLowerCase().includes(q) ||
+          p.tagline.toLowerCase().includes(q) ||
+          p.story.toLowerCase().includes(q) ||
+          (p.themes && p.themes.some((t) => t.toLowerCase().includes(q))) ||
+          (p.colorways && p.colorways.some((c) => c.toLowerCase().includes(q)))
       );
     }
 
@@ -65,21 +94,36 @@ function ShopContent() {
   }, [selectedCategory, searchFilter, sortBy]);
 
   return (
-    <div className="py-10 md:py-16 space-y-12">
-      {/* Hero Header */}
+    <div className="py-10 md:py-16 space-y-16">
+      {/* Hero Section - exactly matching oruky.com/frames placing */}
       <section className="o-container">
         <div className="max-w-3xl">
-          <span className="o-chip">Bespoke &amp; Handcrafted Rugs</span>
+          <span className="o-chip">Bespoke &amp; Handcrafted Luxury Rugs</span>
           <h1 className="o-display text-4xl sm:text-5xl md:text-6xl font-bold mt-4 leading-tight">
             All Rugs
           </h1>
           <p className="text-muted text-base md:text-lg mt-3 leading-relaxed max-w-2xl">
             Bespoke handcrafted and premium commercial rugs. Custom sizes, artisanal tufting, and high-durability weaves tailored for luxury interiors and commercial spaces.
           </p>
+
+          <div className="flex flex-wrap items-center gap-4 mt-6 text-xs text-muted">
+            <span className="inline-flex items-center gap-1.5 font-medium">
+              <Sparkles className="w-4 h-4 text-primary" /> 100% Pure Wool &amp; Artisanal Tufting
+            </span>
+            <span className="inline-flex items-center gap-1.5 font-medium">
+              <Truck className="w-4 h-4 text-primary" /> Free Pan-India Delivery
+            </span>
+            <span className="inline-flex items-center gap-1.5 font-medium">
+              <ShieldCheck className="w-4 h-4 text-primary" /> Bespoke Quality &amp; Dimensional Guarantee
+            </span>
+          </div>
         </div>
 
-        {/* Filter Controls Row */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-10 pb-4 border-b border-app" style={{ borderColor: 'var(--border)' }}>
+        {/* Filter Pills & Sort Row */}
+        <div
+          className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-10 pb-4 border-b border-app"
+          style={{ borderColor: 'var(--border)' }}
+        >
           {/* Category Tabs */}
           <div className="flex flex-wrap items-center gap-2">
             <button
@@ -136,7 +180,9 @@ function ShopContent() {
         {/* Search Feedback */}
         {searchFilter && (
           <div className="flex items-center gap-2 text-sm text-muted mt-4">
-            <span>Showing results for &quot;<b>{searchFilter}</b>&quot;</span>
+            <span>
+              Showing results for &quot;<b>{searchFilter}</b>&quot;
+            </span>
             <button
               onClick={() => setSearchFilter('')}
               className="text-xs text-primary underline cursor-pointer"
@@ -147,7 +193,7 @@ function ShopContent() {
         )}
       </section>
 
-      {/* Products Grid */}
+      {/* Product Grid */}
       <section className="o-container">
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -172,23 +218,115 @@ function ShopContent() {
         )}
       </section>
 
-      {/* Craft Note Callout */}
+      {/* Trade & Bulk Commissions Banner - matching oruky.com/frames placing */}
       <section className="o-container">
-        <div className="o-card p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-1">
-            <div className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-xs font-bold uppercase tracking-wider">The Qadri Promise</span>
+        <a
+          href="https://wa.me/919829062390?text=Hi%20QADRI,%20I%20would%20like%20to%20inquire%20about%20a%20bespoke%20rug%20trade%20commission%20or%20hospitality%20project."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group block rounded-[24px] p-8 md:p-12 transition-all duration-300 hover:shadow-lift"
+          style={{
+            background: 'color-mix(in srgb, var(--heat, #1D1D1F) 8%, var(--surface))',
+            boxShadow: 'var(--shadow-card, none)',
+            border: '1px solid var(--border)',
+          }}
+        >
+          <div className="flex items-center justify-between gap-6 flex-wrap">
+            <div className="max-w-xl">
+              <span className="text-[11px] uppercase tracking-[0.22em] font-bold text-primary">
+                Bespoke &amp; Trade Commissions
+              </span>
+              <h2 className="o-display text-2xl md:text-3xl lg:text-4xl font-bold mt-2">
+                Architectural &amp; Hospitality Projects
+              </h2>
+              <p className="text-sm md:text-base text-muted mt-2 leading-relaxed">
+                Custom dimensions, yarn pom-pom color matching, and volume trade savings for interior design firms, luxury hotels, and corporate spaces.
+              </p>
             </div>
-            <h3 className="o-display text-xl md:text-2xl font-bold">Artisan Craftsmanship &amp; Longevity.</h3>
-            <p className="text-xs md:text-sm text-muted max-w-xl leading-relaxed">
-              Every rug is crafted with premium wool blends and durable woven backings, inspected individually, and delivered directly to your doorstep across India.
+            <span className="o-btn-primary inline-flex items-center gap-2 shrink-0 group-hover:scale-105 transition-transform">
+              Inquire Trade Commission <ArrowRight className="w-4 h-4" />
+            </span>
+          </div>
+        </a>
+      </section>
+
+      {/* Craftsmanship & Artisanal Standards - matching oruky.com/frames placing */}
+      <section className="o-container">
+        <div className="o-card p-8 md:p-12">
+          <div className="max-w-2xl">
+            <span className="o-chip">Artisanal Standards</span>
+            <h2 className="o-display text-2xl md:text-3xl font-bold mt-3">
+              Crafted for Enduring Tactile Luxury
+            </h2>
+            <p className="text-muted text-sm md:text-base mt-2 leading-relaxed">
+              Every QADRI rug is individually tufted and hand-sheared by master artisans using premium wool yarns, reinforced woven backings, and precision sculptural carving.
             </p>
           </div>
-          <div className="flex items-center gap-4 shrink-0 text-xs font-semibold">
-            <div className="flex items-center gap-1.5"><Check className="w-4 h-4 text-mint" /> Free Pan-India Delivery</div>
-            <div className="flex items-center gap-1.5"><Check className="w-4 h-4 text-mint" /> Bespoke Quality Guarantee</div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+            <div className="p-4 rounded-xl bg-surface-2 space-y-2">
+              <CheckCircle2 className="w-5 h-5 text-primary" />
+              <h3 className="font-bold text-sm">Pure New Zealand Wool</h3>
+              <p className="text-xs text-muted leading-relaxed">
+                Hand-spun yarn blends delivering rich lanolin luster, natural soil resistance, and cloud-soft underfoot comfort.
+              </p>
+            </div>
+            <div className="p-4 rounded-xl bg-surface-2 space-y-2">
+              <CheckCircle2 className="w-5 h-5 text-primary" />
+              <h3 className="font-bold text-sm">Reinforced Woven Canvas</h3>
+              <p className="text-xs text-muted leading-relaxed">
+                Dual-layer latexed cotton duck backing ensuring dimensional stability and slip resistance on all flooring types.
+              </p>
+            </div>
+            <div className="p-4 rounded-xl bg-surface-2 space-y-2">
+              <CheckCircle2 className="w-5 h-5 text-primary" />
+              <h3 className="font-bold text-sm">Precision Sculptural Carving</h3>
+              <p className="text-xs text-muted leading-relaxed">
+                Master artisans hand-shear every contour with variable pile depths for striking three-dimensional relief.
+              </p>
+            </div>
+            <div className="p-4 rounded-xl bg-surface-2 space-y-2">
+              <CheckCircle2 className="w-5 h-5 text-primary" />
+              <h3 className="font-bold text-sm">High-Traffic Longevity</h3>
+              <p className="text-xs text-muted leading-relaxed">
+                Commercial-grade fiber density engineered to retain vibrancy and pile memory in executive suites and luxury residences.
+              </p>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Accordion Section - matching oruky.com/frames placing */}
+      <section className="o-container max-w-3xl">
+        <div className="text-center mb-8">
+          <span className="o-chip">Have questions?</span>
+          <h2 className="o-display text-2xl md:text-3xl font-bold mt-2">Frequently Asked Questions</h2>
+        </div>
+
+        <div className="space-y-3">
+          {RUG_FAQS.map((faq, idx) => (
+            <div key={idx} className="o-card overflow-hidden">
+              <button
+                onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                className="w-full p-5 text-left font-bold text-sm flex items-center justify-between gap-4 cursor-pointer"
+              >
+                <span>{faq.q}</span>
+                <ChevronDown
+                  className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
+                    openFaq === idx ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+              {openFaq === idx && (
+                <div
+                  className="px-5 pb-5 text-xs text-muted leading-relaxed border-t border-app pt-3"
+                  style={{ borderColor: 'var(--border)' }}
+                >
+                  {faq.a}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </section>
     </div>
@@ -197,7 +335,7 @@ function ShopContent() {
 
 export default function ShopPage() {
   return (
-    <Suspense fallback={<div className="py-20 text-center"><div className="o-container animate-pulse">Loading shop...</div></div>}>
+    <Suspense fallback={<div className="py-20 text-center"><div className="o-container animate-pulse">Loading rugs...</div></div>}>
       <ShopContent />
     </Suspense>
   );
