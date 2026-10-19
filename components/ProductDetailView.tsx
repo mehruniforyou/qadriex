@@ -203,7 +203,7 @@ export default function ProductDetailView({ product, relatedProducts }: ProductD
                   </div>
 
                   <a
-                    href={`https://wa.me/918521122231?text=${encodeURIComponent(`Hello QADRI team, I would like to request a quote for the rug "${product.name}" (SKU: ${product.slug}). Required quantity: ${quantity} units.`)}`}
+                    href={`https://wa.me/919829062390?text=${encodeURIComponent(`Hello QADRI team, I would like to request a quote for the rug "${product.name}" (SKU: ${product.slug}). Required quantity: ${quantity} units.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 o-btn-primary !py-3.5 gap-2 cursor-pointer text-center justify-center font-bold"

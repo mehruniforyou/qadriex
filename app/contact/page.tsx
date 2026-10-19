@@ -73,12 +73,12 @@ export default function ContactPage() {
               Chat directly with our team regarding custom catalog runs or quick inquiries.
             </p>
             <a
-              href="https://wa.me/918521122231"
+              href="https://wa.me/919829062390"
               target="_blank"
               rel="noopener noreferrer"
               className="o-btn-ghost inline-flex items-center gap-2 mt-5 text-xs font-bold"
             >
-              <Phone className="w-3.5 h-3.5" /> +91-85211-22231
+              <Phone className="w-3.5 h-3.5" /> +91-98290-62390
             </a>
           </div>
 
