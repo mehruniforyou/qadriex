@@ -16,9 +16,28 @@ export default function Header() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
 
   const isFrames = pathname?.startsWith('/frames');
+
+  // Handle scroll to collapse sub-navigation rail
+  useEffect(() => {
+    function handleScroll() {
+      const headerEl = headerRef.current;
+      if (!headerEl) return;
+      const t = window.scrollY;
+      const isScrolled = headerEl.classList.contains('is-scrolled');
+      if (!isScrolled && t > 50) {
+        headerEl.classList.add('is-scrolled');
+      } else if (isScrolled && t < 16) {
+        headerEl.classList.remove('is-scrolled');
+      }
+    }
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Handle Cmd+K / Ctrl+K
   useEffect(() => {
@@ -52,6 +71,7 @@ export default function Header() {
 
   return (
     <header
+      ref={headerRef}
       className="site-header sticky top-0 z-50 backdrop-blur-xl"
       style={{
         background: 'color-mix(in srgb, var(--bg) 86%, transparent)',
@@ -60,7 +80,7 @@ export default function Header() {
     >
       <div className="o-container">
         {/* Top Header Row */}
-        <div className="header-top-row flex items-center justify-between py-3.5 gap-4">
+        <div className="header-top-row flex items-center justify-between gap-4">
           {/* Logo */}
           <Link href="/" aria-label="Qadri home" className="flex items-center shrink-0">
             <img
@@ -229,7 +249,7 @@ export default function Header() {
         </div>
 
         {/* Sub-Navigation Rail */}
-        <div className="header-nav-outer pb-2 pt-0.5">
+        <div className="header-nav-outer">
           <nav aria-label="Primary" className="header-nav-rail hidden md:flex items-center justify-center">
             {isFrames ? (
               <ul className="flex items-center gap-7 lg:gap-9 text-[13px] font-semibold tracking-tight">
