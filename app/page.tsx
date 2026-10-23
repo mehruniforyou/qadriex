@@ -13,7 +13,7 @@ export default function PortalPage() {
   const split = hoveredDoor === 'paper-bags' ? '100%' : hoveredDoor === 'rugs' ? '0%' : '50%';
 
   return (
-    <div className="portal w-full max-w-full overflow-x-hidden" style={{ background: 'var(--bg)', color: 'var(--text)' }}>
+    <div className="portal w-full max-w-full overflow-x-hidden" style={{ background: '#141416', color: 'var(--text)' }}>
       {/* Screen-reader H1 */}
       <h1 className="sr-only">Customisable Paper Bags &amp; Rugs for B2B and Brands</h1>
 
@@ -58,7 +58,7 @@ export default function PortalPage() {
         >
           {/* Paper Bags Background Image (No opacity filter) */}
           <div
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
+            className="absolute inset-0 bg-contain md:bg-cover bg-center bg-no-repeat md:bg-center transition-transform duration-700 ease-out group-hover:scale-105"
             style={{
               backgroundImage: "url('/images/paper-bags-portal-bg.jpg')",
             }}
@@ -102,7 +102,7 @@ export default function PortalPage() {
           onMouseEnter={() => setHoveredDoor('rugs')}
           className="portal-door group overflow-hidden relative"
           style={{
-            background: 'var(--bg)',
+            background: '#141416',
             color: '#FFFFFF',
             ['--aurora' as any]: 'color-mix(in srgb, var(--primary) 14%, transparent)',
             ['--layer-line' as any]: 'rgba(0,0,0,0.045)',
@@ -112,7 +112,7 @@ export default function PortalPage() {
         >
           {/* Rugs Background Image (No opacity filter) */}
           <div
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
+            className="absolute inset-0 bg-contain md:bg-cover bg-center bg-no-repeat md:bg-center transition-transform duration-700 ease-out group-hover:scale-105"
             style={{
               backgroundImage: "url('/images/rugs-portal-bg.jpg')",
             }}
